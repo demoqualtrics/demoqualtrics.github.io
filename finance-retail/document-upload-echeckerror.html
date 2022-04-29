@@ -42,21 +42,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" type="text/css" href="css/default.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" media="all" />
-    
-    <script>
-    function generateError() {
-        $("#preloader h2").text("We are submitting your documents and verifying your identity.");
-        $("#preloader p").text("This should take up to a minute...");
-        $("#preloader").addClass("loading");
-        $("#preloader").fadeIn(500, function () {
-        });
-        setTimeout(function () {
-            $("#preloader").fadeOut(500, function () {
-            window.location.href = "./error.html";
-        });
-        }, 3500);
-    }
-    </script>
 </head>
 
 <body>
@@ -286,6 +271,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                             </div>
                             
+                            <div class="col-12 text-center mt-35">
+                                    <a class="theme-btn theme-btn-lg theme-btn-alt mt-50 wow fadeInUp" data-wow-delay='0.2s'
+                                        href="index.html">
+                                    Banca Homepage <i class="arrow_right"></i>
+                            </a>
+
+                            </div>
                                 
                             <div class="col-md-12">
                                 <div id="feedback"></div>  

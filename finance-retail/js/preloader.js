@@ -9,12 +9,12 @@
   cites[2] = "You can create any type of product documentation with Banca";
   cites[3] = "Advanced visual search system powered by Ajax";
   var cite = cites[Math.floor(Math.random() * cites.length)];
-  $("#preloader p").text(cite);
+  //$("#preloader p").text("");
   $("#preloader").addClass("loading");
 
   $(window).on("load", function () {
     setTimeout(function () {
-      $("#preloader").fadeOut(500, function () {
+      $("#preloader").fadeOut(10, function () {
         $("#preloader").removeClass("loading");
       });
     }, 500);
