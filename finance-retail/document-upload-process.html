@@ -52,6 +52,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="ctn-preloader" class="ctn-preloader">
+            <div class="round_spinner">
+                <div class="spinner"></div>
+                <div class="text">
+                    <img src="img/logo/Logo-2.png" alt="">
+                </div>
+            </div>
+            <h2 class="head">We are submitting your documents and verifying your identity.</h2>
+            <p>This should take up to a minute...</p>
+        </div>
+    </div>
     <!-- Header -->
     <header class="header">
         <div class="header-top py-2 bg_white">
@@ -263,7 +276,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="col-md-9">
                         <div class="loan-details-widget bg_white">
-                            <form action="./document-upload-process.html">
+                            <form action="./document-upload-echeckerror.html">
                                 <div class="row gy-4">
                                     <div class="col-12">
                                         <div class="doc-info">
@@ -429,6 +442,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script type="text/javascript" src="js/dropzone.min.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+    setTimeout(function () {
+            window.location.href = "./document-upload-echeckerror.html";
+    }, 3500);
+    </script>
 
 </body>
 
