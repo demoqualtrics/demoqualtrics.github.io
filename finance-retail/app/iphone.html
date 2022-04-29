@@ -1,0 +1,91 @@
+<html>
+    <head>
+    
+    <style type="text/css">
+        #functions {
+  display: inline-block;
+  margin-top:30px;
+}
+
+#functions ul {
+    list-style:none;
+}
+
+.func_desc{
+  float:left;
+}
+
+i{
+  padding: 10px;
+}
+
+
+#MSvideoContainer {
+  width: 434px;
+  height: 806px;
+  margin: auto;
+  padding: 10px;
+  display: inline-block;
+  float: left;
+  background: url("http://www.makrshakr.com/wp-content/uploads/2016/03/iphone.png") center center no-repeat;
+background-size:cover;
+}
+
+#MSvideoContent {
+  padding-top: 139px;
+  text-align:center;
+  overflow:hidden;
+}
+
+.active, #functions li .small_title:hover {
+    color: #e2038b;
+    cursor:pointer;
+}
+
+.function_desc{
+  display:inline-block;
+  float:left;
+  color: black;
+}
+    </style>
+    </head>
+
+<body style="background: #555">
+<script type="application/javascript">
+  var index = 1;
+    
+  function go() {
+    if (index < 13) {
+      index++;
+    }
+    
+    document.getElementById('phone').src = "./img/app_" + index + ".png";
+  }
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("functions");
+var items = header.getElementsByClassName("function");
+for (var i = 0; i < items.length; i++) {
+  items[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+    
+<div id="MSvideoContainer">
+<div id="MSvideoContent" onclick="go()">
+<img id="phone" src="./img/app_1.png" width="300" height="543" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></img>
+</div>
+</div>
+
+<div id="app_desc">
+  <h2> </h2>
+    <p id="app_desc"> </p>
+</div>
+<div id="functions">
+   
+</div>
+    </body>
+</html>
