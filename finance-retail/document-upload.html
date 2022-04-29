@@ -434,7 +434,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- JS here -->
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="js/preloader.js"></script>
     <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="js/jquery.smoothscroll.min.js"></script>
     <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
@@ -444,6 +443,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script type="text/javascript" src="js/wow.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <script>
+    $("#preloader").fadeOut(1, function () {
+    });
+    
     $("#submit_btn").click(function() {
         $("#preloader h2").text("We are submitting your documents and verifying your identity.");
         $("#preloader p").text("This should take up to a minute...");
