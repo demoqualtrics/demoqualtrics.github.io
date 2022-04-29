@@ -42,6 +42,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" type="text/css" href="css/default.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" media="all" />
+    
+    <script>
+    function generateError() {
+        $("#preloader h2").text("We are submitting your documents and verifying your identity.");
+        $("#preloader p").text("This should take up to a minute...");
+        $("#preloader").addClass("loading");
+        $("#preloader").fadeIn(500, function () {
+        });
+        setTimeout(function () {
+            $("#preloader").fadeOut(500, function () {
+            window.location.href = "./document-upload-2.html";
+        });
+        }, 3500);
+    }
+    </script>
 </head>
 
 <body>
@@ -229,7 +244,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="breadcrumb-content pt-90">
-                                <h1>Documants Upload</h1>
+                                <h1>Documents Upload</h1>
                                 <ul>
                                     <li><a href="index.html">home</a></li>
                                     <li><a href="index.html">pages</a></li>
@@ -264,7 +279,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </li>
                                 <li class=" active"><a href="document-upload.html">
                                         <div class="number"><i class="icon_check"></i> <span>3</span></div>
-                                        Documants
+                                        Documents
                                         Upload
                                     </a>
                                 </li>
@@ -317,7 +332,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                     class="arrow_left"></i>previous
                                             </a>
                                             <button type="submit"
-                                                class="theme-btn-primary_alt theme-btn">Submit</button>
+                                                class="theme-btn-primary_alt theme-btn" onclick="generateError()">Submit</button>
                                         </div>
                                     </div>
                                 </div>
