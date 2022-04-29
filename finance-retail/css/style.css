@@ -341,7 +341,7 @@ input::-webkit-inner-spin-button {
 
 #back-to-top.show {
   opacity: 1;
-  visibility: visible; }
+  visibility: hidden; }
 
 /*----------------------------------------------------*/
 /*----------------------------------------------------*/
