@@ -43,20 +43,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" media="all" />
     
-    <script>
-    function generateError() {
-        $("#preloader h2").text("We are submitting your documents and verifying your identity.");
-        $("#preloader p").text("This should take up to a minute...");
-        $("#preloader").addClass("loading");
-        $("#preloader").fadeIn(500, function () {
-        });
-        setTimeout(function () {
-            $("#preloader").fadeOut(500, function () {
-            window.location.href = "./document-upload-2.html";
-        });
-        }, 3500);
-    }
-    </script>
+    
 </head>
 
 <body>
@@ -331,8 +318,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 class="prev-btn theme-btn-primary_alt theme-btn"><i
                                                     class="arrow_left"></i>previous
                                             </a>
-                                            <button type="submit"
-                                                class="theme-btn-primary_alt theme-btn" onclick="generateError()">Submit</button>
+                                            <button id="submit_btn" type="submit"
+                                                class="theme-btn-primary_alt theme-btn">Submit</button>
                                         </div>
                                     </div>
                                 </div>
@@ -456,6 +443,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script type="text/javascript" src="js/dropzone.min.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+    $("#submit_btn").click(function() {
+        $("#preloader h2").text("We are submitting your documents and verifying your identity.");
+        $("#preloader p").text("This should take up to a minute...");
+        $("#preloader").addClass("loading");
+        $("#preloader").fadeIn(500, function () {
+        });
+        setTimeout(function () {
+            $("#preloader").fadeOut(500, function () {
+            window.location.href = "./document-upload-2.html";
+        });
+        }, 3500);
+    });
+    </script>
 
 </body>
 
