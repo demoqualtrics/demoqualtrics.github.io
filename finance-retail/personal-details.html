@@ -70,8 +70,7 @@ function triggerSurvey() {
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader('X-API-TOKEN', apiToken);
     xhr.send(JSON.stringify(payload)); 
-    
-    //alert("Trigger sent with payload " + payload);
+    //alert("Trigger sent with payload " + JSON.stringify(payload));
 }
 </script>
     <!-- Header -->
