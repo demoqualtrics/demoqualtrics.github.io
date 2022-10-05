@@ -51,6 +51,13 @@ Table of Content:
 body {
   background-color: #f7f9fa; }
 
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    } 
+body {
+    top: 0px !important; 
+    }
+
 a,
 .btn,
 button,
