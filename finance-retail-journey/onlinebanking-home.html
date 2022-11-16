@@ -254,7 +254,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <h2 class="mb-0 wow fadeInUp">Your Accounts</h2>
                     
                     <a href="onlinebanking-messages.html"
-                                    class="theme-btn theme-btn-outlined"><div class="redicon"></div>You have unread messages
+                                    class="theme-btn theme-btn-outlined"><div class="redicon" id="redcircle"></div><span id="message_btn">You have unread messages</span>
                                     </a>
                         </div>
                 <!-- Calculator -->
@@ -266,7 +266,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <h5>Silver Bank Account</h5>
                                 <p>Available balance | 12-34-56 99876563</p>
                             </div>
-                            <h4 class="mb-0">$1,162.88</h4>
+                            <h4 class="mb-0"><span id="currentAccount_balance">$1,162.88</span></h4>
                             <div class="text-center">
                             <a href="#" class="theme-btn theme-btn-rounded"><i
                                     class='arrow_right'></i> </a>
@@ -287,6 +287,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
                         </div>
                     </div>
+                    
+                    <div id="product_item"> </div>
                 </div>
                 <!-- Feature -->
                 <div class="feature">
@@ -725,6 +727,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="text/javascript" src="js/jquery.parallax-scroll.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    
+    <script type="text/javascript">
+    if (window.localStorage.getItem("loan_agreed") !== null) {
+            var loanProduct = `<div class="expected-payment mt-50 mr-30 ml-30 mb-50">
+                        <div class="bg_disable d-flex justify-content-between flex-wrap sec-head align-items-center">
+                            <div>
+                                <h5>Banca Loan | APR 7.8% | 3 years</h5>
+                                <p>Total Amount Repayable $11,203.91 </p>
+                            </div>
+                            <h4 class="mb-0">$311.22 monthly repayment</h4>
+                            <div class="text-center">
+                            <a href="#" class="theme-btn theme-btn-rounded"><i
+                                    class='arrow_right'></i> </a>
+                            </div>
+                        </div>
+                    </div>`;
+        
+            //Add loan balances
+            document.getElementById('currentAccount_balance').innerHTML = "$11,162.88";
+            document.getElementById('product_item').innerHTML = loanProduct;
+            document.getElementById('message_btn').innerHTML = "View Messages";
+            document.getElementById('redcircle').style.display = "none";
+        
+        
+        }
+    </script>
 </body>
 
 </html>
