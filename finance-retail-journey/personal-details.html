@@ -80,6 +80,12 @@ function triggerSurvey() {
     xhr.setRequestHeader('X-API-TOKEN', apiToken);
     xhr.send(JSON.stringify(payload)); 
 }
+    
+function writeToLocalStorage(key, value) {
+    if (typeof(Storage) !== "undefined") {
+        window.localStorage.setItem(key, value);
+    }
+}
 </script>
     <!-- Header -->
     <header class="header">
@@ -297,12 +303,12 @@ function triggerSurvey() {
                                 <div class="row gy-4">
                                     <div class="col-md-6">
                                         <label class="label" for="fName">First Name*</label>
-                                        <input id='fName' class="form-control" type="text" required>
+                                        <input id='fName' class="form-control" type="text" onchange="writeToLocalStorage('firstName', this.value)" required>
                                     </div>
 
                                     <div class="col-md-6">
                                         <label class="label" for="lName">Last Name*</label>
-                                        <input id='lName' class="form-control" type="text" required>
+                                        <input id='lName' class="form-control" type="text" onchange="writeToLocalStorage('lastName', this.value)"required>
                                     </div>
 
                                     <div class="col-md-6">
@@ -435,7 +441,7 @@ function triggerSurvey() {
                                     <div class="col-md-6">
                                         <label class="label" for="emailName">Email</label>
                                         <input class="form-control" type="email" id='emailName'
-                                            placeholder="examplename@example.com" required>
+                                            placeholder="examplename@example.com" onchange="writeToLocalStorage('email', this.value)" required>
                                     </div>
 
                                     <div class="col-md-6">
