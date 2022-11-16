@@ -86,6 +86,23 @@ function writeToLocalStorage(key, value) {
         window.localStorage.setItem(key, value);
     }
 }
+    
+function sendAbandonEmail() {
+    var firstName = document.getElementById("fName").value;
+    var lastName = document.getElementById("lName").value;
+    var email = document.getElementById("emailName").value;
+    
+    var apiToken = "***REMOVED***";
+
+    var url = "https://yul1.qualtrics.com/inbound-event/v1/events/JSON/triggers?contextId=SV_2mWpjBvGP2m6UaW&userId=UR_b3B9sJ6AudaytgN&brandId=qdemo&triggerId=OC_lJVP4FnkJKJ2wNI" 
+    
+    var payload = { firstName: firstName, lastName : lastName, email: email};
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('X-API-TOKEN', apiToken);
+    xhr.send(JSON.stringify(payload)); 
+}
 </script>
     <!-- Header -->
     <header class="header">
@@ -441,7 +458,7 @@ function writeToLocalStorage(key, value) {
                                     <div class="col-md-6">
                                         <label class="label" for="emailName">Email</label>
                                         <input class="form-control" type="email" id='emailName'
-                                            placeholder="examplename@example.com" onchange="writeToLocalStorage('email', this.value)" required>
+                                            placeholder="examplename@example.com" onchange="writeToLocalStorage('email', this.value);sendAbandonEmail();" required>
                                     </div>
 
                                     <div class="col-md-6">
@@ -602,6 +619,20 @@ function writeToLocalStorage(key, value) {
     <script type="text/javascript" src="js/intlTelInput-jquery.min.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script type="application/javascript">
+        if ( window.localStorage.getItem("firstName") !== null ) {
+            //Change banner
+            document.getElementById('fName').value = window.localStorage.getItem("firstName");
+        }
+        if ( window.localStorage.getItem("lastName") !== null ) {
+            //Change banner
+            document.getElementById('lName').value = window.localStorage.getItem("lastName");
+        }
+        if ( window.localStorage.getItem("email") !== null ) {
+            //Change banner
+            document.getElementById('emailName').value = window.localStorage.getItem("email");
+        }
+    </script>
 </body>
 
 </html>

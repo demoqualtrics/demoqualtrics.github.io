@@ -49,7 +49,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKHL8X8"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+        
+<script type="application/javascript">
+function writeToLocalStorage(key, value) {
+    if (typeof(Storage) !== "undefined") {
+        window.localStorage.setItem(key, value);
+    }
+}
     
+</script>
     <!-- Header -->
     <header class="header">
         <div class="header-top py-2 bg_white">
@@ -276,7 +284,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <div class="col-lg-3 col-md-6">
                                         <input class="select-loan-type-radio" name="select-loan-type" type="radio"
-                                            id="Home_loan">
+                                            id="Home_loan" onclick="writeToLocalStorage('product', 'home_loan')";>
                                         <label for="Home_loan" class="loan-type">
                                             <img src="img/apply-loan/icon-5.1.png" alt="icon">
                                             <img src="img/apply-loan/icon-5.2.png" alt="icon">
@@ -294,7 +302,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     </div>
                                     <div class="col-lg-3 col-md-6">
                                         <input class="select-loan-type-radio" name="select-loan-type" type="radio"
-                                            id="Car_loan">
+                                            id="Car_loan" onclick="writeToLocalStorage('product', 'car_loan');">
                                         <label for="Car_loan" class="loan-type">
                                             <img src="img/apply-loan/icon-7.1.png" alt="icon">
                                             <img src="img/apply-loan/icon-7.2.png" alt="icon">
