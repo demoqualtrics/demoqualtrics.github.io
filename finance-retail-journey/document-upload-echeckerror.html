@@ -67,6 +67,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     xhr.setRequestHeader('X-API-TOKEN', apiToken);
     xhr.send(JSON.stringify(payload)); 
     
+    url = "https://yul1.qualtrics.com/inbound-event/v1/events/JSON/triggers?contextId=SV_5dupJ9krXvri7vo&userId=UR_b3B9sJ6AudaytgN&brandId=qdemo&triggerId=OC_4sq5r3VqEAkjxnw";
+    
+    payload = { firstName: firstName, lastName : lastName, email: email };
+    
+    xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('X-API-TOKEN', apiToken);
+    xhr.send(JSON.stringify(payload)); 
+    
 </script>
     <!-- Header -->
     <header class="header">

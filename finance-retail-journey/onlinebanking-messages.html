@@ -328,7 +328,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <div class="job-post-widget">
                             <div class="sidebar-header d-flex justify-content-between align-items-center mt-4 mt-lg-0">
                                 <div class="sidebar-title">
-                                    <h4 class="wow fadeInRight">10 secure messages</h4>
+                                    <h4 class="wow fadeInRight"><span id="message_number">10</span> secure messages</h4>
                                 </div>
 
                                 <div class="sorting-select wow fadeInLeft me-1">
@@ -730,12 +730,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 document.getElementById('dynamic_messages').innerHTML = loanOffer;
         }
         window.addEventListener('load', function () {
+            document.getElementById("message_number").innerHTML  = document.querySelectorAll('.single-job-post').length;
             const date = new Date();
             var currentdate = date.toDateString();
             
             document.getElementById("message1_timestamp").innerHTML = currentdate;
-            document.getElementById("message2_timestamp").innerHTML = currentdate;
-            document.getElementById("message2_date").innerHTML = currentdate;
+            document.getElementById("message2_timestamp").innerHTML = currentdate
+            if (document.getElementById("message2_date") !== null) {
+                document.getElementById("message2_date").innerHTML = currentdate;
+            }
+            
         })
         
         
