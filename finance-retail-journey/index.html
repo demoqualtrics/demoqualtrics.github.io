@@ -830,7 +830,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script type="text/javascript" src="js/custom.js"></script>
     
     <script type="application/javascript">  
-var personalBanner = `<section class="banner-area-3 pt-90" id="banner_animation2">
+var homeLoanBanner = `<section class="banner-area-3 pt-90" id="banner_animation2">
             <div class="bg-slides">
                 <div class="slide" data-parallax='{"x": 220, "y": 0, "rotateZ":0}'>
                     <img class="wow slideInRight" data-wow-delay='0.2s' src="img/banner/slide-shape-1.png" alt="img">
@@ -865,10 +865,78 @@ var personalBanner = `<section class="banner-area-3 pt-90" id="banner_animation2
                 </div>
             </div>
         </section>`;  
+        
+    var mobileAppBanner = `<section class="banner-area" id="banner_animation" style="background: #131417 !important;">
+			<div class="bubbles">
+				<div data-parallax='{"x": 0, "y": -250, "rotateZ":0}'>
+					<div class=" bubble">
+					</div>
+				</div>
+				<div data-parallax='{"x": 0, "y": -250, "rotateZ":0}'>
+					<div class=" bubble">
+					</div>
+				</div>
+				<div data-parallax='{"x": 50, "y": -250, "rotateZ":0}'>
+					<div class=" bubble">
+					</div>
+				</div>
+				<div data-parallax='{"x": 60, "y": -200, "rotateZ":0}'>
+					<div class=" bubble">
+					</div>
+				</div>
+				<div data-parallax='{"x": 50, "y": -130, "rotateZ":0}'>
+					<div class=" bubble">
+					</div>
+				</div>
+				<div data-parallax='{"x": 130, "y": 250, "rotateZ":0}'>
+					<div class=" bubble">
+					</div>
+				</div>
+				<div data-parallax='{"x": 0, "y": -250, "rotateZ":0}'>
+					<div class=" bubble">
+					</div>
+				</div>
+				<div data-parallax='{"x": 100, "y": -250, "rotateZ":0}'>
+					<div class=" bubble">
+					</div>
+				</div>
+			</div>
+			<div class="logos">
+				<img src="img/banner/Logo-1.png" alt="social">
+				<img src="img/banner/Logo-2.png" alt="social">
+				<img src="img/banner/Logo-3.png" alt="social">
+				<img src="img/banner/Logo-4.png" alt="social">
+				<img src="img/banner/Logo-5.png" alt="social">
+				<img src="img/banner/Logo-6.png" alt="social">
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10 mx-auto">
+						<div class="banner-content text-center pt-200">
+							<h1>Get rewarded for shopping online with the<br />Banca Mobile App</h1>
+							<div class="img-area mt-35">
+								<img class="img-fluid" data-depth="0.6" src="img/person.png" alt="person">
+							</div>
 
-if ( window.localStorage.getItem("product") !== null && window.localStorage.getItem("submitted_loan") === null) {
-    //Change banner
-    document.getElementById('banner').innerHTML = personalBanner;
+							<div class="symbol-pulse">
+								<div class="pulse-1"></div>
+								<div class="pulse-2"></div>
+								<div class="pulse-x"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+			</div>
+		</section>`;
+if ( window.localStorage.getItem("submitted_loan") !== null) {
+    //Change banner to upsell something else apart from loans
+    document.getElementById('banner').innerHTML = mobileAppBanner;
+ }
+else if ( window.localStorage.getItem("product") !== null) {
+    //Change banner target to home loan
+    document.getElementById('banner').innerHTML = homeLoanBanner;
  }
 </script>
 </body>

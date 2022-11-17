@@ -50,7 +50,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKHL8X8"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<script type="text/javascript">
+//Trigger interaction ticket to user for demo
+    var firstName = window.localStorage.getItem("firstName");
+    var lastName = window.localStorage.getItem("lastName");
+    var email = window.localStorage.getItem("email");
     
+    var apiToken = "***REMOVED***";
+    
+    var url = "https://yul1.qualtrics.com/inbound-event/v1/events/JSON/triggers?contextId=OC_2SiglBYDIJ27JfK&userId=UR_b3B9sJ6AudaytgN&brandId=qdemo&triggerId=OC_2SiglBYDIJ27JfK" ;
+    
+    var payload = { firstName: firstName, lastName : lastName, email: email, ticketTeam: "Banca Demo", ticketOwner: email + "#qdemo"};
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('X-API-TOKEN', apiToken);
+    xhr.send(JSON.stringify(payload)); 
+    
+</script>
     <!-- Header -->
     <header class="header">
         <div class="header-top py-2 bg_white">

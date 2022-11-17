@@ -750,8 +750,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             document.getElementById('message_btn').innerHTML = "View Messages";
             document.getElementById('redcircle').style.display = "none";
         
+            //Trigger post application feedback survey
+            var firstName = window.localStorage.getItem("firstName");
+            var lastName = window.localStorage.getItem("lastName");
+            var email = window.localStorage.getItem("email");
+    
+            var apiToken = "***REMOVED***";
+
+            var url = "https://yul1.qualtrics.com/inbound-event/v1/events/JSON/triggers?contextId=SV_4UFSlTX88OHFHhQ&userId=UR_b3B9sJ6AudaytgN&brandId=qdemo&triggerId=OC_l7XGFkOL00v09Ti";
+    
+            var payload = { firstName: firstName, lastName : lastName, email: email, ticketTeam: "Banca Demo", ticketOwner: email + "#qdemo"};
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.setRequestHeader('X-API-TOKEN', apiToken);
+            xhr.send(JSON.stringify(payload)); 
+    }
         
-        }
     </script>
 </body>
 
