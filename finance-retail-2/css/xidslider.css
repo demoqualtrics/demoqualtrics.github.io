@@ -3,7 +3,7 @@
   width: 730px;
   height: 800px;
   top: 150px;
-  right: -800px;
+  right: -730px;
   z-index: 9999999999 !important;
   /* Animation  */
   transition-property: all;
