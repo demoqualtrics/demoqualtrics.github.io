@@ -49,6 +49,7 @@ function googleTranslateElementInit() {
     <link rel="stylesheet" type="text/css" href="css/default.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/xidslider.css" media="all" />
 </head>
 
 <body>
@@ -814,6 +815,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Back to top button -->
     <a id="back-to-top" title="Back to Top"></a>
+    
+        
+<!-- // XID Slider Tab -->
+<div id="slideOut">
+<!--   // Tab -->
+  <div class="slideOutTab">
+    <div>
+      <img src="img/xiD-large.svg" alt="XID" width="100px"/>
+    </div>
+  </div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">xiD Profile</h4> </div>
+    <div class="modal-body">
+      <img id="modal-body-image" src="img/profile-snapshots/profile1.png" alt="profile0" width="700px"/>
+    </div>
+    <div class="modal-footer"> </div>
+  </div>
+</div>
+    
+<!-- // END XID Slider Tab -->
 
     <!-- JS here -->
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
@@ -826,8 +848,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script type="text/javascript" src="js/parallax.js"></script>
     <script type="text/javascript" src="js/jquery.parallax-scroll.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/xidslider.js"></script>
 
     <script type="text/javascript" src="js/custom.js"></script>
+    
     
     <script type="application/javascript">  
 var homeLoanBanner = `<section class="banner-area-3 pt-90" id="banner_animation2">
@@ -855,10 +879,13 @@ var homeLoanBanner = `<section class="banner-area-3 pt-90" id="banner_animation2
 
                             <a href="personal-details.html"
                                 class="wow fadeInUp mt-50 theme-btn theme-btn-rounded-2 theme-btn-lg theme-btn-alt"
-                                data-wow-delay="0.3s">Resume your application
+                                data-wow-delay="0.3s" style="margin-right:10px;">Resume your application
                                 <i class="arrow_right"></i></a>
+
+                            <a href="personal-details.html"
+                                class="wow fadeInUp mt-50 theme-btn theme-btn-outlined theme-btn-lg theme-btn-alt" style="color:#bbb;border:1px solid #bbb"
+                                data-wow-delay="0.3s">Not interested</a>
                         </div>
-                        <div id="targeted_content_feedback"></div>
                     </div>
                     <div class="col-lg-5 d-none d-lg-block position-relative">
                         <img class="person-img " src="img/home_loan.jpeg" alt="">
@@ -934,12 +961,20 @@ var homeLoanBanner = `<section class="banner-area-3 pt-90" id="banner_animation2
 if ( window.localStorage.getItem("submitted_loan") !== null) {
     //Change banner to upsell something else apart from loans
     document.getElementById('banner').innerHTML = mobileAppBanner;
+    //update xID profile widget
+    document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile6.png" 
  }
 else if ( window.localStorage.getItem("product") !== null) {
     //Change banner target to home loan
     document.getElementById('banner').innerHTML = homeLoanBanner;
+    
+    //update xID profile widget
+    document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile3.png" 
  }
 </script>
+    
+
+    
 </body>
 
 </html>

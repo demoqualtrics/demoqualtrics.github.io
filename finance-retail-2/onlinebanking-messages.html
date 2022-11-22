@@ -47,6 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" type="text/css" href="css/default.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/xidslider.css" media="all" />
     <style>
 .redicon{
   position: absolute !important;
@@ -514,6 +515,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- footer end -->
     <!-- Back to top button -->
     <a id="back-to-top" title="Back to Top"></a>
+    
+        <!-- // XID Slider Tab -->
+<div id="slideOut">
+<!--   // Tab -->
+  <div class="slideOutTab">
+    <div>
+      <img src="img/xiD-large.svg" alt="XID" width="100px"/>
+    </div>
+  </div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">xiD Profile</h4> </div>
+    <div class="modal-body">
+      <img id="modal-body-image" src="img/profile-snapshots/profile1.png" alt="profile0" width="700px"/>
+    </div>
+    <div class="modal-footer"> </div>
+  </div>
+</div>
+    
+<!-- // END XID Slider Tab -->
 
     <!-- JS here -->
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
@@ -525,6 +546,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="text/javascript" src="js/jquery.nice-select.min.js"></script>
     <script type="text/javascript" src="js/jquery-editable-select.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/xidslider.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     
     <script type="text/javascript">
@@ -725,9 +747,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         if (window.localStorage.getItem("submitted_loan") !== null) {
             //Change messages
                 document.getElementById('dynamic_messages').innerHTML = loanApproved;
+                //Add message for loan acceptance
                 window.localStorage.setItem("loan_agreed", "true");
+                //update xID profile widget
+                document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile7.png" 
         } else if (window.localStorage.getItem("product") !== null) {
+                //Add messages for offers for loan segment
                 document.getElementById('dynamic_messages').innerHTML = loanOffer;
+                //update xID profile widget
+                document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile4.png" 
         }
         window.addEventListener('load', function () {
             document.getElementById("message_number").innerHTML  = document.querySelectorAll('.single-job-post').length;
