@@ -816,8 +816,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Back to top button -->
     <a id="back-to-top" title="Back to Top"></a>
     
-        
-<!-- // XID Slider Tab -->
+    <!-- // xiD Slider Tab -->
 <div id="slideOut">
 <!--   // Tab -->
   <div class="slideOutTab">
@@ -832,10 +831,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <img id="modal-body-image" src="img/profile-snapshots/profile1.png" alt="profile0" width="700px"/>
     </div>
     <div class="modal-footer"> </div>
+    <div style="position:absolute;top:160px;left:211px;1px solid white;background-color:white;color:#999;width:500px;"><span id="profile_email">&nbsp;</span></div>
   </div>
 </div>
-    
-<!-- // END XID Slider Tab -->
+<!-- // END xiD Slider Tab -->
 
     <!-- JS here -->
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
@@ -971,6 +970,11 @@ else if ( window.localStorage.getItem("product") !== null) {
     //update xID profile widget
     document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile3.png" 
  }
+        
+//update xID profile widget with email
+if ( window.localStorage.getItem("email") !== null ) { 
+    document.getElementById('profile_email').innerHTML = window.localStorage.getItem("email");
+}
 </script>
     
 

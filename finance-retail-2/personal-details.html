@@ -63,7 +63,8 @@ function writeToLocalStorage(key, value) {
 //send application journey abandon campaign email.
 function sendAbandonEmail() {
     //update xID profile widget
-    document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile2.png" 
+    document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile2.png"  
+    document.getElementById('profile_email').innerHTML = window.localStorage.getItem("email");
     
     var firstName = document.getElementById("fName").value;
     var lastName = document.getElementById("lName").value;
@@ -586,7 +587,7 @@ function sendAbandonEmail() {
     <!-- Back to top button -->
     <a id="back-to-top" title="Back to Top"></a>
     
-    <!-- // XID Slider Tab -->
+    <!-- // xiD Slider Tab -->
 <div id="slideOut">
 <!--   // Tab -->
   <div class="slideOutTab">
@@ -601,10 +602,10 @@ function sendAbandonEmail() {
       <img id="modal-body-image" src="img/profile-snapshots/profile1.png" alt="profile0" width="700px"/>
     </div>
     <div class="modal-footer"> </div>
+    <div style="position:absolute;top:160px;left:211px;1px solid white;background-color:white;color:#999;width:500px;"><span id="profile_email">&nbsp;</span></div>
   </div>
 </div>
-    
-<!-- // END XID Slider Tab -->
+<!-- // END xiD Slider Tab -->
 
     <!-- JS here -->
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
@@ -631,6 +632,7 @@ function sendAbandonEmail() {
             document.getElementById('emailName').value = window.localStorage.getItem("email");
             //update xID profile widget
             document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile2.png" 
+            document.getElementById('profile_email').innerHTML = window.localStorage.getItem("email");
         }
     </script>
 </body>

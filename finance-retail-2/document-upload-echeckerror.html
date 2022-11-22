@@ -421,7 +421,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Back to top button -->
     <a id="back-to-top" title="Back to Top"></a>
     
-      <!-- // XID Slider Tab -->
+    <!-- // xiD Slider Tab -->
 <div id="slideOut">
 <!--   // Tab -->
   <div class="slideOutTab">
@@ -433,13 +433,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="modal-header">
       <h4 class="modal-title">xiD Profile</h4> </div>
     <div class="modal-body">
-      <img id="modal-body-image" src="img/profile-snapshots/profile5.png" alt="profile5" width="700px"/>
+      <img id="modal-body-image" src="img/profile-snapshots/profile5.png" alt="profile0" width="700px"/>
     </div>
     <div class="modal-footer"> </div>
+    <div style="position:absolute;top:160px;left:211px;1px solid white;background-color:white;color:#999;width:500px;"><span id="profile_email">&nbsp;</span></div>
   </div>
 </div>
-    
-<!-- // END XID Slider Tab -->
+<!-- // END xiD Slider Tab -->
 
     <!-- JS here -->
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
@@ -454,6 +454,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script type="text/javascript" src="js/custom.js"></script>
     
     <script type="application/javascript">
+        //update xID profile widget with email
+        if ( window.localStorage.getItem("email") !== null ) { 
+            document.getElementById('profile_email').innerHTML = window.localStorage.getItem("email");
+        }
+        
         window.addEventListener('load', function () {
             window.localStorage.setItem('submitted_loan','true');
             var content = document.getElementById("amazon-connect-chat-widget");
