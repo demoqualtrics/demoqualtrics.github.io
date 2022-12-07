@@ -34,11 +34,11 @@ function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 } 
     
-function hashCodeToCookie(key, value) {
+function hashCodeToCookie() {
     var hashObj = new jsSHA("SHA-512", "TEXT", {numRounds: 1});
-    hashObj.update(value);
+    hashObj.update(document.getElementById('accessCode').value);
     var hash = hashObj.getHash("HEX");
-    setCookie(key, hash, {secure: true, 'max-age': 3600});
+    setCookie('accessCode', hash, {secure: true, 'max-age': 3600});
 }
 </script>
     
@@ -856,13 +856,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="protector-body">
     <p>Request access code from Alex Lee Yuk Cheung (alee@qualtrics.com) to use prototype journey analytics and orchestration demo.</p>
-    <form action="index.html">
+    <form action="index.html" onsubmit="event.preventDefault();hashCodeToCookie();">
         <div class="col-lg-9">
                         <div class="loan-details-widget bg_white">
                             <div class="row gy-4">
                                     <div class="col-md-6">
-                                        <label class="label" for="fName">Code*</label>
-                                        <input id='fName' class="form-control" type="text" onchange="hashCodeToCookie('accessCode', this.value)" required>
+                                        <label class="label" for="accessCode">Code*</label>
+                                        <input id='accessCode' class="form-control" type="text" required>
                                     </div>
                             </div>
                             <div class="row mt-60">
