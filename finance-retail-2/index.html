@@ -28,18 +28,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>
+<script type="text/javascript" src="./js/cookieFunction.js"></script>
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 } 
     
-function hashCodeToLocalStorage(key, value) {
-    if (typeof(Storage) !== "undefined") {
-        var hashObj = new jsSHA("SHA-512", "TEXT", {numRounds: 1});
-        hashObj.update(value);
-        var hash = hashObj.getHash("HEX");
-        window.localStorage.setItem(key, hash);
-    }
+function hashCodeToCookie(key, value) {
+    var hashObj = new jsSHA("SHA-512", "TEXT", {numRounds: 1});
+    hashObj.update(value);
+    var hash = hashObj.getHash("HEX");
+    setCookie(key, hash, {secure: true, 'max-age': 3600});
 }
 </script>
     
