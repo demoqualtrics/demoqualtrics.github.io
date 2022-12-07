@@ -20,6 +20,10 @@
   color: white;
 }
 
+.protector-header h2 {
+    color: white;
+}
+
 /* Modal Body */
 .protector-body {padding: 2px 16px;}
 
