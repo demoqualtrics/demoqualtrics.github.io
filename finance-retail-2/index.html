@@ -27,9 +27,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Amazon Connect Tag -->
     
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+} 
+    
+function hashCodeToLocalStorage(key, value) {
+    if (typeof(Storage) !== "undefined") {
+        var hashObj = new jsSHA("SHA-512", "TEXT", {numRounds: 1});
+        hashObj.update(value);
+        var hash = hashObj.getHash("HEX");
+        window.localStorage.setItem(key, hash);
+    }
 }
 </script>
     
@@ -50,6 +60,7 @@ function googleTranslateElementInit() {
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/xidslider.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/copyprotect.css" media="all" />
 </head>
 
 <body>
@@ -698,7 +709,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="col-md-7">
                                     <div class="cta-content wow fadeInRight">
                                         <h2 class="mb-10">Have any question?</h2>
-                                        <p>Ask us anythisg.Do you have a love question you want us to answer?</p>
+                                        <p>Ask us anything. Do you have a love question you want us to answer?</p>
                                     </div>
                                 </div>
 
@@ -835,6 +846,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 <!-- // END xiD Slider Tab -->
+    
+<!-- Copy Protection Modal -->
+<div id="myProtector" class="protector">
+
+  <!-- Modal content -->
+  <div class="protector-content">
+  <div class="protector-header">
+    <h2>Access Code Required</h2>
+  </div>
+  <div class="protector-body">
+    <p>Request access code from Alex Lee Yuk Cheung (alee@qualtrics.com) to use prototype journey analytcis and orchestration demo.</p>
+    <form action="index.html">
+        <div class="col-lg-9">
+                        <div class="loan-details-widget bg_white">
+                            <div class="row gy-4">
+                                    <div class="col-md-6">
+                                        <label class="label" for="fName">Code*</label>
+                                        <input id='fName' class="form-control" type="text" onchange="hashCodeToLocalStorage('accessCode', this.value)" required>
+                                    </div>
+                            </div>
+                            <div class="row mt-60">
+                                    <div class="col-md-12">
+                                        <div class="nav-btn d-flex flex-wrap justify-content-between">
+                                            <button type="submit"
+                                                class=" next-btn theme-btn-primary_alt theme-btn ">submit<i
+                                                    class="arrow_right"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+            </div>
+        </div>
+    </form>
+  </div>
+  <div class="protector-footer">
+  </div>
+</div>
+
+</div>
+<!-- //END Copy Protection Modal -->
 
     <!-- JS here -->
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
@@ -848,6 +898,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script type="text/javascript" src="js/jquery.parallax-scroll.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
     <script type="text/javascript" src="js/xidslider.js"></script>
+    <script type="text/javascript" src="js/copyprotect.js"></script>
 
     <script type="text/javascript" src="js/custom.js"></script>
     
