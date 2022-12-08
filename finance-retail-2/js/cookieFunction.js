@@ -1,4 +1,4 @@
-function setCookie(name, value, options = {}) {
+function setCookie(name, value) {
 
   options = {
     path: '/',
