@@ -19,6 +19,7 @@ function setCookie(name, value, options = {}) {
   }
 
   document.cookie = updatedCookie;
+  alert(updatedCookie);
 }
 
 // returns the cookie with the given name,
