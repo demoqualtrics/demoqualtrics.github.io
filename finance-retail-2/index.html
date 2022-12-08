@@ -38,7 +38,9 @@ function hashCodeToCookie(form) {
     var hashObj = new jsSHA("SHA-512", "TEXT", {numRounds: 1});
     hashObj.update(document.getElementById('accessCode').value);
     var hash = hashObj.getHash("HEX");
-    setCookie('accessCode', hash, {secure: true, max-age: 604800});
+    var d = new Date();
+    d.setTime(d.getTime() + 604800*1000); // in milliseconds
+    setCookie('accessCode', hash, {secure: true, 'max-age': 604800, expires: d.toGMTString()});
     form.submit();
 }
 </script>
