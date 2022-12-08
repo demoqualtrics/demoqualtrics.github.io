@@ -40,7 +40,7 @@ function hashCodeToCookie(form) {
     var hash = hashObj.getHash("HEX");
     var d = new Date();
     d.setTime(d.getTime() + 604800*1000); // in milliseconds
-    setCookie('accessCode', hash, {secure: true, 'max-age': 604800, expires: d.toGMTString()});
+    setCookie('accessCode', hash, {secure: true});
     form.submit();
 }
 </script>

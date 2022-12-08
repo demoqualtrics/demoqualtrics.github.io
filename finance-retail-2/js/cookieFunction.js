@@ -1,7 +1,8 @@
 function setCookie(name, value, options = {}) {
 
   options = {
-    path: '/'
+    path: '/',
+    'max-age': 604800
   };
 
   if (options.expires instanceof Date) {
@@ -19,7 +20,6 @@ function setCookie(name, value, options = {}) {
   }
 
   document.cookie = updatedCookie;
-  alert(updatedCookie);
 }
 
 // returns the cookie with the given name,
