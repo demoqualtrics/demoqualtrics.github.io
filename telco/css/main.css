@@ -15957,10 +15957,10 @@ body.active-side-header.slide-right .page_header_side {
 
 	.page_slider .intro_layers_wrapper {
 		bottom: 0;
-		height: 130%;
-		left: 0px;
+		height: 100%;
+		left: 23px;
 		position: absolute;
-		right: 100px;
+		right: 15px;
 		top: 0;
 		-webkit-transform: translateY(1.5%);
 		-ms-transform: translateY(1.5%);
