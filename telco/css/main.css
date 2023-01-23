@@ -10162,8 +10162,11 @@ body.boxed {
 .icon-box.muted-bg,
 .icon-box.box-shadow {
 	padding: 57px 60px 50px;
-}
+ :hover {
+    background-color: #5b83cd;}
 
+}
+    
 @media (max-width: 767px) {
 	.icon-box.ls,
 	.icon-box.ds,
