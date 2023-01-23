@@ -10600,12 +10600,12 @@ h5.special-heading {
 }
 
 .pricing-plan .plan-features {
-	margin: 38px 0 0;
+	margin: 20px 0 0;
 }
 
 .pricing-plan .plan-button {
 	position: relative;
-	top: 38px;
+	top: 18px;
 }
 
 .pricing-plan.plan-featured {
@@ -10616,7 +10616,7 @@ h5.special-heading {
 }
 
 .pricing-plan.plan-featured .plan-button {
-	top: 48px;
+	top: 28px;
 }
 
 .pricing-plan.rounded .plan-name {
@@ -10630,7 +10630,7 @@ h5.special-heading {
 	display: flex;
 	-webkit-justify-content: space-between;
 	justify-content: space-between;
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 @media (max-width: 767px) {
@@ -16067,11 +16067,20 @@ body.active-side-header.slide-right .page_header_side {
 .intro_featured_word_2 {
 	-webkit-clip-path: polygon(10% 0, 100% 0, 100% 53%, 75% 100%, 0 100%, 0 21%);
 	clip-path: polygon(10% 0, 100% 0, 100% 53%, 75% 100%, 0 100%, 0 21%);
-	font-size: 70px;
+	font-size: 120px;
 	font-weight: 750;
 	letter-spacing: -6px;
 	line-height: 0.73;
 	text-transform: uppercase;
+}
+
+.intro_featured_word_3 {
+    text-align: center;
+    font-size: 1200px;
+	font-weight: 750;
+	letter-spacing: -6px;
+	line-height: 0.73;
+	text-transform: uppercase; 
 }
 
 @media (max-width: 767px) {
@@ -19102,12 +19111,12 @@ a.read-more.service-btn:hover {
 }
 
 .blog-carousel .post .entry-meta span {
-	color: #808080;
+	color: #FFFFFF;
 	margin-right: 7px;
 }
 
 .blog-carousel .post .entry-meta span a {
-	color: #808080;
+	color: #FFFFFF;
 }
 
 .blog-carousel .post .entry-meta span a:hover {
