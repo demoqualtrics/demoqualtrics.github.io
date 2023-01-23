@@ -761,7 +761,7 @@
 							<div class="divider-60"></div>
 
 							<div class="col-md-12 text-center">
-								<h1>Confirm Your Details</h1>
+								<h1>Order Details</h1>
 							</div>
 
 							<div class="divider-50"></div>
@@ -769,103 +769,117 @@
 						</div>
 
 					</div>
-					<ol class="breadcrumb full-width">
-						<li class="breadcrumb-item">
-							<a href="./">Home</a>
-						</li>
-						<li class="breadcrumb-item">
-							<a href="#">Shop</a>
-						</li>
-						<li class="breadcrumb-item active">
-							Shopping Cart
-						</li>
-					</ol>
 				</section>
 			</div>
-
-
-			<section class="ls s-pt-80 s-pb-50 s-pt-lg-120 s-pb-lg-100 s-pt-xl-160 s-pb-xl-130">
+            
+			<section class="ls s-pt-80 s-pb-50 s-pt-lg-120 s-pb-lg-100 s-pt-xl-20 s-pb-xl-10">
 				<div class="container">
 					<div class="row">
-						<main class="col-lg-12">
-							<div class="woocommerce-info">Returning customer? <a href="#" class="showlogin">Click here to login</a>
+								</div>
+                <ol class="breadcrumb full-width">
+                             <div style="padding-left:250px"></div>
+                
+						<li class="breadcrumb-item">
+							<button type="button" class="btn btn-outline-maincolor3 small-button"><span>Extras</span></button>
+						</li>
+						<li class="breadcrumb-item">
+							<button type="button" class="btn btn-maincolor3 small-button"><span>Order Details</span></button>
+						</li>
+						<li class="breadcrumb-item active">
+							<button type="button" class="btn btn-outline-maincolor3 small-button"><span>Eligibility Check</span></button>
+						</li>
+                                            <br><br><br>
+					</ol>
+                    
+                    <section>
+                        <hr>
+                    
+                    								<div class="col3-set" id="customer_details">
+									
+										<div class="woocommerce-billing-fields">
+                                        </div>
+                                        <div class="col-lg-12">
+									<h4>Your Contract</h4>
+                                            <div class="alert alert-warning" role="alert">
+                                                <div class="fa-hover col-xl-3 col-lg-4 col-sm-6">
+
+									<i class="color-darkgrey fa fa-bell-o" aria-hidden="true"></i>
+									<span class="sr-only">Example of </span>What your will need:
+								</div>
+							
 							</div>
 
-							<form class="woocomerce-form woocommerce-form-login login" method="post" style="">
+									<!-- tabs start -->
+									<ul class="nav nav-tabs" role="tablist">
+										<li class="nav-item">
+											<a class="nav-link active show" id="tab01" data-toggle="tab" href="#tab01_pane" role="tab" aria-controls="tab01_pane" aria-expanded="true" aria-selected="true">The Basics</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="tab02" data-toggle="tab" href="#tab02_pane" role="tab" aria-controls="tab02_pane" aria-selected="false">Direct Debit</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="tab03" data-toggle="tab" href="#tab03_pane" role="tab" aria-controls="tab03_pane" aria-selected="false"> Employment status</a>
+										</li>
+                                        	<li class="nav-item">
+											<a class="nav-link" id="tab04" data-toggle="tab" href="#tab04_pane" role="tab" aria-controls="tab04_pane" aria-selected="false">Credit Details</a>
+										</li>
 
-
-								<p>If you have shopped with us before, please enter your details in the boxes below. If you are a new customer,
-									please proceed to the Billing &amp; Shipping section.</p>
-
-								<p class="form-row form-row-first">
-									<label for="username">Username or email <span class="required">*</span>
-									</label>
-									<input type="text" class="input-text" name="username" id="username">
-								</p>
-								<p class="form-row form-row-last">
-									<label for="password">Password <span class="required">*</span>
-									</label>
-									<input class="input-text" type="password" name="password" id="password">
-								</p>
-								<div class="clear">
-
-								</div>
-
-
-								<p class="form-row">
-
-									<input type="submit" class="button" name="login" value="Login">
-									<label>
-										<input name="rememberme" type="checkbox" id="rememberme" value="forever">
-										<span>Remember me</span>
-									</label>
-								</p>
-								<p class="lost_password">
-									<a href="shop-account-password-reset.html">Lost your password?</a>
-								</p>
-
-								<div class="clear">
-
-								</div>
-
-
-							</form>
-
-							<div class="woocommerce-info">Have a coupon? <a href="#" class="showcoupon">Click here to enter your code</a>
-							</div>
-
-							<form class="checkout_coupon" method="post" style="display: none;">
-
-								<p class="form-row form-row-first">
-									<input type="text" name="coupon_code" class="input-text" placeholder="Coupon code" id="coupon_code" value="">
-								</p>
-
-								<p class="form-row form-row-last">
-									<input type="submit" class="button" name="apply_coupon" value="Apply coupon">
-								</p>
-
-								<div class="clear">
-
-								</div>
-							</form>
-
-							<form name="checkout" method="post" class="checkout woocommerce-checkout" action="/" enctype="multipart/form-data" novalidate="novalidate">
-
-
-								<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout">
-									<ul class="woocommerce-error">
-										<li><strong>Billing First name</strong> is a required field.</li>
-										<li><strong>Billing Last name</strong> is a required field.</li>
-										<li>Please enter a valid postcode / ZIP.</li>
 									</ul>
-								</div>
+									<div class="tab-content">
 
+										<div class="tab-pane fade in active show" id="tab01_pane" role="tabpanel" aria-labelledby="tab01">
+
+											<h5>The Basics</h5>
+											<p>
+												Your name, payment card billing / delivery address, your email (to send your order confirmation) and mobile number (to keep you updated with delivery).
+											</p>
+
+										</div>
+
+										<div class="tab-pane fade" id="tab02_pane" role="tabpanel" aria-labelledby="tab02">
+
+											<h5>Direct Debit</h5>
+											<p>
+												You'll need to confirm the Direct Debit details you’d like your monthly payments to be taken from. This info should be on the front of your debit / bank card or bank statement
+											</p>
+
+										</div>
+
+										<div class="tab-pane fade" id="tab03_pane" role="tabpanel" aria-labelledby="tab03">
+
+											<h5> Employment Status</h5>
+											<p>
+												We need this to perform a credit check and provide you the services you have requested. Naturally, we’ll treat this information in the strictest confidence.
+											</p>
+
+										</div>
+                                        
+                                        	<div class="tab-pane fade" id="tab04_pane" role="tabpanel" aria-labelledby="tab04">
+
+											<h5> Credit Details</h5>
+											<p>
+												This is needed to pay any upfront costs for the devices you've selected, and for us to confirm the billing name and address you've provided
+											</p>
+
+										</div>
+
+									</div>
+									<!-- tabs end-->
+								</div>
+                                        
+                    </section>
+                                                      
+                                                        
+
+                    
+                    
 
 								<div class="col2-set" id="customer_details">
+                                    <br>
 									<div class="col-1">
 										<div class="woocommerce-billing-fields">
 
-											<h3>Billing details</h3>
+											<h4>Billing details</h4>
 
 
 											<div class="woocommerce-billing-fields__field-wrapper">
@@ -1124,8 +1138,8 @@
 														<option value="UG">Uganda</option>
 														<option value="UA">Ukraine</option>
 														<option value="AE">United Arab Emirates</option>
-														<option value="GB">United Kingdom (UK)</option>
-														<option value="US" selected="selected">United States (US)</option>
+														<option value="US">United States (US)</option>
+                                                        <option value="GB" selected="selected">United Kingdom (UK)</option>
 														<option value="UM">United States (US) Minor Outlying Islands</option>
 														<option value="VI">United States (US) Virgin Islands</option>
 														<option value="UY">Uruguay</option>
@@ -1184,43 +1198,46 @@
 								</div>
 
 
-								<h3 id="order_review_heading">Your order</h3>
+								<h4 id="order_review_heading">Your order</h4>
 
 
 								<div id="order_review" class="woocommerce-checkout-review-order">
 									<table class="shop_table woocommerce-checkout-review-order-table">
 										<thead>
 											<tr>
-												<th class="product-name">Product</th>
-												<th class="product-total">Total</th>
+												<th class="product-name">SKU</th>
+                                                <th class="product-total">Now</th>
+									
 											</tr>
 										</thead>
 										<tbody>
 											<tr class="cart_item">
 												<td class="product-name">
-													Premium Quality&nbsp; <strong class="product-quantity">× 1</strong>
+													<strong>Samsung Galaxy+ 5G</strong>
 												</td>
 												<td class="product-total">
 													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>12.00</span>
+														<span class="woocommerce-Price-currencySymbol">£</span>90.00</span>
 												</td>
 											</tr>
 											<tr class="cart_item">
 												<td class="product-name">
-													Woo Ninja&nbsp; <strong class="product-quantity">× 1</strong>
+                                                    <strong>All Rounder 125GB 5G</strong>
+                                            <br>Unlimited minutes<br>Unlimited text messages<br>125GB data<br>24 months plan; 
 												</td>
 												<td class="product-total">
 													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>15.00</span>
+														<span class="woocommerce-Price-currencySymbol">£</span>35.00</span>
 												</td>
 											</tr>
-											<tr class="cart_item">
+					                       <tr class="cart_item">
 												<td class="product-name">
-													Woo Album #3&nbsp; <strong class="product-quantity">× 2</strong>
+                                                    <strong>Delivery</strong>
+                                                <br>Home delivery
 												</td>
 												<td class="product-total">
 													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>18.00</span>
+														<span class="woocommerce-Price-currencySymbol"></span>Free</span>
 												</td>
 											</tr>
 										</tbody>
@@ -1230,7 +1247,7 @@
 												<th>Subtotal</th>
 												<td>
 													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>45.00</span>
+														<span class="woocommerce-Price-currencySymbol">£</span>45.00</span>
 												</td>
 											</tr>
 
@@ -1241,7 +1258,7 @@
 													<strong>
                         <span class="woocommerce-Price-amount amount">
                             <span
-                                    class="woocommerce-Price-currencySymbol">$</span>45.00</span>
+                                    class="woocommerce-Price-currencySymbol">£</span>125.00</span>
                     </strong>
 												</td>
 											</tr>
@@ -1250,28 +1267,7 @@
 										</tfoot>
 									</table>
 
-									<div id="payment" class="woocommerce-checkout-payment">
-										<ul class="wc_payment_methods payment_methods methods">
-											<li class="wc_payment_method payment_method_cheque">
-												<input id="payment_method_cheque" type="radio" class="input-radio" name="payment_method" value="cheque" checked="checked" data-order_button_text="">
 
-												<label for="payment_method_cheque">
-													Check payments </label>
-												<div class="payment_box payment_method_cheque" style="display: none;">
-													<p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store
-														Postcode.</p>
-												</div>
-											</li>
-											<li class="wc_payment_method payment_method_cod">
-												<input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="cod" data-order_button_text="">
-
-												<label for="payment_method_cod">
-													Cash on delivery </label>
-												<div class="payment_box payment_method_cod" style="display: block;">
-													<p>Pay with cash upon delivery.</p>
-												</div>
-											</li>
-										</ul>
 										<div class="form-row place-order">
 											<noscript>
 												Since your browser does not support JavaScript, or it is disabled, please ensure you click the
@@ -1279,23 +1275,104 @@
 												than the amount stated above if you fail to do so. &lt;br/&gt;&lt;input type="submit"
 												class="button alt" name="woocommerce_checkout_update_totals" value="Update totals" /&gt;
 											</noscript>
-
-											<button type="submit" class="btn btn-outline-maincolor small-button" name="woocommerce_checkout_place_order"><span>Place order</span></button>
+<a href="9-CreditCheck.html">
+											<button type="submit" class="btn btn-outline-maincolor small-button" 
+                                                    name="woocommerce_checkout_place_order"><span>Place order</span></button>
+    
 
 										</div>
 									</div>
-
-								</div>
-
-
-							</form>
-
-
-						</main>
-					</div>
-				</div>
 				<div class="divider-10 d-none d-xl-block"></div>
+                        <hr>
 			</section>
+                    
+                    <section>
+                    <div class="col-lg-12">
+                        <div class="container">
+                            <h4>Other Information</h4>
+                    <div id="accordion01" role="tablist">
+								<div class="card">
+									<div class="card-header" role="tab" id="collapse01_header">
+										<h5>
+											<a data-toggle="collapse" href="#collapse01" aria-expanded="true" aria-controls="collapse01">
+												Moving to Dolphin Telco
+											</a>
+										</h5>
+									</div>
+
+									<div id="collapse01" class="collapse show" role="tabpanel" aria-labelledby="collapse01_header" data-parent="#accordion01">
+										<div class="card-body">
+											A PAC allows you to keep your number when you change network providers.
+
+                                            If you don’t have one from your old network provider, you’ll need to text PAC to 12345. But if you prefer not to keep your old number, you’ll need to text STAC to 98765 and we’ll cancel your account with your old network provider and give you a new number.
+										</div>
+                                        <p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
+													<label for="account_first_name">First name <span class="required">*</span>
+													</label>
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" value="" placeholder="Enter Your 9 Digit PAC or STAC">
+												<div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></p>
+                                        <div><button type="button" class="btn btn-outline-maincolor3 small-button"><span>Check PAC/STAC</span></button>
+                                        <div style="padding-bottom: 50px"></div>
+                                            </div>
+									</div>
+                        
+                    
+								</div>
+								<div class="card">
+									<div class="card-header" role="tab" id="collapse02_header">
+										<h5>
+											<a class="collapsed" data-toggle="collapse" href="#collapse02" aria-expanded="false" aria-controls="collapse02">
+												Credit Check Information
+											</a>
+										</h5>
+									</div>
+									<div id="collapse02" class="collapse" role="tabpanel" aria-labelledby="collapse02_header" data-parent="#accordion01">
+										<div class="card-body">
+											The questions we ask here are important for us to perform a short credit check which will enable us to provide you with the services and devices you have chosen.
+<br>
+                                                Answering these questions as accurately as possible will help us process your order more smoothly and help prevent delays in getting your order to you.
+										</div>
+                                        <fieldset>
+													<legend>Credit Check</legend>
+
+													<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+														<label for="account_first_name">Date moved to current address <span class="required">*</span>
+													</label>
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" value="" placeholder="Date moved to current address">
+													<div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></p>
+													<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+														<label for="account_first_name">Employment status <span class="required">*</span>
+													</label>
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" value="" placeholder="Employment Status: Please choose an option">
+													<div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></p>
+													<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+														<label for="account_first_name">Date started current employment <span class="required">*</span>
+													</label>
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" value="" placeholder="Date started current employment">
+													<div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></p>
+												</fieldset>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header" role="tab" id="collapse03_header">
+										<h5>
+											<a class="collapsed" data-toggle="collapse" href="#collapse03" aria-expanded="false" aria-controls="collapse03">
+												Check your coverage
+											</a>
+										</h5>
+									</div>
+									<div id="collapse03" class="collapse" role="tabpanel" aria-labelledby="collapse03_header" data-parent="#accordion01">
+										<div class="card-body">
+											You’ll need to be in an area with 5G coverage to get 5G speeds. You can check if there’s 5G in the places you visit with our coverage checker
+										</div>
+                                        		<button type="submit" class="btn btn-outline-maincolor small-button" name="woocommerce_checkout_place_order"><span>Check Coverage</span></button>
+                                        			
+									</div>
+								</div>
+							</div>
+                            <Hr>
+                                <br>
+                            </section>
 
 
 			<section class="footer-carousel c-gutter-0 container-px-0 s-py-0">
