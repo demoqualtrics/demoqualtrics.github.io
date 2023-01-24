@@ -1276,9 +1276,7 @@
 												class="button alt" name="woocommerce_checkout_update_totals" value="Update totals" /&gt;
 											</noscript>
                                             <div>
-                                              <a href="https://demoqualtrics.github.io/telco/9-CreditCheck.html">
-											<button type="button" class="btn btn-outline-maincolor2"><span>Place Order</span></button>
-                                                </a>
+											<button type="button" class="btn btn-outline-maincolor2"><span>Add to Cart</span></button>
                                                 </div>
                                                 </div>
 									
@@ -1292,7 +1290,7 @@
                             <h4>Complete the Process</h4>
                     <div id="accordion01" role="tablist">
 								<div class="card">
-									<div class="card-header" role="tab" id="collapse01_header">
+									<div class="card-header" role="tab" id="collapse02_header">
 										<h5>
 											<a data-toggle="collapse" href="#collapse01" aria-expanded="true" aria-controls="collapse01">
 												Step 2: Moving to Dolphin Telco
@@ -1300,7 +1298,7 @@
 										</h5>
 									</div>
 
-									<div id="collapse01" class="collapse show" role="tabpanel" aria-labelledby="collapse01_header" data-parent="#accordion01">
+                                    <div id="collapse01" class="collapse" role="tabpanel" aria-labelledby="collapse01_header" data-parent="#accordion01">
 										<div class="card-body">
 											A PAC allows you to keep your number when you change network providers.
 
@@ -1326,37 +1324,82 @@
 											</a>
 										</h5>
 									</div>
-									<div id="collapse02" class="collapse" role="tabpanel" aria-labelledby="collapse02_header" data-parent="#accordion01">
+									
+                                    
+                                    <div id="collapse02" class="collapse" role="tabpanel" aria-labelledby="collapse02_header" data-parent="#accordion01">
 										<div class="card-body">
 											The questions we ask here are important for us to perform a short credit check which will enable us to provide you with the services and devices you have chosen.
-<br>
+                                            <br>
                                                 Answering these questions as accurately as possible will help us process your order more smoothly and help prevent delays in getting your order to you.
 										</div>
                                         <fieldset>
 													<legend>Credit Check</legend>
+                                                    <div>
+                                                        <h7>When did you move to your current address?</h7>
+                                                        <form action="/action_page.php">
+                                                      
+                                                          <input type="date" id="birthday" name="birthday">
+                                                            <br>
+                                                            </form>
+                                                        </div>
+                                                            <br>
+                                            
+                                            <div>
+                                                <h7>When did you join your current bank?</h7>
+                                                        <form action="/action_page.php">
+                                                      
+                                                          <input type="date" id="birthday" name="birthday">
+                                                            <br>
+                                                            </form>
+                                                        </div>
+                                                            <br>
+                                            
+                                                <tr>
+                                            
+											    <div>
+                                                <h7>When did you start your current employment?</h7>
+                                                        <form action="/action_page.php">
+                                                      
+                                                          <input type="date" id="birthday" name="birthday">
+                                                            <br>
+                                                            </form>
+                                                        </div>
+                                                            <br>
+                                            
+                                                <tr>
+                                                <h7>What is your current employment status?</h7>
+													<td class="value">
+														<select id="pa_size" class="wc-default-select" name="attribute_pa_size" data-attribute_name="attribute_pa_size" style="color: black" >
+															<option value="">Select Employment Status</option>
+															<option value="x-small" class="attached enabled">Office-based</option>
+															<option value="small" class="attached enabled">Non Office-based</option>
+															<option value="medium" class="attached enabled">Retired</option>
+															<option value="large" class="attached enabled">Student</option>
+															<option value="x-large" class="attached enabled">Other</option>
+														</select>
+                                                        <br>
+													</td>
+                                                    <br>
+												</tr>
+                                            
 
-													<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-														<label for="account_first_name">Date moved to current address <span class="required">*</span>
-													</label>
-													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" value="" placeholder="Date moved to current address">
-													<div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></p>
-													<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-														<label for="account_first_name">Employment status <span class="required">*</span>
-													</label>
-													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" value="" placeholder="Employment Status: Please choose an option">
-													<div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></p>
-													<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-														<label for="account_first_name">Date started current employment <span class="required">*</span>
-													</label>
-													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" value="" placeholder="Date started current employment">
-													<div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></p>
+                                                    
+										
+
+                                               <a href="https://demoqualtrics.github.io/telco/9-CreditCheck.html">
+                                                <button type="submit" class="btn btn-outline-maincolor small-button" name="woocommerce_checkout_place_order"><span>Submit</span></button>
+                                            </a>
+                                                       
 												</fieldset>
+                                        <div> 
 									</div>
 								</div>
+                                    <br>
 								<div class="card">
 									<div class="card-header" role="tab" id="collapse03_header">
 										<h5>
 											<a class="collapsed" data-toggle="collapse" href="#collapse03" aria-expanded="false" aria-controls="collapse03">
+                                                
 												Step 4: Check your coverage
 											</a>
 										</h5>
