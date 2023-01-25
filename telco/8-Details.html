@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P6TPCWL');</script>
+<!-- End Google Tag Manager -->
+    
+    <title>Dolphin Telco</title>
+    <meta name="robots" content="noindex">
+	<meta charset="utf-8">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+    <link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    
+
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.min.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6TPCWL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Genesys Chat Widget Tag -->
+    <script src="https://apps.mypurecloud.com/widgets/9.0/cxbus.min.js" onload="javascript:CXBus.configure({debug:false,pluginsPath:'https://apps.mypurecloud.com/widgets/9.0/plugins/'}); CXBus.loadPlugin('widgets-core');"></script>
+
+<script>
+  window._genesys = {
+    "widgets": {
+        "main": {
+            "debug": true,
+            "timeFormat": 24,
+            "theme": "dark",
+            "lang": "en",
+            "mobileMode": "auto",
+            "mobileModeBreakpoint": 600,
+            "preload": [
+                "webchat"
+            ]
+        },
+        "webchat": {
+            "transport": {
+            "type": "purecloud-v2-sockets",
+            "dataURL": "https://api.mypurecloud.com",
+            "deploymentKey": "c8ea4906-729e-40e6-81c2-7b147f258dd5",
+            "orgGuid": "1d9123ca-5eee-449c-8b4f-937148c4d011",
+            "interactionData": {
+                "routing": {
+                    "targetType": "QUEUE",
+                    "targetAddress": "QualtricsSurveyQueue",
+                    "priority": 2
+                }
+            }
+            },
+            userData: {},
+            confirmFormCloseEnabled: true,
+            emojis: true,
+            autoInvite: {
+                enabled: true,
+                timeToInviteSeconds: 5,
+                inviteTimeoutSeconds: 30
+            },
+            chatButton: {
+                enabled: true,
+                openDelay: 100,
+                effectDuration: 100,
+                hideDuringInvite: true,
+                template: "<div class='cx-widget cx-webchat-chat-button cx-side-button' role='button' tabindex='0' data-message='ChatButton' data-gcb-service-node='true'><span class='cx-icon' data-icon='chat'></span><span class='i18n cx-chat-button-label' data-message='ChatButton'></span></div>"
+            }
+        }
+    }
+  };
+
+</script>
+    <!-- End Genesys Chat Widget Tag -->    
+    
+    <!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+	<div class="preloader">
+		<div class="preloader_image"></div>
+	</div>
+
+	<!-- search modal -->
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<div class="widget widget_search">
+			<a href="./" class="logo">
+				<span class="logo-text py-20"><strong>Dolphin Telco</strong>com</span>
+			</a>
+			<form method="get" class="searchform search-form" action="/">
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+				</div>
+				<button type="submit" class="btn">Search</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Unyson messages modal -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+		<div class="fw-messages-wrap ls p-normal">
+			<!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+			<!--
+		<ul class="list-unstyled">
+			<li>Message To User</li>
+		</ul>
+		-->
+
+		</div>
+	</div><!-- eof .modal -->
+
+	<!-- wrappers for visual page editor and boxed version of template -->
+	<div id="canvas">
+		<div id="box_wrapper">
+
+			<!-- template sections -->
+
+			<!--topline section visible only on small screens|-->
+
+				<section class="page_topline ls s-borderbottom c-my-20">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-md-6 text-md-left text-center animate" data-animation="fadeInDown" data-delay="150">
+							<ul class="top-includes">
+								<li>
+									<span class="icon-inline">
+										<span class="icon-styled color-main fs-14">
+											<i class="fa fa-phone"></i>
+										</span>
+										<span class="small-text">
+											<a href="tel:+1 206-111-1112">+1 206-111-1112	</a>
+										</span>
+									</span>
+								</li>
+								<li>
+									<span class="icon-inline">
+										<span class="icon-styled color-main fs-14">
+											<i class="fa fa-pencil"></i>
+										</span>
+										<span class="small-text">
+											<a href="#">info@dolpintelco.com</a>
+										</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-6 text-center text-md-right d-none d-md-block">
+							<ul class="top-includes">
+								<li>
+									<span class="icon-inline">
+										<span class="icon-styled color-main2 fs-14">
+											<i class="fa fa-comment"></i>
+										</span>
+										<span class="small-text">
+											<a class="hover-main2" href="./help.html">Help</a>
+										</span>
+									</span>
+								</li>
+                                <li>
+									<span class="icon-inline">
+										<span class="icon-styled color-main2 fs-14">
+											<i class="fa fa-phone"></i>
+										</span>
+										<span class="small-text">
+											<a class="hover-main2" href="./contactus.html">Contact Us</a>
+										</span>
+									</span>
+								</li>
+								<li>
+									<span class="icon-inline">
+										<span class="icon-styled color-main2 fs-14">
+											<i class="fa fa-user"></i>
+										</span>
+										<span class="small-text">
+											<a class="hover-main2" href="./signin.html">My Dolphin</a>
+										</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+      
+    
+                    
+				</div>
+                    
+
+			</section>
+
+
+			<!--eof topline-->
+
+			<div class="header_absolute header_layout_1">
+                <div id="particles-js"></div>
+				<!-- header with two Bootstrap columns - left for logo and right for navigation and includes (search, social icons, additional links and buttons etc -->
+				<header class="page_header ls justify-nav-end">
+					<div class="container-fluid">
+						<div class="row align-items-center animate" data-animation="fadeInLeft" data-delay="200">
+							<div class="col-xl-2 col-lg-4 col-md-5 col-11">
+								<a href="./index.html" class="logo">
+                                    <img src="img/DolphinTelcoLogoWhite.png" />
+				 					<!--span class="logo-text py-20"><strong>Dolphin Telco</strong>com</span-->
+								</a>
+							</div>
+							<div class="col-xl-9 col-lg-8 col-md-7 col-1 animate" data-animation="fadeInRight" data-delay="200">
+								<div class="nav-wrap">
+
+									<!-- main nav start -->
+									<nav class="top-nav">
+										<ul class="nav sf-menu">
+
+
+											<li class="active">
+												<a href="index.html">Home</a>
+												
+											</li>
+
+											<li>
+												<a href="#">TV</a>
+												<ul>
+													<li>
+														<a href="#">Movies</a>
+													</li>
+                                                    <li>
+														<a href="#">Sports</a>
+													</li>
+                                                    <li>
+														<a href="#">Kids</a>
+													</li>
+                                                    <li>
+														<a href="#">Entertainment</a>
+													</li>
+                                                </ul>
+                                            </li>
+													
+
+											<li>
+												<a href="#">Broadband</a>
+                                                <ul>
+													<li>
+														<a href="#">Fibre</a>
+													</li>
+                                                    <li>
+														<a href="./broadband_ultrafast.html">Ultrafast Fibre</a>
+													</li>
+                                                    <li>
+														<a href="#">Landline</a>
+													</li>
+                                                    <li>
+														<a href="#">Mobile Broadband</a>
+													</li>
+                                                </ul>
+											</li>
+
+											<li>
+												<a href="#">Mobile</a>
+                                                <ul>
+													<li>
+														<a href="#">Phones</a>
+													</li>
+                                                    <li>
+														<a href="#">Tablets</a>
+													</li>
+                                                    <li>
+														<a href="#">SIM Only</a>
+													</li>
+                                                    <li>
+														<a href="#">Accessories</a>
+													</li>
+                                                </ul>
+											</li>
+
+											<li>
+												<a href="#">Deals</a>
+											</li>
+
+											
+
+										</ul>
+
+
+									</nav>
+									<!-- eof main nav -->
+
+									<!--hidding includes on small devices. They are duplicated in topline-->
+									<ul class="top-includes d-none d-xl-block search-icon">
+
+										<li>
+											<!--modal search-->
+											<span>
+												<a href="#" class="search_modal_button">
+													<i class="fa fa-search"></i>
+												</a>
+											</span>
+
+										</li>
+
+									</ul>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- header toggler -->
+					<span class="toggle_menu"><span></span></span>
+				</header>
+
+				<div class="page_header_wrapper main-header-side">
+					<div class="page_header_side header_slide header_side_right ls">
+						<span class="toggle_menu toggle_menu_side header-slide"><span></span></span>
+						<div class="scrollbar-macosx">
+							<div class="side_header_inner">
+								<div class="header-side-menu">
+									<!-- main side nav start -->
+									<nav class="mainmenu_side_wrapper">
+										<ul class="nav menu-click">
+											<li>
+												<a href="faq.html">
+													<i class="color-main7 fa fa-question-circle"></i>
+													FAQ
+												</a>
+											</li>
+											<li>
+												<a href="booking-form.html">
+													<i class="color-main7 fa fa-paper-plane"></i>
+													Submit a ticket
+												</a>
+											</li>
+											<li>
+												<a href="terms_of_use.html">
+													<i class="color-main7 fa fa-rocket"></i>
+													Terms Of Use
+												</a>
+											</li>
+											<li>
+												<a href="availability-map.html">
+													<i class="color-main7 fa fa-file-text-o"></i>
+													Terms of Service
+												</a>
+											</li>
+											<li>
+												<a href="contact.html">
+													<i class="color-main7 fa fa-phone"></i>
+													call me back
+												</a>
+											</li>
+										</ul>
+									</nav>
+									<!-- eof main side nav -->
+
+
+								</div>
+							</div>
+						</div>
+						<div class="facebook-messeger d-flex align-items-center hero-bg">
+							<img src="images/messeger.png" alt="">
+							<a href="https://messenger.com" class="small-text">
+								facebook messeger
+							</a>
+						</div>
+					</div>
+
+				</div>
+
+				<section class="page_title cs s-pt-60 s-pb-10 s-pt-lg-130 s-pb-lg-60 page_title text-center">
+					<div class="container-fluid">
+						<div class="row">
+
+
+							<div class="col-md-12 text-center animate" data-animation="fadeInUp" data-delay="200">
+								<h1>Complete Your Order </h1>
+							</div>
+ 
+						</div> 
+                        
+					</div>
+
+				</section>
+			</div>
+            
+			<section class="ls s-pt-80 s-pb-50 s-pt-lg-120 s-pb-lg-100 s-pt-xl-20 s-pb-xl-10">
+				<div class="container">
+					<div class="row">
+								</div>
+                <ol class="breadcrumb full-width">
+                             <div style="padding-left:250px"></div>
+                
+						<li class="breadcrumb-item">
+							<button type="button" class="btn btn-outline-maincolor3 small-button"><span>Extras</span></button>
+						</li>
+						<li class="breadcrumb-item">
+							<button type="button" class="btn btn-maincolor3 small-button"><span>Order Details</span></button>
+						</li>
+						<li class="breadcrumb-item active">
+							<button type="button" class="btn btn-outline-maincolor3 small-button"><span>Eligibility Check</span></button>
+						</li>
+                                            <br><br><br>
+					</ol>
+                    
+                    <section>
+                        <hr>
+                    
+                    								<div class="col3-set" id="customer_details">
+									
+										<div class="woocommerce-billing-fields">
+                                        </div>
+                                        <div class="col-lg-12">
+									<h4>Your Contract</h4>
+                                            <div class="alert alert-warning" role="alert">
+                                                <div class="fa-hover col-xl-3 col-lg-4 col-sm-6">
+
+									<i class="color-darkgrey fa fa-bell-o" aria-hidden="true"></i>
+									<span class="sr-only">Example of </span>What your will need:
+								</div>
+							
+							</div>
+
+									<!-- tabs start -->
+									<ul class="nav nav-tabs" role="tablist">
+										<li class="nav-item">
+											<a class="nav-link active show" id="tab01" data-toggle="tab" href="#tab01_pane" role="tab" aria-controls="tab01_pane" aria-expanded="true" aria-selected="true">The Basics</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="tab02" data-toggle="tab" href="#tab02_pane" role="tab" aria-controls="tab02_pane" aria-selected="false">Direct Debit</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="tab03" data-toggle="tab" href="#tab03_pane" role="tab" aria-controls="tab03_pane" aria-selected="false"> Employment status</a>
+										</li>
+                                        	<li class="nav-item">
+											<a class="nav-link" id="tab04" data-toggle="tab" href="#tab04_pane" role="tab" aria-controls="tab04_pane" aria-selected="false">Credit Details</a>
+										</li>
+
+									</ul>
+									<div class="tab-content">
+
+										<div class="tab-pane fade in active show" id="tab01_pane" role="tabpanel" aria-labelledby="tab01">
+
+											<h5>The Basics</h5>
+											<p>
+												Your name, payment card billing / delivery address, your email (to send your order confirmation) and mobile number (to keep you updated with delivery).
+											</p>
+
+										</div>
+
+										<div class="tab-pane fade" id="tab02_pane" role="tabpanel" aria-labelledby="tab02">
+
+											<h5>Direct Debit</h5>
+											<p>
+												You'll need to confirm the Direct Debit details you’d like your monthly payments to be taken from. This info should be on the front of your debit / bank card or bank statement
+											</p>
+
+										</div>
+
+										<div class="tab-pane fade" id="tab03_pane" role="tabpanel" aria-labelledby="tab03">
+
+											<h5> Employment Status</h5>
+											<p>
+												We need this to perform a credit check and provide you the services you have requested. Naturally, we’ll treat this information in the strictest confidence.
+											</p>
+
+										</div>
+                                        
+                                        	<div class="tab-pane fade" id="tab04_pane" role="tabpanel" aria-labelledby="tab04">
+
+											<h5> Credit Details</h5>
+											<p>
+												This is needed to pay any upfront costs for the devices you've selected, and for us to confirm the billing name and address you've provided
+											</p>
+
+										</div>
+
+									</div>
+									<!-- tabs end-->
+								</div>
+                                        
+                    </section>
+                                                              
+
+								<div class="col2-set" id="customer_details">
+                                    <br>
+									<div class="col-1">
+										<div class="woocommerce-billing-fields">
+
+											<h4>Billing details</h4>
+
+
+											<div class="woocommerce-billing-fields__field-wrapper">
+												<p class="form-row form-row-first validate-required woocommerce-invalid woocommerce-invalid-required-field" id="billing_first_name_field" data-priority="10">
+													<label for="billing_first_name" class="">First
+														name <abbr class="required" title="required">*</abbr>
+													</label>
+													<input type="text" class="input-text form-control" name="billing_first_name" id="billing_first_name" placeholder="First name" value="" autocomplete="given-name" autofocus="autofocus">
+												</p>
+												<p class="form-row form-row-last validate-required" id="billing_last_name_field" data-priority="20">
+													<label for="billing_last_name" class="">Last name <abbr class="required" title="required">*</abbr>
+													</label>
+													<input type="text" class="input-text form-control" name="billing_last_name" id="billing_last_name" placeholder="Last name" value="" autocomplete="family-name">
+												</p>
+												<p class="form-row form-row-wide" id="billing_company_field" data-priority="30">
+													<label for="billing_company" class="">Company name</label>
+													<input type="text" class="input-text form-control" name="billing_company" id="billing_company" placeholder="Company name" value="" autocomplete="organization">
+												</p>
+												<p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" id="billing_country_field" data-priority="40">
+													<label for="billing_country" class="">Country
+														<abbr class="required" title="required">*</abbr>
+													</label>
+													<select name="billing_country" id="billing_country" class="country_to_state country_select  select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+														<option value="">Select a country…</option>
+														<option value="AX">Åland Islands</option>
+														<option value="AF">Afghanistan</option>
+														<option value="AL">Albania</option>
+														<option value="DZ">Algeria</option>
+														<option value="AS">American Samoa</option>
+														<option value="AD">Andorra</option>
+														<option value="AO">Angola</option>
+														<option value="AI">Anguilla</option>
+														<option value="AQ">Antarctica</option>
+														<option value="AG">Antigua and Barbuda</option>
+														<option value="AR">Argentina</option>
+														<option value="AM">Armenia</option>
+														<option value="AW">Aruba</option>
+														<option value="AU">Australia</option>
+														<option value="AT">Austria</option>
+														<option value="AZ">Azerbaijan</option>
+														<option value="BS">Bahamas</option>
+														<option value="BH">Bahrain</option>
+														<option value="BD">Bangladesh</option>
+														<option value="BB">Barbados</option>
+														<option value="BY">Belarus</option>
+														<option value="PW">Belau</option>
+														<option value="BE">Belgium</option>
+														<option value="BZ">Belize</option>
+														<option value="BJ">Benin</option>
+														<option value="BM">Bermuda</option>
+														<option value="BT">Bhutan</option>
+														<option value="BO">Bolivia</option>
+														<option value="BQ">Bonaire, Saint Eustatius and Saba</option>
+														<option value="BA">Bosnia and Herzegovina</option>
+														<option value="BW">Botswana</option>
+														<option value="BV">Bouvet Island</option>
+														<option value="BR">Brazil</option>
+														<option value="IO">British Indian Ocean Territory</option>
+														<option value="VG">British Virgin Islands</option>
+														<option value="BN">Brunei</option>
+														<option value="BG">Bulgaria</option>
+														<option value="BF">Burkina Faso</option>
+														<option value="BI">Burundi</option>
+														<option value="KH">Cambodia</option>
+														<option value="CM">Cameroon</option>
+														<option value="CA">Canada</option>
+														<option value="CV">Cape Verde</option>
+														<option value="KY">Cayman Islands</option>
+														<option value="CF">Central African Republic</option>
+														<option value="TD">Chad</option>
+														<option value="CL">Chile</option>
+														<option value="CN">China</option>
+														<option value="CX">Christmas Island</option>
+														<option value="CC">Cocos (Keeling) Islands</option>
+														<option value="CO">Colombia</option>
+														<option value="KM">Comoros</option>
+														<option value="CG">Congo (Brazzaville)</option>
+														<option value="CD">Congo (Kinshasa)</option>
+														<option value="CK">Cook Islands</option>
+														<option value="CR">Costa Rica</option>
+														<option value="HR">Croatia</option>
+														<option value="CU">Cuba</option>
+														<option value="CW">Curaçao</option>
+														<option value="CY">Cyprus</option>
+														<option value="CZ">Czech Republic</option>
+														<option value="DK">Denmark</option>
+														<option value="DJ">Djibouti</option>
+														<option value="DM">Dominica</option>
+														<option value="DO">Dominican Republic</option>
+														<option value="EC">Ecuador</option>
+														<option value="EG">Egypt</option>
+														<option value="SV">El Salvador</option>
+														<option value="GQ">Equatorial Guinea</option>
+														<option value="ER">Eritrea</option>
+														<option value="EE">Estonia</option>
+														<option value="ET">Ethiopia</option>
+														<option value="FK">Falkland Islands</option>
+														<option value="FO">Faroe Islands</option>
+														<option value="FJ">Fiji</option>
+														<option value="FI">Finland</option>
+														<option value="FR">France</option>
+														<option value="GF">French Guiana</option>
+														<option value="PF">French Polynesia</option>
+														<option value="TF">French Southern Territories</option>
+														<option value="GA">Gabon</option>
+														<option value="GM">Gambia</option>
+														<option value="GE">Georgia</option>
+														<option value="DE">Germany</option>
+														<option value="GH">Ghana</option>
+														<option value="GI">Gibraltar</option>
+														<option value="GR">Greece</option>
+														<option value="GL">Greenland</option>
+														<option value="GD">Grenada</option>
+														<option value="GP">Guadeloupe</option>
+														<option value="GU">Guam</option>
+														<option value="GT">Guatemala</option>
+														<option value="GG">Guernsey</option>
+														<option value="GN">Guinea</option>
+														<option value="GW">Guinea-Bissau</option>
+														<option value="GY">Guyana</option>
+														<option value="HT">Haiti</option>
+														<option value="HM">Heard Island and McDonald Islands</option>
+														<option value="HN">Honduras</option>
+														<option value="HK">Hong Kong</option>
+														<option value="HU">Hungary</option>
+														<option value="IS">Iceland</option>
+														<option value="IN">India</option>
+														<option value="ID">Indonesia</option>
+														<option value="IR">Iran</option>
+														<option value="IQ">Iraq</option>
+														<option value="IE">Ireland</option>
+														<option value="IM">Isle of Man</option>
+														<option value="IL">Israel</option>
+														<option value="IT">Italy</option>
+														<option value="CI">Ivory Coast</option>
+														<option value="JM">Jamaica</option>
+														<option value="JP">Japan</option>
+														<option value="JE">Jersey</option>
+														<option value="JO">Jordan</option>
+														<option value="KZ">Kazakhstan</option>
+														<option value="KE">Kenya</option>
+														<option value="KI">Kiribati</option>
+														<option value="KW">Kuwait</option>
+														<option value="KG">Kyrgyzstan</option>
+														<option value="LA">Laos</option>
+														<option value="LV">Latvia</option>
+														<option value="LB">Lebanon</option>
+														<option value="LS">Lesotho</option>
+														<option value="LR">Liberia</option>
+														<option value="LY">Libya</option>
+														<option value="LI">Liechtenstein</option>
+														<option value="LT">Lithuania</option>
+														<option value="LU">Luxembourg</option>
+														<option value="MO">Macao S.A.R., China</option>
+														<option value="MK">Macedonia</option>
+														<option value="MG">Madagascar</option>
+														<option value="MW">Malawi</option>
+														<option value="MY">Malaysia</option>
+														<option value="MV">Maldives</option>
+														<option value="ML">Mali</option>
+														<option value="MT">Malta</option>
+														<option value="MH">Marshall Islands</option>
+														<option value="MQ">Martinique</option>
+														<option value="MR">Mauritania</option>
+														<option value="MU">Mauritius</option>
+														<option value="YT">Mayotte</option>
+														<option value="MX">Mexico</option>
+														<option value="FM">Micronesia</option>
+														<option value="MD">Moldova</option>
+														<option value="MC">Monaco</option>
+														<option value="MN">Mongolia</option>
+														<option value="ME">Montenegro</option>
+														<option value="MS">Montserrat</option>
+														<option value="MA">Morocco</option>
+														<option value="MZ">Mozambique</option>
+														<option value="MM">Myanmar</option>
+														<option value="NA">Namibia</option>
+														<option value="NR">Nauru</option>
+														<option value="NP">Nepal</option>
+														<option value="NL">Netherlands</option>
+														<option value="NC">New Caledonia</option>
+														<option value="NZ">New Zealand</option>
+														<option value="NI">Nicaragua</option>
+														<option value="NE">Niger</option>
+														<option value="NG">Nigeria</option>
+														<option value="NU">Niue</option>
+														<option value="NF">Norfolk Island</option>
+														<option value="KP">North Korea</option>
+														<option value="MP">Northern Mariana Islands</option>
+														<option value="NO">Norway</option>
+														<option value="OM">Oman</option>
+														<option value="PK">Pakistan</option>
+														<option value="PS">Palestinian Territory</option>
+														<option value="PA">Panama</option>
+														<option value="PG">Papua New Guinea</option>
+														<option value="PY">Paraguay</option>
+														<option value="PE">Peru</option>
+														<option value="PH">Philippines</option>
+														<option value="PN">Pitcairn</option>
+														<option value="PL">Poland</option>
+														<option value="PT">Portugal</option>
+														<option value="PR">Puerto Rico</option>
+														<option value="QA">Qatar</option>
+														<option value="RE">Reunion</option>
+														<option value="RO">Romania</option>
+														<option value="RU">Russia</option>
+														<option value="RW">Rwanda</option>
+														<option value="ST">São Tomé and Príncipe</option>
+														<option value="BL">Saint Barthélemy</option>
+														<option value="SH">Saint Helena</option>
+														<option value="KN">Saint Kitts and Nevis</option>
+														<option value="LC">Saint Lucia</option>
+														<option value="SX">Saint Martin (Dutch part)</option>
+														<option value="MF">Saint Martin (French part)</option>
+														<option value="PM">Saint Pierre and Miquelon</option>
+														<option value="VC">Saint Vincent and the Grenadines</option>
+														<option value="WS">Samoa</option>
+														<option value="SM">San Marino</option>
+														<option value="SA">Saudi Arabia</option>
+														<option value="SN">Senegal</option>
+														<option value="RS">Serbia</option>
+														<option value="SC">Seychelles</option>
+														<option value="SL">Sierra Leone</option>
+														<option value="SG">Singapore</option>
+														<option value="SK">Slovakia</option>
+														<option value="SI">Slovenia</option>
+														<option value="SB">Solomon Islands</option>
+														<option value="SO">Somalia</option>
+														<option value="ZA">South Africa</option>
+														<option value="GS">South Georgia/Sandwich Islands</option>
+														<option value="KR">South Korea</option>
+														<option value="SS">South Sudan</option>
+														<option value="ES">Spain</option>
+														<option value="LK">Sri Lanka</option>
+														<option value="SD">Sudan</option>
+														<option value="SR">Suriname</option>
+														<option value="SJ">Svalbard and Jan Mayen</option>
+														<option value="SZ">Swaziland</option>
+														<option value="SE">Sweden</option>
+														<option value="CH">Switzerland</option>
+														<option value="SY">Syria</option>
+														<option value="TW">Taiwan</option>
+														<option value="TJ">Tajikistan</option>
+														<option value="TZ">Tanzania</option>
+														<option value="TH">Thailand</option>
+														<option value="TL">Timor-Leste</option>
+														<option value="TG">Togo</option>
+														<option value="TK">Tokelau</option>
+														<option value="TO">Tonga</option>
+														<option value="TT">Trinidad and Tobago</option>
+														<option value="TN">Tunisia</option>
+														<option value="TR">Turkey</option>
+														<option value="TM">Turkmenistan</option>
+														<option value="TC">Turks and Caicos Islands</option>
+														<option value="TV">Tuvalu</option>
+														<option value="UG">Uganda</option>
+														<option value="UA">Ukraine</option>
+														<option value="AE">United Arab Emirates</option>
+														<option value="US">United States (US)</option>
+                                                        <option value="GB" selected="selected">United Kingdom (UK)</option>
+														<option value="UM">United States (US) Minor Outlying Islands</option>
+														<option value="VI">United States (US) Virgin Islands</option>
+														<option value="UY">Uruguay</option>
+														<option value="UZ">Uzbekistan</option>
+														<option value="VU">Vanuatu</option>
+														<option value="VA">Vatican</option>
+														<option value="VE">Venezuela</option>
+														<option value="VN">Vietnam</option>
+														<option value="WF">Wallis and Futuna</option>
+														<option value="EH">Western Sahara</option>
+														<option value="YE">Yemen</option>
+														<option value="ZM">Zambia</option>
+														<option value="ZW">Zimbabwe</option>
+													</select>
+												</p>
+												<p class="form-row form-row-wide address-field validate-required" id="billing_address_1_field" data-priority="50">
+													<label for="billing_address_1" class="">Street
+														address <abbr class="required" title="required">*</abbr>
+													</label>
+													<input type="text" class="input-text form-control" name="billing_address_1" id="billing_address_1" placeholder="House number and street name" value="" autocomplete="address-line1">
+												</p>
+												<p class="form-row form-row-wide address-field" id="billing_address_2_field" data-priority="60">
+													<input type="text" class="input-text form-control" name="billing_address_2" id="billing_address_2" placeholder="Apartment, suite, unit etc. (optional)" value="" autocomplete="address-line2">
+												</p>
+												<p class="form-row form-row-wide address-field validate-required" id="billing_city_field" data-priority="70" data-o_class="form-row form-row-wide address-field validate-required">
+													<label for="billing_city" class="">Town / City <abbr class="required" title="required">*</abbr>
+													</label>
+													<input type="text" class="input-text form-control" name="billing_city" id="billing_city" placeholder="Town / City" value="" autocomplete="address-level2">
+												</p>
+												<p class="form-row form-row-wide address-field validate-state validate-required" id="billing_state_field" data-priority="80" data-o_class="form-row form-row-wide address-field validate-required validate-state">
+													<label for="billing_state" class="">State / County <abbr class="required" title="required">*</abbr>
+													</label>
+													<input type="text" class="input-text form-control" value="" placeholder="tate / County " name="billing_state" id="billing_state" autocomplete="address-level1">
+												</p>
+												<p class="form-row form-row-wide address-field validate-postcode validate-required" id="billing_postcode_field" data-priority="90" data-o_class="form-row form-row-wide address-field validate-required validate-postcode">
+													<label for="billing_postcode" class="">Postcode / ZIP <abbr class="required" title="required">*</abbr>
+													</label>
+													<input type="text" class="input-text form-control" name="billing_postcode" id="billing_postcode" placeholder="Postcode / ZIP" value="" autocomplete="postal-code">
+												</p>
+												<p class="form-row form-row-first validate-required validate-phone" id="billing_phone_field" data-priority="100">
+													<label for="billing_phone" class="">Phone <abbr class="required" title="required">*</abbr>
+													</label>
+													<input type="tel" class="input-text form-control" name="billing_phone" id="billing_phone" placeholder="billing phone" value="" autocomplete="tel">
+												</p>
+												<p class="form-row form-row-last validate-required validate-email" id="billing_email_field" data-priority="110">
+													<label for="billing_email" class="">Email address <abbr class="required" title="required">*</abbr>
+													</label>
+													<input type="email" class="input-text form-control" name="billing_email" id="billing_email" placeholder="" value="admin@test.com" autocomplete="email">
+												</p>
+                                                
+											</div>
+                                           
+										</div>
+									</div>
+								</div>
+<BR>
+
+								<h4 id="order_review_heading">Your order</h4>
+
+
+								<div id="order_review" class="woocommerce-checkout-review-order">
+									<table class="shop_table woocommerce-checkout-review-order-table">
+										<thead>
+											<tr>
+												<th class="product-name">SKU</th>
+                                                <th class="product-total">Now</th>
+									
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="cart_item">
+												<td class="product-name">
+													<strong>Samsung Galaxy+ 5G</strong>
+												</td>
+												<td class="product-total">
+													<span class="woocommerce-Price-amount amount">
+														<span class="woocommerce-Price-currencySymbol">£</span>90.00</span>
+												</td>
+											</tr>
+											<tr class="cart_item">
+												<td class="product-name">
+                                                    <strong>All Rounder 125GB 5G</strong>
+                                            <br>Unlimited minutes<br>Unlimited text messages<br>125GB data<br>24 months plan; 
+												</td>
+												<td class="product-total">
+													<span class="woocommerce-Price-amount amount">
+														<span class="woocommerce-Price-currencySymbol">£</span>35.00</span>
+												</td>
+											</tr>
+					                       <tr class="cart_item">
+												<td class="product-name">
+                                                    <strong>Delivery</strong>
+                                                <br>Home delivery
+												</td>
+												<td class="product-total">
+													<span class="woocommerce-Price-amount amount">
+														<span class="woocommerce-Price-currencySymbol"></span>Free</span>
+												</td>
+											</tr>
+										</tbody>
+										<tfoot>
+
+											<tr class="cart-subtotal">
+												<th>Subtotal</th>
+												<td>
+													<span class="woocommerce-Price-amount amount">
+														<span class="woocommerce-Price-currencySymbol">£</span>45.00</span>
+												</td>
+											</tr>
+
+
+											<tr class="order-total">
+												<th>Total</th>
+												<td>
+													<strong>
+                        <span class="woocommerce-Price-amount amount">
+                            <span
+                                    class="woocommerce-Price-currencySymbol">£</span>125.00</span>
+                    </strong>
+												</td>
+											</tr>
+
+
+										</tfoot>
+									</table>
+
+
+										<div class="form-row place-order">
+											<noscript>
+												Since your browser does not support JavaScript, or it is disabled, please ensure you click the
+												&lt;em&gt;Update Totals&lt;/em&gt; button before placing your order. You may be charged more
+												than the amount stated above if you fail to do so. &lt;br/&gt;&lt;input type="submit"
+												class="button alt" name="woocommerce_checkout_update_totals" value="Update totals" /&gt;
+											</noscript>
+                                            <div>
+											<button type="button" class="btn btn-outline-maincolor2"><span>Amend Order</span></button>
+                                                </div>
+                                                </div>
+									
+		
+                    
+			</section>
+                   
+                    
+                    <section>
+                    <div class="col-lg-12">
+                        <div class="container">
+                            <h4>Complete the Process</h4>
+                    <div id="accordion01" role="tablist">
+								<div class="card">
+									<div class="card-header" role="tab" id="collapse02_header">
+										<h5>
+											<a data-toggle="collapse" href="#collapse01" aria-expanded="true" aria-controls="collapse01">
+												Step 2: Moving to Dolphin Telco
+											</a>
+										</h5>
+									</div>
+
+                                    <div id="collapse01" class="collapse" role="tabpanel" aria-labelledby="collapse01_header" data-parent="#accordion01">
+										<div class="card-body">
+											A PAC allows you to keep your number when you change network providers.
+
+                                            If you don’t have one from your old network provider, you’ll need to text PAC to 12345. But if you prefer not to keep your old number, you’ll need to text STAC to 98765 and we’ll cancel your account with your old network provider and give you a new number.
+										</div>
+                                        <p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
+													<label for="account_first_name">First name <span class="required">*</span>
+													</label>
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" value="" placeholder="Enter Your 9 Digit PAC or STAC">
+												<div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></p>
+                                        <div><button type="button" class="btn btn-outline-maincolor3 small-button"><span>Check PAC/STAC</span></button>
+                                        <div style="padding-bottom: 50px"></div>
+                                            </div>
+									</div>
+                        
+                    
+								</div>
+								<div class="card">
+									<div class="card-header" role="tab" id="collapse02_header">
+										<h5>
+											<a class="collapsed" data-toggle="collapse" href="#collapse02" aria-expanded="false" aria-controls="collapse02">
+												Step 3:Credit Check Information
+											</a>
+										</h5>
+									</div>
+									
+                                    
+                                    <div id="collapse02" class="collapse" role="tabpanel" aria-labelledby="collapse02_header" data-parent="#accordion01">
+										<div class="card-body">
+											The questions we ask here are important for us to perform a short credit check which will enable us to provide you with the services and devices you have chosen.
+                                            <br>
+                                                Answering these questions as accurately as possible will help us process your order more smoothly and help prevent delays in getting your order to you.
+										</div>
+                                        <fieldset>
+													<legend>Credit Check</legend>
+                                                    <div>
+                                                        <h7>When did you move to your current address?</h7>
+                                                        <form action="/action_page.php">
+                                                      
+                                                          <input type="date" id="birthday" name="birthday">
+                                                            <br>
+                                                            </form>
+                                                        </div>
+                                                            <br>
+                                            
+                                            <div>
+                                                <h7>When did you join your current bank?</h7>
+                                                        <form action="/action_page.php">
+                                                      
+                                                          <input type="date" id="birthday" name="birthday">
+                                                            <br>
+                                                            </form>
+                                                        </div>
+                                                            <br>
+                                            
+                                                <tr>
+                                            
+											    <div>
+                                                <h7>When did you start your current employment?</h7>
+                                                        <form action="/action_page.php">
+                                                      
+                                                          <input type="date" id="birthday" name="birthday">
+                                                            <br>
+                                                            </form>
+                                                        </div>
+                                                            <br>
+                                            
+                                                <tr>
+                                                <h7>What is your current employment status?</h7>
+													<td class="value">
+														<select id="pa_size" class="wc-default-select" name="attribute_pa_size" data-attribute_name="attribute_pa_size" style="color: black" >
+															<option value="">Select Employment Status</option>
+															<option value="x-small" class="attached enabled">Office-based</option>
+															<option value="small" class="attached enabled">Non Office-based</option>
+															<option value="medium" class="attached enabled">Retired</option>
+															<option value="large" class="attached enabled">Student</option>
+															<option value="x-large" class="attached enabled">Other</option>
+														</select>
+                                                        <br>
+													</td>
+                                                    <br>
+												</tr>
+                                            
+
+                                                    
+										
+
+                                               <a href="https://demoqualtrics.github.io/telco/9-CreditCheck.html">
+                                                <button type="submit" class="btn btn-outline-maincolor small-button" name="woocommerce_checkout_place_order"><span>Submit</span></button>
+                                            </a>
+                                                       
+												</fieldset>
+                                        <div> 
+									</div>
+								</div>
+                                    <br>
+								<div class="card">
+									<div class="card-header" role="tab" id="collapse03_header">
+										<h5>
+											<a class="collapsed" data-toggle="collapse" href="#collapse03" aria-expanded="false" aria-controls="collapse03">
+                                                
+												Step 4: Check your coverage
+											</a>
+										</h5>
+									</div>
+									<div id="collapse03" class="collapse" role="tabpanel" aria-labelledby="collapse03_header" data-parent="#accordion01">
+										<div class="card-body">
+											You’ll need to be in an area with 5G coverage to get 5G speeds. You can check if there’s 5G in the places you visit with our coverage checker
+										</div>
+                                        		<button type="submit" class="btn btn-outline-maincolor small-button" name="woocommerce_checkout_place_order"><span>Check Coverage</span></button>
+                                        			
+									</div>
+								</div>
+							</div>
+                            <Hr>
+                                <br>
+                            </section>
+
+
+			<section class="footer-carousel c-gutter-0 container-px-0 s-py-0">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<div class="owl-carousel small-gallery-carousel" data-margin="0" data-responsive-lg="8" data-responsive-md="4" data-responsive-sm="3" data-responsive-xs="2" data-nav="true" data-loop="true">
+
+								<a href="images/square/03.jpg" class="photoswipe-link" data-width="800" data-height="800">
+									<img src="images/square/03.jpg" alt="">
+								</a>
+								<a href="images/square/04.jpg" class="photoswipe-link" data-width="800" data-height="800">
+									<img src="images/square/04.jpg" alt="">
+								</a>
+								<a href="images/square/05.jpg" class="photoswipe-link" data-width="800" data-height="800">
+									<img src="images/square/05.jpg" alt="">
+								</a>
+								<a href="images/square/06.jpg" class="photoswipe-link" data-width="800" data-height="800">
+									<img src="images/square/06.jpg" alt="">
+								</a>
+								<a href="images/square/07.jpg" class="photoswipe-link" data-width="800" data-height="800">
+									<img src="images/square/07.jpg" alt="">
+								</a>
+								<a href="images/square/08.jpg" class="photoswipe-link" data-width="800" data-height="800">
+									<img src="images/square/08.jpg" alt="">
+								</a>
+								<a href="images/square/09.jpg" class="photoswipe-link" data-width="800" data-height="800">
+									<img src="images/square/09.jpg" alt="">
+								</a>
+								<a href="images/square/10.jpg" class="photoswipe-link" data-width="800" data-height="800">
+									<img src="images/square/10.jpg" alt="">
+								</a>
+								<a href="images/square/01.jpg" class="photoswipe-link" data-width="800" data-height="800">
+									<img src="images/square/01.jpg" alt="">
+								</a>
+								<a href="images/square/02.jpg" class="photoswipe-link" data-width="800" data-height="800">
+									<img src="images/square/02.jpg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer class="page_footer ls ms s-pt-80 s-pb-70 s-py-lg-120 s-pt-xl-135 s-pb-xl-105 c-gutter-60 text-center text-md-left">
+				<div class="container">
+					<div class="row">
+						<div class="divider-20 d-none d-xl-block"></div>
+
+						<div class="col-md-6 col-xl-3 order-xl-1 order-md-1 animate" data-animation="fadeInUp">
+
+							<div class="widget widget_text">
+								<h4 class="widget-title">About</h4>
+								<p>
+									Welcome largest broadband and Internet services provider where you can choose the best plan ever.
+								</p>
+								<div class="widget widget_social_buttons">
+									<a href="#" class="fa fa-facebook color-bg-icon rounded-icon" title="facebook"></a>
+									<a href="#" class="fa fa-twitter color-bg-icon rounded-icon" title="twitter"></a>
+									<a href="#" class="fa fa-youtube-play color-bg-icon rounded-icon" title="youtube-play"></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-xl-3 order-xl-2 order-md-4 animate" data-animation="fadeInUp">
+							<div class="widget links">
+								<h4 class="widget-title">Links</h4>
+								<ul>
+									<li class="cat-item">
+										<a href="blog-right.html">Packages</a>
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">MaxiNet Media</a>
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">Connection</a>
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">Support</a>
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">Video Tutorials</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6 col-xl-3 order-xl-3 order-md-3 animate" data-animation="fadeInUp">
+							<div class="widget services-links">
+								<h4 class="widget-title">Services</h4>
+								<ul>
+									<li class="cat-item">
+										<a href="blog-right.html">4K Cable TV</a>
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">Dedicated Server</a>
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">High Speed Internet</a>
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">Smartphone Service</a>
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">Dedicated Server</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6 col-xl-3 order-xl-4 order-md-2 animate" data-animation="fadeInUp">
+							<div class="widget widget_icons_list">
+								<h4 class="widget-title">Call Us</h4>
+								<p>23-456-7890</p>
+								<a href="#" class="small-text">
+									<i class="fa fa-envelope-o color-main fs-14"></i>
+									email us
+								</a>
+								<h4 class="widget-title">Visit Us</h4>
+								<p>246 Benson St., Ashwaubenon</p>
+								<a href="#" class="small-text">
+									<i class="fa fa-map-marker color-main3 fs-14"></i>
+									Get Direction
+								</a>
+							</div>
+							<div class="divider-45 d-none d-md-block d-xlz-none"></div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<section class="page_copyright ds s-py-10 copyright-bg">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="divider-15 d-none d-lg-block"></div>
+						<div class="col-md-12 text-center">
+							<p>&copy; Copyright <span class="copyright_year">2019</span> All Rights Reserved</p>
+						</div>
+						<div class="divider-15 d-none d-lg-block"></div>
+					</div>
+				</div>
+			</section>
+
+
+		</div><!-- eof #box_wrapper -->
+	</div><!-- eof #canvas -->
+
+
+	<script src="js/compressed.js"></script>
+	<script src="js/main.js"></script>
+
+
+</body>
+
+</html>
