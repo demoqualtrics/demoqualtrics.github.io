@@ -59,8 +59,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var lastName = window.localStorage.getItem("lastName");
     var email = window.localStorage.getItem("email");
     
-    var apiToken = "***REMOVED***";
-    
     var url = "https://yul1.qualtrics.com/inbound-event/v1/events/JSON/triggers?contextId=OC_2SiglBYDIJ27JfK&userId=UR_b3B9sJ6AudaytgN&brandId=qdemo&triggerId=OC_2SiglBYDIJ27JfK" ;
     
     var payload = { firstName: firstName, lastName : lastName, email: email, ticketTeam: "Banca Demo", ticketOwner: email + "#qdemo"};
