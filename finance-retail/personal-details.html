@@ -55,28 +55,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 //Trigger post application survey to user for demo
 function triggerSurvey(form) {
     
-    var firstName = document.getElementById("fName").value;
-    var lastName = document.getElementById("lName").value;
-    var email = document.getElementById("emailName").value;
+    var firstName = encodeURIComponent(document.getElementById("fName").value);
+    var lastName = encodeURIComponent(document.getElementById("lName").value);
+    var email = encodeURIComponent(document.getElementById("emailName").value);
     var mobile = $("#inputPhoneNumber").intlTelInput("getNumber");
 
-    var url = "https://ca1.qualtrics.com/inbound-event/v1/events/JSON/triggers?contextId=SV_4UFSlTX88OHFHhQ&userId=UR_b3B9sJ6AudaytgN&brandId=qdemo&triggerId=OC_l7XGFkOL00v09Ti" 
+    var url = "https://xu3lmfjuwe.execute-api.us-east-1.amazonaws.com/default/qualtricsJSONWebhookRelay?triggerId=OC_l7XGFkOL00v09Ti&contextId=SV_4UFSlTX88OHFHhQ&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
     
-    var payload = { firstName: firstName, lastName : lastName, email: email, mobile: mobile, ticketTeam: "Banca Demo", ticketOwner: email + "#qdemo"};
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", url, true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.setRequestHeader('X-API-TOKEN', apiToken);
-    xhr.send(JSON.stringify(payload)); 
+    xhr.open("GET", url, true);
+    xhr.send('');
     //alert("Trigger sent with payload " + JSON.stringify(payload));
     
-    url = "https://ca1.qualtrics.com/inbound-event/v1/events/JSON/triggers?contextId=OC_2SiglBYDIJ27JfK&userId=UR_b3B9sJ6AudaytgN&brandId=qdemo&triggerId=OC_2SiglBYDIJ27JfK" 
+    url = "https://xu3lmfjuwe.execute-api.us-east-1.amazonaws.com/default/qualtricsJSONWebhookRelay?triggerId=OC_2SiglBYDIJ27JfK&contextId=OC_2SiglBYDIJ27JfK&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
     
     xhr = new XMLHttpRequest();
-    xhr.open("POST", url, true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.setRequestHeader('X-API-TOKEN', apiToken);
-    xhr.send(JSON.stringify(payload)); 
+    xhr.open("GET", url, true);
+    xhr.send(''); 
     xhr.onreadystatechange = function() {
         if (xhr.readyState == XMLHttpRequest.DONE) {
             //submit form
