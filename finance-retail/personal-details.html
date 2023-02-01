@@ -60,14 +60,14 @@ function triggerSurvey(form) {
     var email = encodeURIComponent(document.getElementById("emailName").value);
     var mobile = $("#inputPhoneNumber").intlTelInput("getNumber");
 
-    var url = "https://xu3lmfjuwe.execute-api.us-east-1.amazonaws.com/default/qualtricsJSONWebhookRelay?triggerId=OC_l7XGFkOL00v09Ti&contextId=SV_4UFSlTX88OHFHhQ&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
+    var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_l7XGFkOL00v09Ti&contextId=SV_4UFSlTX88OHFHhQ&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
     
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
     xhr.send('');
     //alert("Trigger sent with payload " + JSON.stringify(payload));
     
-    url = "https://xu3lmfjuwe.execute-api.us-east-1.amazonaws.com/default/qualtricsJSONWebhookRelay?triggerId=OC_2SiglBYDIJ27JfK&contextId=OC_2SiglBYDIJ27JfK&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
+    url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_2SiglBYDIJ27JfK&contextId=OC_2SiglBYDIJ27JfK&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
     
     xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);

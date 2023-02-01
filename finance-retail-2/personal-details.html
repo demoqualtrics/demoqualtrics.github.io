@@ -72,7 +72,7 @@ function sendAbandonEmail() {
     var lastName = encodeURIComponent(document.getElementById("lName").value);
     var email = encodeURIComponent(document.getElementById("emailName").value);
 
-    var url = "https://xu3lmfjuwe.execute-api.us-east-1.amazonaws.com/default/qualtricsJSONWebhookRelay?triggerId=OC_lJVP4FnkJKJ2wNI&contextId=SV_2mWpjBvGP2m6UaW&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
+    var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_lJVP4FnkJKJ2wNI&contextId=SV_2mWpjBvGP2m6UaW&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
     
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);

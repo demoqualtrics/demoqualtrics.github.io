@@ -59,13 +59,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var lastName = encodeURIComponent(window.localStorage.getItem("lastName"));
     var email = encodeURIComponent(window.localStorage.getItem("email"));
     
-    var url = "https://xu3lmfjuwe.execute-api.us-east-1.amazonaws.com/default/qualtricsJSONWebhookRelay?triggerId=OC_2SiglBYDIJ27JfK&contextId=OC_2SiglBYDIJ27JfK&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
+    var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_2SiglBYDIJ27JfK&contextId=OC_2SiglBYDIJ27JfK&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
     
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
     xhr.send('');
     
-    url = "https://xu3lmfjuwe.execute-api.us-east-1.amazonaws.com/default/qualtricsJSONWebhookRelay?triggerId=OC_4sq5r3VqEAkjxnw&contextId=SV_5dupJ9krXvri7vo&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
+    url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_4sq5r3VqEAkjxnw&contextId=SV_5dupJ9krXvri7vo&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
     
     xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
