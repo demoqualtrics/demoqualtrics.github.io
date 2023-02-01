@@ -68,19 +68,15 @@ function sendAbandonEmail() {
     document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile2.png"  
     document.getElementById('profile_email').innerHTML = window.localStorage.getItem("email");
     
-    var firstName = document.getElementById("fName").value;
-    var lastName = document.getElementById("lName").value;
-    var email = document.getElementById("emailName").value;
-    
+    var firstName = encodeURIComponent(document.getElementById("fName").value);
+    var lastName = encodeURIComponent(document.getElementById("lName").value);
+    var email = encodeURIComponent(document.getElementById("emailName").value);
 
-    var url = "https://yul1.qualtrics.com/inbound-event/v1/events/JSON/triggers?contextId=SV_2mWpjBvGP2m6UaW&userId=UR_b3B9sJ6AudaytgN&brandId=qdemo&triggerId=OC_lJVP4FnkJKJ2wNI" 
+    var url = "https://xu3lmfjuwe.execute-api.us-east-1.amazonaws.com/default/qualtricsJSONWebhookRelay?triggerId=OC_lJVP4FnkJKJ2wNI&contextId=SV_2mWpjBvGP2m6UaW&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
     
-    var payload = { firstName: firstName, lastName : lastName, email: email};
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", url, true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.setRequestHeader('X-API-TOKEN', apiToken);
-    xhr.send(JSON.stringify(payload)); 
+    xhr.open("GET", url, true);
+    xhr.send('');
 }
 </script>
     <!-- Header -->

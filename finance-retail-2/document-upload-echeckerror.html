@@ -55,28 +55,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <script type="text/javascript">
 //Trigger interaction ticket to user for demo
-    var firstName = window.localStorage.getItem("firstName");
-    var lastName = window.localStorage.getItem("lastName");
-    var email = window.localStorage.getItem("email");
+    var firstName = encodeURIComponent(window.localStorage.getItem("firstName"));
+    var lastName = encodeURIComponent(window.localStorage.getItem("lastName"));
+    var email = encodeURIComponent(window.localStorage.getItem("email"));
     
-    var url = "https://yul1.qualtrics.com/inbound-event/v1/events/JSON/triggers?contextId=OC_2SiglBYDIJ27JfK&userId=UR_b3B9sJ6AudaytgN&brandId=qdemo&triggerId=OC_2SiglBYDIJ27JfK" ;
+    var url = "https://xu3lmfjuwe.execute-api.us-east-1.amazonaws.com/default/qualtricsJSONWebhookRelay?triggerId=OC_2SiglBYDIJ27JfK&contextId=OC_2SiglBYDIJ27JfK&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
     
-    var payload = { firstName: firstName, lastName : lastName, email: email, ticketTeam: "Banca Demo", ticketOwner: email + "#qdemo"};
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", url, true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.setRequestHeader('X-API-TOKEN', apiToken);
-    xhr.send(JSON.stringify(payload)); 
+    xhr.open("GET", url, true);
+    xhr.send('');
     
-    url = "https://yul1.qualtrics.com/inbound-event/v1/events/JSON/triggers?contextId=SV_5dupJ9krXvri7vo&userId=UR_b3B9sJ6AudaytgN&brandId=qdemo&triggerId=OC_4sq5r3VqEAkjxnw";
-    
-    payload = { firstName: firstName, lastName : lastName, email: email };
+    url = "https://xu3lmfjuwe.execute-api.us-east-1.amazonaws.com/default/qualtricsJSONWebhookRelay?triggerId=OC_4sq5r3VqEAkjxnw&contextId=SV_5dupJ9krXvri7vo&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
     
     xhr = new XMLHttpRequest();
-    xhr.open("POST", url, true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.setRequestHeader('X-API-TOKEN', apiToken);
-    xhr.send(JSON.stringify(payload)); 
+    xhr.open("GET", url, true);
+    xhr.send('');
     
 </script>
     <!-- Header -->
