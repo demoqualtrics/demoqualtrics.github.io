@@ -72,6 +72,7 @@ function triggerSurvey(form) {
     xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
     xhr.send(''); 
+
     xhr.onreadystatechange = function() {
         if (xhr.readyState == XMLHttpRequest.DONE) {
             //submit form

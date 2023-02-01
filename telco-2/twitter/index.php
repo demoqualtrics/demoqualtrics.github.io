@@ -23,7 +23,6 @@ if(empty($_POST)) { die(); }
 class ezTweet {
 	/*************************************** config ***************************************/
 
-	// Your Twitter App Consumer Key
 	private $consumer_key = '***REMOVED***';
 
 	// Your Twitter App Consumer Secret
