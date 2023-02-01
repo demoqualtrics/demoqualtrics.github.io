@@ -24,7 +24,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   amazon_connect('snippetId', 'QVFJREFIanUzYnhvNFBocFpzVHdoQjZmUUtOd1FaMjMxR3ZDRG9RRWNFUkFkM3dWVWdHZnhGVWhuNnNnTTNNNkJuY1d4dFNUQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNdzBuM1hEcE1ZVHFTc2ppUUFnRVFnQ3M3WUtFbVh0cUNzN1NHcDRPWitQUmUyN1gzdmhIaC93aFhPa1pHVHFOMlVFSW5NK1J0UUpuSWtOUkg6OjVEYld3Z1NqUW9iQVR2M2JnT1ZwNXBOYWhtbTN6dlR3eGVlR1lESlFhVnNDMzdkRWZyeEVxZXJRL3JjZU1mT3Mwby9zeEJLT2pFZ2wvVDQ2WHJjT0tCT0pheERpRzNWQlNHVFVrcmxUQ1pqQytGMkxqVDdGcCtNWlRkM0QzR0tzY0JSOGMrb0N6UWlYY29HaFBCQ2JPWCtKRkY4OE40ST0=');
   amazon_connect('supportedMessagingContentTypes', [ 'text/plain', 'text/markdown' ]); 
   amazon_connect('xmjourney','true');
-  amazon_connect(‘customerDisplayName’, function(callback) {
+  amazon_connect('customerDisplayName', function(callback) {
     const displayName = window.localStorage.getItem("firstName") + " " + window.localStorage.getItem("lastName");
     callback(displayName);
   });
