@@ -74,6 +74,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </script>
 <!-- End Amazon Connect Tag -->
     
+<script type="text/javascript">
+    function openChat() {
+        var content = document.getElementById("amazon-connect-chat-widget");
+            var kbButton = content.getElementsByTagName("button")[0];
+            kbButton.click();
+    }
+</script>
+    
     <!--[if lt IE 9]>
 		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
 	<![endif]-->
@@ -186,6 +194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
                     
 				</div>
+                    
                 
 			</section>
 
@@ -1109,9 +1118,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
             
-    <script type="text/javascript">var content = document.getElementById("amazon-connect-chat-widget");
-            var kbButton = content.getElementsByTagName("button")[0];
-            kbButton.click();</script>
+    <script type="text/javascript">
+        window.addEventListener('load', function () {
+            setTimeout(openChat, 3000);
+        })
+    </script>
 
 
 </body>
