@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-P6TPCWL');</script>
 <!-- End Google Tag Manager -->
     
-    <title>Dolphin Telco</title>
+    <title>Dolphin Telco Shop</title>
     <meta name="robots" content="noindex">
 	<meta charset="utf-8">
 	<!--[if IE]>
@@ -58,58 +58,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6TPCWL"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<!-- Genesys Chat Widget Tag -->
-    <script src="https://apps.mypurecloud.com/widgets/9.0/cxbus.min.js" onload="javascript:CXBus.configure({debug:false,pluginsPath:'https://apps.mypurecloud.com/widgets/9.0/plugins/'}); CXBus.loadPlugin('widgets-core');"></script>
-
-<script>
-  window._genesys = {
-    "widgets": {
-        "main": {
-            "debug": true,
-            "timeFormat": 24,
-            "theme": "dark",
-            "lang": "en",
-            "mobileMode": "auto",
-            "mobileModeBreakpoint": 600,
-            "preload": [
-                "webchat"
-            ]
-        },
-        "webchat": {
-            "transport": {
-            "type": "purecloud-v2-sockets",
-            "dataURL": "https://api.mypurecloud.com",
-            "deploymentKey": "c8ea4906-729e-40e6-81c2-7b147f258dd5",
-            "orgGuid": "1d9123ca-5eee-449c-8b4f-937148c4d011",
-            "interactionData": {
-                "routing": {
-                    "targetType": "QUEUE",
-                    "targetAddress": "QualtricsSurveyQueue",
-                    "priority": 2
-                }
-            }
-            },
-            userData: {},
-            confirmFormCloseEnabled: true,
-            emojis: true,
-            autoInvite: {
-                enabled: true,
-                timeToInviteSeconds: 5,
-                inviteTimeoutSeconds: 30
-            },
-            chatButton: {
-                enabled: true,
-                openDelay: 100,
-                effectDuration: 100,
-                hideDuringInvite: true,
-                template: "<div class='cx-widget cx-webchat-chat-button cx-side-button' role='button' tabindex='0' data-message='ChatButton' data-gcb-service-node='true'><span class='cx-icon' data-icon='chat'></span><span class='i18n cx-chat-button-label' data-message='ChatButton'></span></div>"
-            }
-        }
-    }
-  };
-
+<!-- Amazon Connect Tag -->
+    <script type="text/javascript">
+  (function(w, d, x, id){
+    s=d.createElement('script');
+    s.src='https://dend6g4sigg57.cloudfront.net/amazon-connect-chat-interface-client.js';
+    s.async=1;
+    s.id=id;
+    d.getElementsByTagName('head')[0].appendChild(s);
+    w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+  })(window, document, 'amazon_connect', 'fd84bc97-ff51-4db7-95ef-247704c0b91c');
+  amazon_connect('styles', { openChat: { color: 'white', backgroundColor: '#000000'}, closeChat: { color: 'white', backgroundColor: '#000000'} });
+  amazon_connect('snippetId', 'QVFJREFIZ25JVzc0R0xQTVpWSlI0RjdyVlBselRRYnQzeW5TZEVnWGFmQnNNZ0lXbmdGRW9WM2pLZHZRMnJTenNLdS96UXVLQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNWVZmRGo1cTBNL20zNXdQTEFnRVFnQ3RKTEgzUXZYWWJrZ1JhT3pYK3lqajZYU01YU00wRStVc29vZ1FKaWQyR0ZReXloNEFsOXp4WUhTUkY6OkZsdzVDYlBPMU9LdnZiNGovZVJDbm9aTDMwLy93blBRUGRBUU5aMmJRWFkxeHdBbSs1YjRpY0hWUGYyV0tIZWFUaEZrZEthKzJNTFByanhyNTE0UVlBb0h6c0NCUEYrSlpqdHZVTElKVTNmSEtmM3ZQaVkrWUlBNlN6V1l2Z2ViRzZSNTBGTjYyWEpocndvRU5NaDdRMFQ1eEVhNmxDQT0=');
+  amazon_connect('supportedMessagingContentTypes', [ 'text/plain', 'text/markdown' ]);
 </script>
-    <!-- End Genesys Chat Widget Tag -->    
+<!-- End Amazon Connect Tag -->
+    
+<script type="text/javascript">
+    function openChat() {
+        var content = document.getElementById("amazon-connect-chat-widget");
+            var kbButton = content.getElementsByTagName("button")[0];
+            kbButton.click();
+    }
+</script>
     
     <!--[if lt IE 9]>
 		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
@@ -132,7 +103,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<div class="form-group">
 					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
 				</div>
-				<button type="submit" class="btn">Search</button>
+				<button type="Submit" class="btn">Search</button>
 			</form>
 		</div>
 	</div>
@@ -223,6 +194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
                     
 				</div>
+                    
                 
 			</section>
 
@@ -758,7 +730,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 									</label>
 
 									<input type="search" id="woocommerce-product-search-field-widget" class="search-field" placeholder="Keyword" value="" name="search">
-									<input type="submit" value="Search">
+									
 								</form>
 							</div>
 
@@ -1145,6 +1117,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
+            
+    <script type="text/javascript">
+        window.addEventListener('load', function () {
+            setTimeout(openChat, 10000);
+        })
+    </script>
 
 
 </body>
