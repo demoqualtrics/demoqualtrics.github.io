@@ -418,6 +418,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<section class="s-py-10 s-py-lg-1 s-py-xl-10  ls ms">
 				<div class="container">
 	
+                    <script type="application/javascript">  
+    
+function writeToLocalStorage(key, value) {
+    if (typeof(Storage) !== "undefined") {
+        window.localStorage.setItem(key, value);
+    }
+}
+                    </script>
 		
 						<main class="col-lg-12">
 							<article>
@@ -429,8 +437,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 											<p class = "woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide animate" data-animation="fadeInDown" data-delay="300" style="color: red">
 												<label for="emailName" style="color: aqua">Username or email address <span class="required">*</span>
 												</label>
-												<input type="text" class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" style="color: grey" name="emailName" id="emailName" value="" placeholder="Username or email address" style="color: green">  
+												<input type="text" class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" style="color: grey" name="email" id="email" value="" placeholder="Username or email address" style="color: green">  
                                                 <input id='emailName' class="form-control" type="text" onchange="writeToLocalStorage('username', this.value)" required>
+                                                    <script>
+      const emailInput = document.getElementById('email');
+
+      emailInput.addEventListener('change', (event) => {
+        localStorage.setItem('email', event.target.value);
+      });
+    </script>
 											</p>
 											<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide animate" data-animation="fadeInDown" data-delay="300">
 												<label for="password">Password <span class="required">*</span>
@@ -644,7 +659,7 @@ function sendAbandonEmail() {
     
     var firstName = encodeURIComponent(document.getElementById("fName").value);
     var lastName = encodeURIComponent(document.getElementById("lName").value);
-    var email = encodeURIComponent(document.getElementById("emailName").value);
+    var email = encodeURIComponent(document.getElementById("email").value);
 
     var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_mrkpL4x98CrYvCr&contextId=SV_5ASIeGEq2NdQ4aG&firstName=Sarah&lastName=Bailey&email=" + email + "&mobile=0";
     
