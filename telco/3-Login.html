@@ -427,9 +427,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 										<form class="woocomerce-form woocommerce-form-login login" method="post">
 											<p class = "woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide animate" data-animation="fadeInDown" data-delay="300" style="color: red">
-												<label for="username" style="color: aqua">Username or email address <span class="required">*</span>
+												<label for="emailName" style="color: aqua">Username or email address <span class="required">*</span>
 												</label>
-												<input type="text" class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" style="color: grey" name="username" id="username" value="" placeholder="Username or email address" style="color: green">  
+												<input type="text" class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" style="color: grey" name="emailName" id="emailName" value="" placeholder="Username or email address" style="color: green">  
+                                                <input id='emailName' class="form-control" type="text" onchange="writeToLocalStorage('username', this.value)" required>
 											</p>
 											<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide animate" data-animation="fadeInDown" data-delay="300">
 												<label for="password">Password <span class="required">*</span>
@@ -627,6 +628,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
     <script type="text/javascript" src="js/xidslider.js"></script>
+    <script type="application/javascript">  
+    
+function writeToLocalStorage(key, value) {
+    if (typeof(Storage) !== "undefined") {
+        window.localStorage.setItem(key, value);
+    }
+}
+
+//send application journey abandon campaign email.
+function sendAbandonEmail() {
+    //update xID profile widget
+    document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile2.png"  
+    document.getElementById('profile_email').innerHTML = window.localStorage.getItem("email");
+    
+    var firstName = encodeURIComponent(document.getElementById("fName").value);
+    var lastName = encodeURIComponent(document.getElementById("lName").value);
+    var email = encodeURIComponent(document.getElementById("emailName").value);
+
+    var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=[TRIGGER]&contextId=[CONTEXT ID]&firstName=Sarah&lastName=Bailey&email=" + email + "&mobile=0";
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.send('');
+}
+</script>
     
 </body>
 
