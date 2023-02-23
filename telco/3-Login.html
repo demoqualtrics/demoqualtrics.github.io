@@ -646,7 +646,7 @@ function sendAbandonEmail() {
     var lastName = encodeURIComponent(document.getElementById("lName").value);
     var email = encodeURIComponent(document.getElementById("emailName").value);
 
-    var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=[TRIGGER]&contextId=[CONTEXT ID]&firstName=Sarah&lastName=Bailey&email=" + email + "&mobile=0";
+    var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_mrkpL4x98CrYvCr&contextId=SV_5ASIeGEq2NdQ4aG&firstName=Sarah&lastName=Bailey&email=" + email + "&mobile=0";
     
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
