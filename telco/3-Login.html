@@ -438,7 +438,6 @@ function writeToLocalStorage(key, value) {
 												<label for="emailName" style="color: aqua">Username or email address <span class="required">*</span>
 												</label>
 												<input type="text" class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" style="color: grey" name="email" id="email" value="" placeholder="Username or email address" style="color: green">  
-                                                <input id='emailName' class="form-control" type="text" onchange="writeToLocalStorage('username', this.value)" required>
                                                     <script>
       const emailInput = document.getElementById('email');
 
@@ -661,7 +660,7 @@ function sendAbandonEmail() {
     var lastName = encodeURIComponent(document.getElementById("lName").value);
     var email = encodeURIComponent(document.getElementById("email").value);
 
-    var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_mrkpL4x98CrYvCr&contextId=SV_5ASIeGEq2NdQ4aG&firstName=Sarah&lastName=Bailey&email=akeenan@qualtrics.com&mobile=0";
+    var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_mrkpL4x98CrYvCr&contextId=SV_5ASIeGEq2NdQ4aG&firstName=Sarah&lastName=Bailey&email=" + email + "&mobile=0";
     
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
