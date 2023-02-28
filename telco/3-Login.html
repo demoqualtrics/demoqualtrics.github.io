@@ -27,8 +27,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-P6TPCWL');</script>
 <!-- End Google Tag Manager -->
     
-    
-<script type="application/javascript">  
+    <script type="application/javascript">  
     
 function writeToLocalStorage(key, value) {
     if (typeof(Storage) !== "undefined") {
@@ -46,13 +45,14 @@ function sendAbandonEmail() {
     var lastName = encodeURIComponent(document.getElementById("lName").value);
     var email = encodeURIComponent(document.getElementById("emailName").value);
 
-    var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_mrkpL4x98CrYvCr&contextId=SV_5ASIeGEq2NdQ4aG&firstName=Sarah&lastName=Bailey&email=AKeenan@qualtrics.com&mobile=0";
+    var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_mrkpL4x98CrYvCr&contextId=SV_5ASIeGEq2NdQ4aG&firstName=Sarah&lastName=Bailey&email=" + email + "&mobile=0";
     
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
     xhr.send('');
 }
 </script>
+
     
     <title>Login</title>
     <meta name="robots" content="noindex">
@@ -458,7 +458,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 											<p class = "woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide animate" data-animation="fadeInDown" data-delay="300" style="color: red">
 												<label for="emailName" style="color: aqua">Username or email address <span class="required">*</span>
 												</label>
-												<input type="text" class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" style="color: grey" name="email" id="emailName" value="" placeholder="Username or email address" style="color: green" onchange="writeToLocalStorage('email', this.value);sendAbandonEmail();" required>
+											 <input class="form-control" type="email" id='emailName' placeholder="examplename@example.com" onchange="writeToLocalStorage('email', this.value);sendAbandonEmail();" required>
                                                         
 
 											</p>
@@ -490,8 +490,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 						</main>
 					</div>
-
-				</div>
 			</section>
 
 			<section class="footer-carousel c-gutter-0 container-px-0 s-py-0">
@@ -632,7 +630,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 		</div><!-- eof #box_wrapper -->
-	</div><!-- eof #canvas -->
     
         <!-- // xiD Slider Tab -->
 <div id="slideOut">
@@ -657,25 +654,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
-    <script type="text/javascript" src="js/xidslider.js"></script>
-        <script type="application/javascript">
-        if ( window.localStorage.getItem("firstName") !== null ) {
-            //Change banner
-            document.getElementById('fName').value = window.localStorage.getItem("firstName");
-        }
-        if ( window.localStorage.getItem("lastName") !== null ) {
-            //Change banner
-            document.getElementById('lName').value = window.localStorage.getItem("lastName");
-        }
-        if ( window.localStorage.getItem("email") !== null ) {
-            //Change banner
-            document.getElementById('emailName').value = window.localStorage.getItem("email");
-            //update xID profile widget
-            document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile2.png" 
-            document.getElementById('profile_email').innerHTML = window.localStorage.getItem("email");
-        }
-    </script>
-    
+    <script type="application/javascript">
 </body>
     
 </html>
