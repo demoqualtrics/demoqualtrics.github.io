@@ -63,7 +63,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Genesys Chat Widget Tag -->
     <script src="https://apps.mypurecloud.com/widgets/9.0/cxbus.min.js" onload="javascript:CXBus.configure({debug:false,pluginsPath:'https://apps.mypurecloud.com/widgets/9.0/plugins/'}); CXBus.loadPlugin('widgets-core');"></script>
 
-    <script type="application/javascript">  
+<script type="application/javascript">  
     
 function writeToLocalStorage(key, value) {
     if (typeof(Storage) !== "undefined") {
@@ -652,23 +652,8 @@ function sendAbandonEmail() {
 
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
-        <script type="application/javascript">
-        if ( window.localStorage.getItem("firstName") !== null ) {
-            //Change banner
-            document.getElementById('fName').value = window.localStorage.getItem("firstName");
-        }
-        if ( window.localStorage.getItem("lastName") !== null ) {
-            //Change banner
-            document.getElementById('lName').value = window.localStorage.getItem("lastName");
-        }
-        if ( window.localStorage.getItem("email") !== null ) {
-            //Change banner
-            document.getElementById('emailName').value = window.localStorage.getItem("email");
-            //update xID profile widget
-            document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile2.png" 
-            document.getElementById('profile_email').innerHTML = window.localStorage.getItem("email");
-        }
-    </script>
+    <script type="application/javascript">
+
     </div>
 </body>
     
