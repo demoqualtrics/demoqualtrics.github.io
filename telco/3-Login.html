@@ -77,12 +77,9 @@ function sendAbandonEmail() {
     document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile2.png"  
     document.getElementById('profile_email').innerHTML = window.localStorage.getItem("email");
     
-    var firstName = encodeURIComponent(document.getElementById("fName").value);
-    var lastName = encodeURIComponent(document.getElementById("lName").value);
     var email = encodeURIComponent(document.getElementById("emailName").value);
 
     var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_mrkpL4x98CrYvCr&contextId=SV_5ASIeGEq2NdQ4aG&firstName=Sarah&lastName=Bailey&email=" + email + "&mobile=0";
-    
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
     xhr.send('');
@@ -653,22 +650,7 @@ function sendAbandonEmail() {
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
         <script type="application/javascript">
-        if ( window.localStorage.getItem("firstName") !== null ) {
-            //Change banner
-            document.getElementById('fName').value = window.localStorage.getItem("firstName");
-        }
-        if ( window.localStorage.getItem("lastName") !== null ) {
-            //Change banner
-            document.getElementById('lName').value = window.localStorage.getItem("lastName");
-        }
-        if ( window.localStorage.getItem("email") !== null ) {
-            //Change banner
-            document.getElementById('emailName').value = window.localStorage.getItem("email");
-            //update xID profile widget
-            document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile2.png" 
-            document.getElementById('profile_email').innerHTML = window.localStorage.getItem("email");
-        }
-    </script>
+
     </div>
 </body>
     
