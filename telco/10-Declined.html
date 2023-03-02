@@ -58,58 +58,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6TPCWL"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<!-- Genesys Chat Widget Tag -->
-    <script src="https://apps.mypurecloud.com/widgets/9.0/cxbus.min.js" onload="javascript:CXBus.configure({debug:false,pluginsPath:'https://apps.mypurecloud.com/widgets/9.0/plugins/'}); CXBus.loadPlugin('widgets-core');"></script>
-
-<script>
-  window._genesys = {
-    "widgets": {
-        "main": {
-            "debug": true,
-            "timeFormat": 24,
-            "theme": "dark",
-            "lang": "en",
-            "mobileMode": "auto",
-            "mobileModeBreakpoint": 600,
-            "preload": [
-                "webchat"
-            ]
-        },
-        "webchat": {
-            "transport": {
-            "type": "purecloud-v2-sockets",
-            "dataURL": "https://api.mypurecloud.com",
-            "deploymentKey": "c8ea4906-729e-40e6-81c2-7b147f258dd5",
-            "orgGuid": "1d9123ca-5eee-449c-8b4f-937148c4d011",
-            "interactionData": {
-                "routing": {
-                    "targetType": "QUEUE",
-                    "targetAddress": "QualtricsSurveyQueue",
-                    "priority": 2
-                }
-            }
-            },
-            userData: {},
-            confirmFormCloseEnabled: true,
-            emojis: true,
-            autoInvite: {
-                enabled: true,
-                timeToInviteSeconds: 5,
-                inviteTimeoutSeconds: 30
-            },
-            chatButton: {
-                enabled: true,
-                openDelay: 100,
-                effectDuration: 100,
-                hideDuringInvite: true,
-                template: "<div class='cx-widget cx-webchat-chat-button cx-side-button' role='button' tabindex='0' data-message='ChatButton' data-gcb-service-node='true'><span class='cx-icon' data-icon='chat'></span><span class='i18n cx-chat-button-label' data-message='ChatButton'></span></div>"
-            }
-        }
-    }
-  };
-
-</script>
-    <!-- End Genesys Chat Widget Tag -->    
     
     <!--[if lt IE 9]>
 		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
@@ -690,6 +638,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
 
+    <!-- Start of HubSpot Embed Code --> <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/27035632.js"></script> <!-- End of HubSpot Embed Code -->
 
 </body>
 

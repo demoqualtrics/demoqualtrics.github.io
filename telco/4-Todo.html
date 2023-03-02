@@ -48,7 +48,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<script src="js/vendor/respond.min.js"></script>
 		<script src="js/vendor/jquery-1.12.4.min.js"></script>
 	<![endif]-->
+    
 
+    
+<script type="application/javascript">  
+    
+function writeToLocalStorage(key, value) {
+    if (typeof(Storage) !== "undefined") {
+        window.localStorage.setItem(key, value);
+    }
+}
+window.onload = function() {
+//send application journey abandon campaign email.
+function sendAbandonEmail() {
+    //update xID profile widget
+    document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile2.png"  
+    document.getElementById('profile_email').innerHTML = window.localStorage.getItem("email");
+    
+    var firstName = encodeURIComponent(document.getElementById("fName").value);
+    var lastName = encodeURIComponent(document.getElementById("lName").value);
+    var email = encodeURIComponent(document.getElementById("emailName").value);
+
+    var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_lJVP4FnkJKJ2wNI&contextId=SV_2mWpjBvGP2m6UaW&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.send('');
+}
+}
+</script>
 </head>
 
 <body>

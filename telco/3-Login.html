@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -61,6 +62,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <!-- Genesys Chat Widget Tag -->
     <script src="https://apps.mypurecloud.com/widgets/9.0/cxbus.min.js" onload="javascript:CXBus.configure({debug:false,pluginsPath:'https://apps.mypurecloud.com/widgets/9.0/plugins/'}); CXBus.loadPlugin('widgets-core');"></script>
+
+<script type="application/javascript">  
+    
+function writeToLocalStorage(key, value) {
+    if (typeof(Storage) !== "undefined") {
+        window.localStorage.setItem(key, value);
+    }
+}
+
+//send application journey abandon campaign email.
+function sendAbandonEmail() {
+    //update xID profile widget
+    document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile2.png"  
+    document.getElementById('profile_email').innerHTML = window.localStorage.getItem("email");
+    
+    var email = encodeURIComponent(document.getElementById("emailName").value);
+
+    var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_mrkpL4x98CrYvCr&contextId=SV_5ASIeGEq2NdQ4aG&firstName=Sarah&lastName=Bailey&email=" + email + "&mobile=0";
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.send('');
+}
+</script>
 
 <script>
   window._genesys = {
@@ -293,7 +317,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 												<a href="#">Mobile</a>
                                                 <ul>
 													<li>
-														<a href="#">Phones</a>
+														<a href="#">Phone</a>
 													</li>
                                                     <li>
 														<a href="#">Tablets</a>
@@ -418,6 +442,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<section class="s-py-10 s-py-lg-1 s-py-xl-10  ls ms">
 				<div class="container">
 	
+
 		
 						<main class="col-lg-12">
 							<article>
@@ -427,9 +452,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 										<form class="woocomerce-form woocommerce-form-login login" method="post">
 											<p class = "woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide animate" data-animation="fadeInDown" data-delay="300" style="color: red">
-												<label for="username" style="color: aqua">Username or email address <span class="required">*</span>
+												<label for="emailName" style="color: aqua">Username or email address <span class="required">*</span>
 												</label>
-												<input type="text" class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" style="color: grey" name="username" id="username" value="" placeholder="Username or email address" style="color: green">  
+											 <input class="form-control" type="email" id='emailName' placeholder="examplename@example.com" onchange="writeToLocalStorage('email', this.value);sendAbandonEmail();" required>
+                                                        
+
 											</p>
 											<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide animate" data-animation="fadeInDown" data-delay="300">
 												<label for="password">Password <span class="required">*</span>
@@ -459,8 +486,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 						</main>
 					</div>
-
-				</div>
 			</section>
 
 			<section class="footer-carousel c-gutter-0 container-px-0 s-py-0">
@@ -601,7 +626,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 		</div><!-- eof #box_wrapper -->
-	</div><!-- eof #canvas -->
     
         <!-- // xiD Slider Tab -->
 <div id="slideOut">
@@ -623,11 +647,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <!-- // END xiD Slider Tab -->
 
-
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
-    <script type="text/javascript" src="js/xidslider.js"></script>
-    
-</body>
+        <script type="application/javascript">
 
+    </div>
+</body>
+    
 </html>
