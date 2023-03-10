@@ -486,6 +486,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
     <script type="text/javascript" src="js/xidslider.js"></script>
+    <script type="text/javascript">
+    if ( window.localStorage.getItem("showXid") !== null ) {
+            //hide or show Xid Widget
+        if (window.localStorage.getItem("showXid") === "true") {
+            document.getElementById('slideOut').style.display = "block";
+        }
+        else {
+            document.getElementById('slideOut').style.display = "none";        
+        }
+    }
+    else {
+        document.getElementById('slideOut').style.display = "none";        
+    }
+    </script>
 
 
 </body>

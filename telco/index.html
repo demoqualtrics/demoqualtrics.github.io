@@ -50,6 +50,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="https://apps.mypurecloud.com/widgets/9.0/cxbus.min.js" onload="javascript:CXBus.configure({debug:false,pluginsPath:'https://apps.mypurecloud.com/widgets/9.0/plugins/'}); CXBus.loadPlugin('widgets-core');"></script>
     
 <script type="application/javascript">
+    function writeToLocalStorage(key, value) {
+        if (typeof(Storage) !== "undefined") {
+            window.localStorage.setItem(key, value);
+        }
+    }
+    
+    function toggleXid(value) {
+        writeToLocalStorage("showXid", value);
+        if (value) {
+            document.getElementById('slideOut').style.display = "block";
+        } else {
+            document.getElementById('slideOut').style.display = "none";
+        }
+    }
+    
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     if (urlParams.get('session') == "clear") {
@@ -213,6 +228,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 										</span>
 									</span>
 								</li>
+                                <li>
+                                    <span class="icon-inline">
+                                    <!-- Rounded switch -->
+                                        <label class="switch">
+                                            <input id="xid-toggle-switch" type="checkbox" onchange="toggleXid(this.checked);">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </span>
+                                </li>
 							</ul>
 						</div>
 					</div>
@@ -1158,10 +1182,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
     <script type="text/javascript" src="js/xidslider.js"></script>
+    <script type="text/javascript">
+        
+        if ( window.localStorage.getItem("showXid") !== null ) {
+            //hide or show Xid Widget
+            if (window.localStorage.getItem("showXid") === "true") {
+                document.getElementById('slideOut').style.display = "block";
+                document.getElementById('xid-toggle-switch').checked = true;
+            }
+            else {
+                document.getElementById('slideOut').style.display = "none";    
+                document.getElementById('xid-toggle-switch').checked = false;
+            }
+        }
+        else {
+            document.getElementById('slideOut').style.display = "none";    
+            document.getElementById('xid-toggle-switch').checked = false;
+        }
+    </script>
 
 
 	<!-- Google Map Script -->
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0pr5xCHpaTGv12l73IExOHDJisBP2FK4&callback=initGoogleMap"></script>
+    
 
 </body>
 

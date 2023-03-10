@@ -463,7 +463,7 @@ function writeToLocalStorage(key, value) {
 														WiFi connection problems can be frustrating, but we’re here to help keep you online. Simply test your broadband service, and if we find an issue we can help with a fix online. If needed you can book a technician, order a replacement WiFi Hub, or chat to one of our team.
 													</p>
                                                     <p class="Test my Connection">
-													<a href="https://demoqualtrics.github.io/telco/404.html" class="btn btn-maincolor" onclick="writeToLocalStorage('test', 'true');"><span>Test my Connection</span></a>
+													<a href="./404.html" class="btn btn-maincolor" onclick="writeToLocalStorage('test', 'true');"><span>Test my Connection</span></a>
                                                     <div id="feedback"> </div>
 
 												</div>
@@ -1271,6 +1271,19 @@ function writeToLocalStorage(key, value) {
         if ( window.localStorage.getItem("social") !== null ) {
             //update xID profile widget
             document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile5.png";
+        }
+        
+        if ( window.localStorage.getItem("showXid") !== null ) {
+            //hide or show Xid Widget
+            if (window.localStorage.getItem("showXid") === "true") {
+                document.getElementById('slideOut').style.display = "block";
+            }
+            else {
+                document.getElementById('slideOut').style.display = "none";        
+            }
+        }
+        else {
+            document.getElementById('slideOut').style.display = "none";        
         }
     </script>
 
