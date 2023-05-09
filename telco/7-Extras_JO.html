@@ -50,23 +50,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
 <script type="application/javascript">  
     
+function readFromLocalStorage(key) {
+    if (typeof(Storage) !== "undefined") {
+        return window.localStorage.getItem(key);
+    } else {
+        return null;
+    }
+}
+
+//send application journey abandon campaign email.
 function sendAbandonEmail() {
-  //update xID profile widget
-  document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile2.png";
-  document.getElementById('profile_email').innerHTML = window.localStorage.getItem("email");
+    //update xID profile widget
+    document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile2.png"  
+    document.getElementById('profile_email').innerHTML = readFromLocalStorage("email");
+    
+    var email = encodeURIComponent(readFromLocalStorage("email"));
 
-  var email = encodeURIComponent(document.getElementById("emailName").value);
-
-  var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_mrkpL4x98CrYvCr&contextId=SV_5ASIeGEq2NdQ4aG&firstName=Sarah&lastName=Bailey&email=" + email + "&mobile=0";
-
-  setTimeout(function() {
+    var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_mrkpL4x98CrYvCr&contextId=SV_5ASIeGEq2NdQ4aG&firstName=Sarah&lastName=Bailey&email=" + email + "&mobile=0";
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
     xhr.send('');
-  }, 10000); // Delay execution by 10 seconds (10000 milliseconds)
 }
 
+window.addEventListener("load", function() {
+    // Call the sendAbandonEmail function
+    sendAbandonEmail();
+});
+
 </script>
+
+
     
     
     <!--[if lt IE 9]>
