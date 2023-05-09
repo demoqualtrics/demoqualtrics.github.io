@@ -48,39 +48,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     
-<script type="application/javascript">  
-    
-function readFromLocalStorage(key) {
-    if (typeof(Storage) !== "undefined") {
-        return window.localStorage.getItem(key);
-    } else {
-        return null;
-    }
-}
+  <script>
+      // Wait for the page to load
+      window.addEventListener('load', function() {
+        // Wait for 5 seconds before showing the pop-up
+        setTimeout(function() {
+          // Retrieve the email key from local storage
+          var email = localStorage.getItem('email');
 
-//send application journey abandon campaign email.
-function sendAbandonEmail() {
-    //update xID profile widget
-    document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile2.png"  
-    document.getElementById('profile_email').innerHTML = readFromLocalStorage("email");
-    
-    var email = encodeURIComponent(readFromLocalStorage("email"));
-
-    var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_mrkpL4x98CrYvCr&contextId=SV_5ASIeGEq2NdQ4aG&firstName=Sarah&lastName=Bailey&email=" + email + "&mobile=0";
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
-    xhr.send('');
-}
-
-window.addEventListener("load", function() {
-    // Call the sendAbandonEmail function
-    sendAbandonEmail();
-});
-
-</script>
-
-
-    
+          // If the email key exists, show it in the pop-up
+          if (email) {
+            alert('Your email is: ' + email);
+          }
+        }, 5000);
+      });
+    </script>
     
     <!--[if lt IE 9]>
 		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
