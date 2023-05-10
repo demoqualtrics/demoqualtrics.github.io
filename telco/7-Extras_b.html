@@ -51,12 +51,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script type="application/javascript"> 
 
 function retrieveEmailFromLocalStorage() {
-  setTimeout(function() {
-    const email = localStorage.getItem('email');
-    console.log('Retrieved email from local storage:', email);
-    alert('Your email is: ' + email);
-  }, 3000);
+  const email = localStorage.getItem('email');
+  if (email) {
+    setTimeout(function() {
+      alert('Your email is: ' + email);
+    }, 3000);
+  } else {
+    console.log('No email value found in localStorage');
+  }
 }
+
+// Call the function to retrieve the email value from localStorage
+retrieveEmailFromLocalStorage();
     
 </script>
     
