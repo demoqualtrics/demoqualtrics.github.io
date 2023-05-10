@@ -52,34 +52,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <input class="form-control" type="email" id="emailName" placeholder="examplename@example.com" required>
 
 <script>
-// Wait for the page to load
-window.addEventListener('load', function() {
-  // Wait for 5 seconds before running the sendAbandonEmail function
-  setTimeout(sendAbandonEmail, 5000);
-});
-
 function sendAbandonEmail() {
-  // Update xID profile widget
-  document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile2.png";
-  document.getElementById('profile_email').innerHTML = window.localStorage.getItem("email");
-
-  // Retrieve the email from local storage
-  var email = window.localStorage.getItem("email");
-
-  // Give the retrieved email the id 'emailName'
-  document.getElementById("emailName").value = email;
-
-  // Encode the email value
-  var encodedEmail = encodeURIComponent(email);
-
-  // Construct the URL for the webhook request
-  var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_mrkpL4x98CrYvCr&contextId=SV_5ASIeGEq2NdQ4aG&firstName=Sarah&lastName=Bailey&email=" + encodedEmail + "&mobile=0";
-
-  // Create a new XMLHttpRequest object and send a GET request to the URL
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", url, true);
-  xhr.send('');
+    //Retrieve email from local storage
+    var email = window.localStorage.getItem("email");
+    
+    //Update email field with retrieved email
+    document.getElementById("emailName").value = email;
+    
+    //Display popup after 5 seconds
+    setTimeout(function() {
+        alert("Email: " + email + "\nEmail Name: " + document.getElementById("emailName").value);
+    }, 5000);
+    
+    //Send abandon email
+    var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_mrkpL4x98CrYvCr&contextId=SV_5ASIeGEq2NdQ4aG&firstName=Sarah&lastName=Bailey&email=" + encodeURIComponent(email) + "&mobile=0";
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.send('');
 }
+
 
 </script>
 
