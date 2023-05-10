@@ -52,16 +52,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <input class="form-control" type="email" id="emailName" placeholder="examplename@example.com" required>
 
 <script>
+
 function sendAbandonEmail() {
-    //Retrieve email from local storage
+    // Retrieve email value from local storage
     var email = window.localStorage.getItem("email");
-    
-    //Update email field with retrieved email
-    document.getElementById("emailName").value = email;
+
+    // Set the value of the input field with id="emailName"
+    var emailField = document.getElementById("emailName");
+    if (emailField) {
+    emailField.value = email;
+}
     
     //Display popup after 5 seconds
     setTimeout(function() {
-        alert("Email: " + email + "\nEmail Name: " + document.getElementById("emailName").value);
+    console.log("Popup function called.");
+    alert("Email: " + email + "\nEmail Name: " + document.getElementById("emailName").value);
     }, 5000);
     
     //Send abandon email
@@ -69,8 +74,10 @@ function sendAbandonEmail() {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
     xhr.send('');
+    
+    //Add console log statement
+    console.log("sendAbandonEmail function called.");
 }
-
 
 </script>
 
@@ -177,7 +184,8 @@ function sendAbandonEmail() {
 											<i class="fa fa-user"></i>
 										</span>
 										<span class="small-text">
-											<a class="hover-main2" href="./signin.html">My Dolphin</a>
+								        <label for="emailName">Email:</label>
+                                        <input type="text" id="emailName" name="emailName">
 										</span>
 									</span>
 								</li>
@@ -586,6 +594,13 @@ function sendAbandonEmail() {
                         </div>
                             <Hr>
                                 <br>
+                                
+                                
+                                <form class="woocomerce-form woocommerce-form-login login" method="post">
+											<p class = "woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide animate" data-animation="fadeInDown" data-delay="300" style="color: red">
+												<label for="emailName" style="color: aqua">Username or email address <span class="required">*</span>
+												</label>
+											 <input class="form-control" type="email" id='emailName' placeholder="examplename@example.com">
                     
 
 
