@@ -48,6 +48,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
    
+<script type="application/javascript"> 
+
+function retrieveEmailFromLocalStorage() {
+  setTimeout(function() {
+    const email = localStorage.getItem('email');
+    console.log('Retrieved email from local storage:', email);
+    alert('Your email is: ' + email);
+  }, 3000);
+}
+    
+</script>
     
     <!--[if lt IE 9]>
 		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
@@ -704,9 +715,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</div><!-- eof #canvas -->
 
 
-	<script src="js/compressed.js"></script>
+    
+    <script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
-    <script type="text/javascript">
+    <script type="application/javascript">
 
     function picture(){ 
     var pic = "https://i.imgur.com/llZUg8a.png"
