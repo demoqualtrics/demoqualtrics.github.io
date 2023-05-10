@@ -52,31 +52,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <input class="form-control" type="email" id="emailName" placeholder="examplename@example.com" required>
 
 <script>
+      // Wait for the page to load
+      window.addEventListener('load', function() {
+        // Wait for 5 seconds before showing the pop-up
+        setTimeout(function() {
+          // Retrieve the email key from local storage
+          var email = localStorage.getItem('email');
 
-function sendAbandonEmail() {
-    // Retrieve email value from local storage
-    var email = window.localStorage.getItem("email");
-
-    // Set the value of the input field with id="emailName"
-    var emailField = document.getElementById("emailName");
-    if (emailField) {
-    emailField.value = email;
-}
-    
-    //Display popup after 5 seconds
-    setTimeout(function() {
-    console.log("Popup function called.");
-    alert("Email: " + email + "\nEmail Name: " + document.getElementById("emailName").value);
-    }, 5000);
-    
-    //Send abandon email
-    var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_mrkpL4x98CrYvCr&contextId=SV_5ASIeGEq2NdQ4aG&firstName=Sarah&lastName=Bailey&email=" + encodeURIComponent(email) + "&mobile=0";
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
-    xhr.send('');
-    
-    //Add console log statement
-    console.log("sendAbandonEmail function called.");
+          // If the email key exists, show it in the pop-up
+          if (email) {
+            alert('Your email is: ' + email);
+          }
+        }, 5000);
+      });
 }
 
 </script>
