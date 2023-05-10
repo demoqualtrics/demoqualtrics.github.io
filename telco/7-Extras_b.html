@@ -47,28 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6TPCWL"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    
-<!-- The input field where the user enters their email -->
-<input class="form-control" type="email" id="emailName" placeholder="examplename@example.com" required>
-
-<script>
-      // Wait for the page to load
-      window.addEventListener('load', function() {
-        // Wait for 5 seconds before showing the pop-up
-        setTimeout(function() {
-          // Retrieve the email key from local storage
-          var email = localStorage.getItem('email');
-
-          // If the email key exists, show it in the pop-up
-          if (email) {
-            alert('Your email is: ' + email);
-          }
-        }, 5000);
-      });
-}
-
-</script>
-
+   
     
     <!--[if lt IE 9]>
 		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
@@ -172,8 +151,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 											<i class="fa fa-user"></i>
 										</span>
 										<span class="small-text">
-								        <label for="emailName">Email:</label>
-                                        <input type="text" id="emailName" name="emailName">
+											<a class="hover-main2" href="./signin.html">My Dolphin</a>
 										</span>
 									</span>
 								</li>
@@ -582,13 +560,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                             <Hr>
                                 <br>
-                                
-                                
-                                <form class="woocomerce-form woocommerce-form-login login" method="post">
-											<p class = "woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide animate" data-animation="fadeInDown" data-delay="300" style="color: red">
-												<label for="emailName" style="color: aqua">Username or email address <span class="required">*</span>
-												</label>
-											 <input class="form-control" type="email" id='emailName' placeholder="examplename@example.com">
                     
 
 
