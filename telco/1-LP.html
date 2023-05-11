@@ -378,7 +378,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 </div>
              <div class="homepagecta2" data-animation="fadeInUp">
                      <div style="padding-top: 850px"></div>
-            <button type="button" class="btn btn-white"><span>View Deals</span></button>
+                       <button type="button" class="btn btn-white" onclick="clearSessionAndRedirect()"><span>View Deals</span></button>
+
+<script>
+function clearSessionAndRedirect() {
+  document.cookie = "session=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  window.location.href = "https://demoqualtrics.github.io/telco/7-Extras.html";
+}
+</script>
              <button type="button" class="btn btn-white2"><span>Why Dophin Telco</span></button>
                          <button type="button" class="btn btn-white2"><span>Check Coverage</span></button>
             </div>
