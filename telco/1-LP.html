@@ -378,14 +378,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 </div>
              <div class="homepagecta2" data-animation="fadeInUp">
                      <div style="padding-top: 850px"></div>
-                       <button type="button" class="btn btn-white" onclick="clearSessionAndRedirect()"><span>View Deals</span></button>
+<button type="button" class="btn btn-white" onclick="clearCookiesAndRedirect()"><span>View Deals</span></button>
 
 <script>
-function clearSessionAndRedirect() {
-  document.cookie = "session=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+function clearCookiesAndRedirect() {
+  // Get all cookies for the current website
+  var cookies = document.cookie.split(";");
+
+  // Loop through each cookie and delete it
+  for (var i = 0; i < cookies.length; i++) {
+    var cookieName = cookies[i].split("=")[0];
+    document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  }
+
+  // Redirect the user to the specified URL
   window.location.href = "https://demoqualtrics.github.io/telco/7-Extras.html";
 }
 </script>
+
              <button type="button" class="btn btn-white2"><span>Why Dophin Telco</span></button>
                          <button type="button" class="btn btn-white2"><span>Check Coverage</span></button>
             </div>
