@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<script async src="https://www.googleoptimize.com/optimize.js?id=OPT-5JJMHCD"></script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-TD96K9KHFM"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-TD96K9KHFM');
+	</script>
+	<!--End Google tag (gtag.js) -->
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-P6TPCWL');</script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- End Google Tag Manager -->
+
+	<title>My Dolphin Telco</title>
+	<meta name="robots" content="noindex">
+	<meta charset="utf-8">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.min.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+	<![endif]-->
+
+
+
+	<script type="application/javascript">
+
+		function writeToLocalStorage(key, value) {
+			if (typeof (Storage) !== "undefined") {
+				window.localStorage.setItem(key, value);
+			}
+		}
+		window.onload = function () {
+			//send application journey abandon campaign email.
+			function sendAbandonEmail() {
+				//update xID profile widget
+				document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile2.png"
+				document.getElementById('profile_email').innerHTML = window.localStorage.getItem("email");
+
+				var firstName = encodeURIComponent(document.getElementById("fName").value);
+				var lastName = encodeURIComponent(document.getElementById("lName").value);
+				var email = encodeURIComponent(document.getElementById("emailName").value);
+
+				var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_lJVP4FnkJKJ2wNI&contextId=SV_2mWpjBvGP2m6UaW&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
+
+				var xhr = new XMLHttpRequest();
+				xhr.open("GET", url, true);
+				xhr.send('');
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6TPCWL" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<!-- Genesys Chat Widget Tag -->
+	<script src="https://apps.mypurecloud.com/widgets/9.0/cxbus.min.js"
+		onload="javascript:CXBus.configure({debug:false,pluginsPath:'https://apps.mypurecloud.com/widgets/9.0/plugins/'}); CXBus.loadPlugin('widgets-core');"></script>
+
+
+
+	<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+	<div class="preloader">
+		<div class="preloader_image"></div>
+	</div>
+
+	<!-- search modal -->
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<div class="widget widget_search">
+			<a href="./" class="logo">
+				<span class="logo-text py-20"><strong>Dolphin Telco</strong>com</span>
+			</a>
+			<form method="get" class="searchform search-form" action="/">
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword"
+						id="modal-search-input">
+				</div>
+				<button type="submit" class="btn">Search</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Unyson messages modal -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+		<div class="fw-messages-wrap ls p-normal">
+			<!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+			<!--
+		<ul class="list-unstyled">
+			<li>Message To User</li>
+		</ul>
+		-->
+
+		</div>
+	</div><!-- eof .modal -->
+
+	<!-- wrappers for visual page editor and boxed version of template -->
+	<div id="canvas">
+		<div id="box_wrapper">
+
+			<!-- template sections -->
+
+			<!--topline section visible only on small screens|-->
+
+			<section class="page_topline ls s-borderbottom c-my-20 animate" data-animation="fadeInDown"
+				data-delay="150">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-md-6 text-md-left text-center">
+							<ul class="top-includes">
+								<li>
+									<span class="icon-inline">
+										<span class="icon-styled color-main fs-14">
+											<i class="fa fa-phone"></i>
+										</span>
+										<span class="small-text">
+											<a href="tel:+1 206-111-1112">+1 206-111-1112 </a>
+										</span>
+									</span>
+								</li>
+								<li>
+									<span class="icon-inline">
+										<span class="icon-styled color-main fs-14">
+											<i class="fa fa-pencil"></i>
+										</span>
+										<span class="small-text">
+											<a href="#">info@dolpintelco.com</a>
+										</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-6 text-center text-md-right d-none d-md-block">
+							<ul class="top-includes">
+								<li>
+									<span class="icon-inline">
+										<span class="icon-styled color-main2 fs-14">
+											<i class="fa fa-comment"></i>
+										</span>
+										<span class="small-text">
+											<a class="hover-main2" href="./help.html">Help</a>
+										</span>
+									</span>
+								</li>
+								<li>
+									<span class="icon-inline">
+										<span class="icon-styled color-main2 fs-14">
+											<i class="fa fa-phone"></i>
+										</span>
+										<span class="small-text">
+											<a class="hover-main2" href="./contactus.html">Contact Us</a>
+										</span>
+									</span>
+								</li>
+								<li>
+									<span class="icon-inline">
+										<span class="icon-styled color-main2 fs-14">
+											<i class="fa fa-user"></i>
+										</span>
+										<span class="small-text">
+											<a class="hover-main2" href="./signin.html">My Dolphin</a>
+										</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!--eof topline-->
+
+			<div class="header_absolute header_layout_1 ">
+				<div id="particles-js"></div>
+				<!-- header with two Bootstrap columns - left for logo and right for navigation and includes (search, social icons, additional links and buttons etc -->
+				<header class="page_header ls justify-nav-end">
+					<div class="container-fluid">
+						<div class="row align-items-center">
+							<div class="col-xl-2 col-lg-4 col-md-5 col-11 animate" data-animation="fadeInLeft"
+								data-delay="200">">
+								<a href="./index.html" class="logo">
+									<img src="img/DolphinTelcoLogoWhite.png" />
+									<!--span class="logo-text py-20"><strong>Dolphin Telco</strong>com</span-->
+								</a>
+							</div>
+							<div class="col-xl-9 col-lg-8 col-md-7 col-1 animate" data-animation="fadeInRight"
+								data-delay="200">">">
+								<div class="nav-wrap">
+
+									<!-- main nav start -->
+									<nav class="top-nav">
+										<ul class="nav sf-menu">
+
+
+											<li class="active">
+												<a href="index.html">Home</a>
+
+											</li>
+
+											<li>
+												<a href="#">TV</a>
+												<ul>
+													<li>
+														<a href="#">Movies</a>
+													</li>
+													<li>
+														<a href="#">Sports</a>
+													</li>
+													<li>
+														<a href="#">Kids</a>
+													</li>
+													<li>
+														<a href="#">Entertainment</a>
+													</li>
+												</ul>
+											</li>
+
+
+											<li>
+												<a href="#">Broadband</a>
+												<ul>
+													<li>
+														<a href="#">Fibre</a>
+													</li>
+													<li>
+														<a href="./broadband_ultrafast.html">Ultrafast Fibre</a>
+													</li>
+													<li>
+														<a href="#">Landline</a>
+													</li>
+													<li>
+														<a href="#">Mobile Broadband</a>
+													</li>
+												</ul>
+											</li>
+
+											<li>
+												<a href="#">Mobile</a>
+												<ul>
+													<li>
+														<a href="#">Phones</a>
+													</li>
+													<li>
+														<a href="#">Tablets</a>
+													</li>
+													<li>
+														<a href="#">SIM Only</a>
+													</li>
+													<li>
+														<a href="#">Accessories</a>
+													</li>
+												</ul>
+											</li>
+
+											<li>
+												<a href="#">Deals</a>
+											</li>
+
+
+
+										</ul>
+
+
+									</nav>
+									<!-- eof main nav -->
+
+									<!--hidding includes on small devices. They are duplicated in topline-->
+									<ul class="top-includes d-none d-xl-block search-icon">
+
+										<li>
+											<!--modal search-->
+											<span>
+												<a href="#" class="search_modal_button">
+													<i class="fa fa-search"></i>
+												</a>
+											</span>
+
+										</li>
+
+									</ul>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- header toggler -->
+					<span class="toggle_menu"><span></span></span>
+				</header>
+
+				<div class="page_header_wrapper main-header-side">
+					<div class="page_header_side header_slide header_side_right ls">
+						<span class="toggle_menu toggle_menu_side header-slide"><span></span></span>
+						<div class="scrollbar-macosx">
+							<div class="side_header_inner">
+								<div class="header-side-menu">
+									<!-- main side nav start -->
+									<nav class="mainmenu_side_wrapper">
+										<ul class="nav menu-click">
+											<li>
+												<a href="faq.html">
+													<i class="color-main7 fa fa-question-circle"></i>
+													FAQ
+												</a>
+											</li>
+											<li>
+												<a href="booking-form.html">
+													<i class="color-main7 fa fa-paper-plane"></i>
+													Submit a ticket
+												</a>
+											</li>
+											<li>
+												<a href="terms_of_use.html">
+													<i class="color-main7 fa fa-rocket"></i>
+													Terms Of Use
+												</a>
+											</li>
+											<li>
+												<a href="availability-map.html">
+													<i class="color-main7 fa fa-file-text-o"></i>
+													Terms of Service
+												</a>
+											</li>
+											<li>
+												<a href="contact.html">
+													<i class="color-main7 fa fa-phone"></i>
+													call me back
+												</a>
+											</li>
+										</ul>
+									</nav>
+									<!-- eof main side nav -->
+
+
+								</div>
+							</div>
+						</div>
+						<div class="facebook-messeger d-flex align-items-center hero-bg">
+							<img src="images/messeger.png" alt="">
+							<a href="https://messenger.com" class="small-text">
+								facebook messeger
+							</a>
+						</div>
+					</div>
+
+				</div>
+
+				<section class="page_title cs s-pt-60 s-pb-10 s-pt-lg-130 s-pb-lg-60 page_title text-center">
+					<div class="container-fluid">
+						<div class="row">
+
+							<div class="col-md-12 text-center animate" data-animation="fadeInUp" data-delay="150">
+								<div class="divider-60"></div>
+								<h1>Manage Your Account</h1>
+							</div>
+
+							<div class="col-md-12 text-center animate" data-animation="fadeInUp" data-delay="180">
+								<h7>Customer since 2016</h7>
+							</div>
+
+						</div>
+					</div>
+				</section>
+			</div>
+            
+            <div>
+     <div>
+
+<section class="ls s-py-1 s-py-lg-1 s-py-xl-10 c-gutter-20">
+  <div class="container" style="position: relative;">
+    <div class="row">
+      <aside class="col-lg-10 col-xl-10 order-lg-10">
+        <div class="widget widget_categories">
+          <p class="small-text color-main2 animate" data-animation="fadeInUp" data-delay="350" id="welcome-message"></p>
+        </div>
+      </aside>
+      <div style="position: absolute; top: 5px; right: 0;">
+        <button type="button" class="btn btn-white2" style="position: relative; padding-left: 25px; padding-right: 25px; height: 40px;">
+          <i class="fa fa-circle" style="color: #ff0000; position: absolute; left: 4px; top: 50%; transform: translateY(-50%);"></i>
+          <span style="font-size: 10px;">You have new messages!</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#collapse01').on('shown.bs.collapse', function () {
+      $('.btn-white2').hide();
+    })
+  });
+</script>
+
+<script>
+  var now = new Date();
+  var hour = now.getHours();
+
+  var welcomeMessage;
+
+  if (hour < 12) {
+    welcomeMessage = "Good morning, Sarah";
+  } else if (hour < 18) {
+    welcomeMessage = "Good afternoon, Sarah";
+  } else {
+    welcomeMessage = "Good evening, Sarah";
+  }
+
+  document.getElementById("welcome-message").innerHTML = welcomeMessage;
+</script>
+         
+<div class="container">
+				<div class="row">
+					<main class="col-lg-4 col-xl-8 order-lg-2 animate" data-animation="fadeInLeft" data-delay="220"> 
+						<h5><i class="fa fa-bell fa-lg" aria-hidden="true"></i>Latest Updates</h5>
+         
+                        
+<div id="accordion01" role="tablist">
+  <div class="card">
+    <div class="card-header" role="tab" id="collapse01_header">
+      <h5>
+        <a class="collapsed" data-toggle="collapse" href="#collapse01" aria-expanded="false" aria-controls="collapse01">
+          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+          Congratulations - Your order is on it's way!
+        </a>
+      </h5>
+    </div>
+    <div id="collapse01" class="collapse" role="tabpanel" aria-labelledby="collapse01_header" data-parent="#accordion01">
+      <div class="card-body">
+                We are delighted to informed you that your order has been confirmed. <br/>
+								</div>
+							</div>
+                                <br>
+							<div class="card">
+								<div class="card-header" role="tab" id="collapse02_header">
+									<h5>
+										<a class="collapsed" data-toggle="collapse" href="#collapse02" aria-expanded="false" aria-controls="collapse02">
+											<i class="fa fa-plane fa-lg" aria-hidden="true"></i>
+											Going abroad?
+										</a>
+									</h5>
+								</div>
+								<div id="collapse02" class="collapse" role="tabpanel" aria-labelledby="collapse02_header" data-parent="#accordion01" style="">
+									<div class="card-body">
+										Check roaming costs before you go<br/>
+										<button type="button" class="btn btn-outline-maincolor small-button"><span>See roaming costs</span></button>	
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" role="tab" id="collapse03_header">
+									<h5>
+										<a class="collapsed" data-toggle="collapse" href="#collapse03" aria-expanded="false" aria-controls="collapse03">
+											<i class="fa fa-gift fa-lg" aria-hidden="true"></i>
+											Check offers & upgrades
+										</a>
+									</h5>
+								</div>
+								<div id="collapse03" class="collapse" role="tabpanel" aria-labelledby="collapse03_header" data-parent="#accordion01">
+									<div class="card-body">
+										Check offers and upgrades based on your existing plan<br/>
+										<button type="button" class="btn btn-outline-maincolor small-button"><span>Offers & upgrades</span></button>	
+									</div>
+								</div>
+							</div>													
+						</div>
+    </div>
+    		</main>
+            
+
+         
+					<aside class="col-lg-5 col-xl-4 order-lg-1 animate" data-animation="fadeInLeft" data-delay="150"">
+						<div class="widget widget_categories">
+
+							<h5 class="widget-title categories-tilte">My Dolphin Account</h5>
+
+							<ul>
+								<li class="cat-item">
+									<a href="blog-right.html">Bills & Payments</a>
+								</li>
+								<li class="cat-item">
+									<a href="blog-right.html">Data & Usage</a>
+								</li>
+								<li class="cat-item">
+									<a href="blog-right.html">Plan</a>
+								</li>
+								<li class="cat-item">
+									<a href="blog-right.html">Add-ons & Extras</a>
+								</li>
+                                <li class="cat-item">
+									<a href="blog-right.html">Log out</a>
+								</li>
+							</ul>
+						</div>
+					</aside>
+
+					<div class="d-none d-lg-block divider-30"></div>
+				</div>
+		</div>
+	</div>
+                        	</div>
+			</section>
+ 
+
+                <section class="ls s-pt-1 s-pb-1 s-pt-lg-1 s-pb-lg-1 s-pt-xl-1 s-pb-xl-1 c-mb-1 c-mb-lg-1">
+				<div class="container">
+                                                <div class="col-md-12 text-center animate" data-animation="fadeInDown" data-delay="350">
+                                                    
+							</div>
+                    
+                    							<div class="row">
+
+<div class="col-lg-4">
+	<div class="icon-box text-center bordered rounded box-shadow animate" data-animation="fadeInLeft" data-delay="250">
+		<div class="icon-styled bg-maincolor3 rounded fs-24"><i class="fa fa-arrow-circle-o-up"></i></div>
+		<h5>Latest Bill</h5>
+        <p class="small-text color-main1">£57.50</p>
+        <p class="small-text color-main1">Collected via direct debit</p>
+	</div>
+</div>
+
+	<div class="col-lg-4">
+	<div class="icon-box text-center bordered rounded box-shadow animate" data-animation="fadeInLeft" data-delay="250">
+		<div class="icon-styled bg-maincolor2 rounded fs-24"><i class="fa fa-arrow-circle-o-up"></i></div>
+		<h5>Data Usage</h5>
+        <p class="small-text color-main1">45.0GB / 45.0GB</p>
+        <p class="small-text color-main1">Refreshes on <span id="refresh-date"></span></p>
+	</div>
+</div>
+
+<script>
+    // Get today's date
+    var today = new Date();
+    // Add a month to today's date
+    var nextMonth = new Date(today.getFullYear(), today.getMonth() + 1, 1);
+    // Set the date to the 7th of the next month
+    nextMonth.setDate(7);
+    // Format the date to display as "DD/MM/YYYY"
+    var formattedDate = nextMonth.toLocaleDateString('en-GB');
+    // Set the formatted date as the text content of the span with the "refresh-date" id
+    document.getElementById('refresh-date').textContent = formattedDate;
+</script>
+                                                                                                                                                                                                                  
+	<div class="col-lg-4">
+	<div class="icon-box text-center bordered rounded box-shadow animate" data-animation="fadeInLeft" data-delay="250">
+		<div class="icon-styled bg-maincolor rounded fs-24"><i class="fa fa-arrow-circle-o-up"></i></div>
+		<h5>Upgrade</h5>
+        <p class="small-text color-main1">Upgrade your package</p>
+        <p class="small-text color-main1">View options <span id="refresh-date"></span></p>
+	</div>
+</div>
+							</div>
+
+					</div>
+			</section>
+<br><br>
+
+	<section class="footer-carousel c-gutter-0 container-px-0 s-py-0">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<div class="owl-carousel small-gallery-carousel" data-margin="0" data-responsive-lg="8"
+						data-responsive-md="4" data-responsive-sm="3" data-responsive-xs="2" data-nav="true"
+						data-loop="true">
+
+						<a href="images/square/03.jpg" class="photoswipe-link" data-width="800" data-height="800">
+							<img src="images/square/03.jpg" alt="">
+						</a>
+						<a href="images/square/04.jpg" class="photoswipe-link" data-width="800" data-height="800">
+							<img src="images/square/04.jpg" alt="">
+						</a>
+						<a href="images/square/05.jpg" class="photoswipe-link" data-width="800" data-height="800">
+							<img src="images/square/05.jpg" alt="">
+						</a>
+						<a href="images/square/06.jpg" class="photoswipe-link" data-width="800" data-height="800">
+							<img src="images/square/06.jpg" alt="">
+						</a>
+						<a href="images/square/07.jpg" class="photoswipe-link" data-width="800" data-height="800">
+							<img src="images/square/07.jpg" alt="">
+						</a>
+						<a href="images/square/08.jpg" class="photoswipe-link" data-width="800" data-height="800">
+							<img src="images/square/08.jpg" alt="">
+						</a>
+						<a href="images/square/09.jpg" class="photoswipe-link" data-width="800" data-height="800">
+							<img src="images/square/09.jpg" alt="">
+						</a>
+						<a href="images/square/10.jpg" class="photoswipe-link" data-width="800" data-height="800">
+							<img src="images/square/10.jpg" alt="">
+						</a>
+						<a href="images/square/01.jpg" class="photoswipe-link" data-width="800" data-height="800">
+							<img src="images/square/01.jpg" alt="">
+						</a>
+						<a href="images/square/02.jpg" class="photoswipe-link" data-width="800" data-height="800">
+							<img src="images/square/02.jpg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer
+		class="page_footer ls ms s-pt-80 s-pb-70 s-py-lg-120 s-pt-xl-135 s-pb-xl-105 c-gutter-60 text-center text-md-left">
+		<div class="container">
+			<div class="row">
+				<div class="divider-20 d-none d-xl-block"></div>
+
+				<div class="col-md-6 col-xl-3 order-xl-1 order-md-1 animate" data-animation="fadeInUp">
+
+					<div class="widget widget_text">
+						<h4 class="widget-title">About</h4>
+						<p>
+							Welcome largest broadband and Internet services provider where you can choose the best plan
+							ever.
+						</p>
+						<div class="widget widget_social_buttons">
+							<a href="#" class="fa fa-facebook color-bg-icon rounded-icon" title="facebook"></a>
+							<a href="#" class="fa fa-twitter color-bg-icon rounded-icon" title="twitter"></a>
+							<a href="#" class="fa fa-youtube-play color-bg-icon rounded-icon" title="youtube-play"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-xl-3 order-xl-2 order-md-4 animate" data-animation="fadeInUp">
+					<div class="widget links">
+						<h4 class="widget-title">Links</h4>
+						<ul>
+							<li class="cat-item">
+								<a href="blog-right.html">Packages</a>
+							</li>
+							<li class="cat-item">
+								<a href="blog-right.html">MaxiNet Media</a>
+							</li>
+							<li class="cat-item">
+								<a href="blog-right.html">Connection</a>
+							</li>
+							<li class="cat-item">
+								<a href="blog-right.html">Support</a>
+							</li>
+							<li class="cat-item">
+								<a href="blog-right.html">Video Tutorials</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6 col-xl-3 order-xl-3 order-md-3 animate" data-animation="fadeInUp">
+					<div class="widget services-links">
+						<h4 class="widget-title">Services</h4>
+						<ul>
+							<li class="cat-item">
+								<a href="blog-right.html">4K Cable TV</a>
+							</li>
+							<li class="cat-item">
+								<a href="blog-right.html">Dedicated Server</a>
+							</li>
+							<li class="cat-item">
+								<a href="blog-right.html">High Speed Internet</a>
+							</li>
+							<li class="cat-item">
+								<a href="blog-right.html">Smartphone Service</a>
+							</li>
+							<li class="cat-item">
+								<a href="blog-right.html">Dedicated Server</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6 col-xl-3 order-xl-4 order-md-2 animate" data-animation="fadeInUp">
+					<div class="widget widget_icons_list">
+						<h4 class="widget-title">Call Us</h4>
+						<p>23-456-7890</p>
+						<a href="#" class="small-text">
+							<i class="fa fa-envelope-o color-main fs-14"></i>
+							email us
+						</a>
+						<h4 class="widget-title">Visit Us</h4>
+						<p>246 Benson St., Ashwaubenon</p>
+						<a href="#" class="small-text">
+							<i class="fa fa-map-marker color-main3 fs-14"></i>
+							Get Direction
+						</a>
+					</div>
+					<div class="divider-45 d-none d-md-block d-xlz-none"></div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<section class="page_copyright ds s-py-10 copyright-bg">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="divider-15 d-none d-lg-block"></div>
+				<div class="col-md-12 text-center">
+					<p>&copy; Copyright <span class="copyright_year">2019</span> All Rights Reserved</p>
+				</div>
+				<div class="divider-15 d-none d-lg-block"></div>
+			</div>
+		</div>
+	</section>
+
+
+	</div><!-- eof #box_wrapper -->
+	</div><!-- eof #canvas -->
+
+
+	<script src="js/compressed.js"></script>
+	<script src="js/main.js"></script>
+
+
+</body>
+
+</html>
