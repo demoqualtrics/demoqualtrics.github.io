@@ -413,12 +413,24 @@
           <p class="small-text color-main2 animate" data-animation="fadeInUp" data-delay="350" id="welcome-message"></p>
         </div>
       </aside>
-<div style="position: absolute; top: 5px; right: 0;">
-  <button type="button" class="btn btn-white2" style="position: relative; padding-left: 25px; padding-right: 25px; height: 40px;">
-    <i class="fa fa-circle" style="color: #ff0000; position: absolute; left: 4px; top: 50%; transform: translateY(-50%);"></i>
-    <span style="font-size: 10px;">You have new messages!</span>
-  </button>
-</div>
+      <div style="position: absolute; top: 5px; right: 0;">
+        <button type="button" class="btn btn-white2" style="position: relative; padding-left: 25px; padding-right: 25px; height: 40px;">
+          <i class="fa fa-circle" style="color: #ff0000; position: absolute; left: 4px; top: 50%; transform: translateY(-50%);"></i>
+          <span style="font-size: 10px;">You have new messages!</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#collapse01').on('shown.bs.collapse', function () {
+      $('.btn-white2').hide();
+    })
+  });
+</script>
 
 
 
