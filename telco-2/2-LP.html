@@ -52,6 +52,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     updatePageViews();
   </script>
     
+    <script type="application/javascript"> 
+
+function retrieveEmailFromLocalStorage() {
+  const email = localStorage.getItem('email');
+  if (email) {
+    setTimeout(function() {
+      alert('Your email is: ' + email);
+      sendAbandonEmail(); // Call the sendAbandonEmail function after the popup has been displayed
+    }, 3000);
+  } else {
+    console.log('No email value found in localStorage');
+  }
+}
+
+function sendAbandonEmail() {
+  var email = encodeURIComponent(localStorage.getItem('email'));
+  console.log('Sending abandon email for email:', email);
+  var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_mrkpL4x98CrYvCr&contextId=SV_5ASIeGEq2NdQ4aG&firstName=Sarah&lastName=Bailey&email=" + email + "&mobile=0";
+  console.log('API URL:', url);
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", url, true);
+  xhr.send('');
+}
+
+// Call the function to retrieve the email value from localStorage
+retrieveEmailFromLocalStorage();
+    
+</script>
+    
     
     
     <title>Flash Sale Landing Page</title>
