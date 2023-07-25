@@ -27,8 +27,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
     
     
+  <script>
+    // Function to update the page views count and store it in local storage
+    function updatePageViews() {
+      // Check if 'page_views' is already in local storage
+      let pageViews = localStorage.getItem('page_views');
+      
+      if (pageViews) {
+        // If it exists, increment the count
+        pageViews = parseInt(pageViews) + 1;
+      } else {
+        // If it doesn't exist, set the count to 1
+        pageViews = 1;
+      }
+      
+      // Save the updated value to local storage
+      localStorage.setItem('page_views', pageViews);
+      
+      // Update the page content to display the current page views count
+      document.querySelector('#pageViewsCount').innerText = pageViews;
+    }
     
-
+    // Call the function on page load to increment the page views count
+    updatePageViews();
+  </script>
+    
+    
     
     <title>Flash Sale Landing Page</title>
     <meta name="robots" content="noindex">
