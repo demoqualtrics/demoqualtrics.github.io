@@ -30,6 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<link rel="stylesheet" href="css/animations.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+    <link rel="stylesheet" type="text/css" href="css/xidslider.css" media="all" />
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
 	<!--[if lt IE 9]>
@@ -48,55 +49,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Genesys Chat Widget Tag -->
     <script src="https://apps.mypurecloud.com/widgets/9.0/cxbus.min.js" onload="javascript:CXBus.configure({debug:false,pluginsPath:'https://apps.mypurecloud.com/widgets/9.0/plugins/'}); CXBus.loadPlugin('widgets-core');"></script>
 
-<script>
-  window._genesys = {
-    "widgets": {
-        "main": {
-            "debug": true,
-            "timeFormat": 24,
-            "theme": "dark",
-            "lang": "en",
-            "mobileMode": "auto",
-            "mobileModeBreakpoint": 600,
-            "preload": [
-                "webchat"
-            ]
-        },
-        "webchat": {
-            "transport": {
-            "type": "purecloud-v2-sockets",
-            "dataURL": "https://api.mypurecloud.com",
-            "deploymentKey": "c8ea4906-729e-40e6-81c2-7b147f258dd5",
-            "orgGuid": "1d9123ca-5eee-449c-8b4f-937148c4d011",
-            "interactionData": {
-                "routing": {
-                    "targetType": "QUEUE",
-                    "targetAddress": "QualtricsSurveyQueue",
-                    "priority": 2
-                }
-            }
-            },
-            userData: {},
-            confirmFormCloseEnabled: true,
-            emojis: true,
-            autoInvite: {
-                enabled: true,
-                timeToInviteSeconds: 5,
-                inviteTimeoutSeconds: 30
-            },
-            chatButton: {
-                enabled: true,
-                openDelay: 100,
-                effectDuration: 100,
-                hideDuringInvite: true,
-                template: "<div class='cx-widget cx-webchat-chat-button cx-side-button' role='button' tabindex='0' data-message='ChatButton' data-gcb-service-node='true'><span class='cx-icon' data-icon='chat'></span><span class='i18n cx-chat-button-label' data-message='ChatButton'></span></div>"
-            }
-        }
-    }
-  };
-
-</script>
-    <!-- End Genesys Chat Widget Tag -->
     
     <!--[if lt IE 9]>
 		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
@@ -113,7 +65,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</button>
 		<div class="widget widget_search">
 			<a href="./" class="logo">
-				<span class="logo-text py-20"><strong>Maxi</strong>com</span>
+				<span class="logo-text py-20"><strong>Dolphin</strong>com</span>
 			</a>
 			<form method="get" class="searchform search-form" action="/">
 				<div class="form-group">
@@ -221,7 +173,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<div class="col-xl-2 col-lg-4 col-md-5 col-11">
 								<a href="./index.html" class="logo">
                                     <img src="img/DolphinTelcoLogoWhite.png" />
-				 					<!--span class="logo-text py-20"><strong>Maxi</strong>com</span-->
+				 					<!--span class="logo-text py-20"><strong>Dolphinx</strong>com</span-->
 								</a>
 							</div>
 							<div class="col-xl-9 col-lg-8 col-md-7 col-1">
@@ -434,7 +386,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								</div>
 
 								<p>
-									<a href="./" class="btn btn-white"><span>Back To Homepage</span></a>
+									<a href="./help.html" class="btn btn-white"><span>Back To Help</span></a>
 								</p>
 							</div>
 							<!-- .page-content -->
@@ -459,10 +411,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 		</div><!-- eof #box_wrapper -->
 	</div><!-- eof #canvas -->
+    
+     <!-- // xiD Slider Tab -->
+<div id="slideOut">
+<!--   // Tab -->
+  <div class="slideOutTab">
+    <div>
+      <img src="img/xiD-large.svg" alt="XID" width="100px"/>
+    </div>
+  </div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">xiD Profile</h4> </div>
+    <div class="modal-body">
+      <img id="modal-body-image" src="img/profile-snapshots/profile3.png" alt="profile" width="700px"/>
+    </div>
+    <div class="modal-footer"> </div>
+    <div style="position:absolute;top:160px;left:211px;border: 1px solid white;background-color:white;color:#999;width:400px;"><span id="profile_email">&nbsp;</span></div>
+  </div>
+</div>
+<!-- // END xiD Slider Tab -->
+
 
 
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
+    <script type="text/javascript" src="js/xidslider.js"></script>
+    <script type="text/javascript">
+    if ( window.localStorage.getItem("showXid") !== null ) {
+            //hide or show Xid Widget
+        if (window.localStorage.getItem("showXid") === "true") {
+            document.getElementById('slideOut').style.display = "block";
+        }
+        else {
+            document.getElementById('slideOut').style.display = "none";        
+        }
+    }
+    else {
+        document.getElementById('slideOut').style.display = "none";        
+    }
+    </script>
 
 
 </body>

@@ -30,6 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<link rel="stylesheet" href="css/animations.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+    <link rel="stylesheet" type="text/css" href="css/xidslider.css" media="all" />
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
 	<!--[if lt IE 9]>
@@ -47,56 +48,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <!-- Genesys Chat Widget Tag -->
     <script src="https://apps.mypurecloud.com/widgets/9.0/cxbus.min.js" onload="javascript:CXBus.configure({debug:false,pluginsPath:'https://apps.mypurecloud.com/widgets/9.0/plugins/'}); CXBus.loadPlugin('widgets-core');"></script>
-
-<script>
-  window._genesys = {
-    "widgets": {
-        "main": {
-            "debug": true,
-            "timeFormat": 24,
-            "theme": "dark",
-            "lang": "en",
-            "mobileMode": "auto",
-            "mobileModeBreakpoint": 600,
-            "preload": [
-                "webchat"
-            ]
-        },
-        "webchat": {
-            "transport": {
-            "type": "purecloud-v2-sockets",
-            "dataURL": "https://api.mypurecloud.com",
-            "deploymentKey": "c8ea4906-729e-40e6-81c2-7b147f258dd5",
-            "orgGuid": "1d9123ca-5eee-449c-8b4f-937148c4d011",
-            "interactionData": {
-                "routing": {
-                    "targetType": "QUEUE",
-                    "targetAddress": "QualtricsSurveyQueue",
-                    "priority": 2
-                }
-            }
-            },
-            userData: {},
-            confirmFormCloseEnabled: true,
-            emojis: true,
-            autoInvite: {
-                enabled: true,
-                timeToInviteSeconds: 5,
-                inviteTimeoutSeconds: 30
-            },
-            chatButton: {
-                enabled: true,
-                openDelay: 100,
-                effectDuration: 100,
-                hideDuringInvite: true,
-                template: "<div class='cx-widget cx-webchat-chat-button cx-side-button' role='button' tabindex='0' data-message='ChatButton' data-gcb-service-node='true'><span class='cx-icon' data-icon='chat'></span><span class='i18n cx-chat-button-label' data-message='ChatButton'></span></div>"
-            }
+    
+<script type="application/javascript">
+    function writeToLocalStorage(key, value) {
+        if (typeof(Storage) !== "undefined") {
+            window.localStorage.setItem(key, value);
         }
     }
-  };
-
+    
+    function toggleXid(value) {
+        writeToLocalStorage("showXid", value);
+        if (value) {
+            document.getElementById('slideOut').style.display = "block";
+        } else {
+            document.getElementById('slideOut').style.display = "none";
+        }
+    }
+    
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    if (urlParams.get('session') == "clear") {
+        window.localStorage.clear();
+    }
 </script>
-    <!-- End Genesys Chat Widget Tag -->
+
     
     <!--[if lt IE 9]>
 		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
@@ -113,7 +88,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</button>
 		<div class="widget widget_search">
 			<a href="./" class="logo">
-				<span class="logo-text py-20"><strong>Maxi</strong>com</span>
+				<span class="logo-text py-20"><strong>Dolphin</strong></span>
 			</a>
 			<form method="get" class="searchform search-form" action="/">
 				<div class="form-group">
@@ -200,10 +175,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 											<i class="fa fa-user"></i>
 										</span>
 										<span class="small-text">
-											<a class="hover-main2" href="./signin.html">My Dolphin</a>
+											<a class="hover-main2" href="./3-Login.html">My Dolphin</a>
 										</span>
 									</span>
 								</li>
+                                <li>
+                                    <span class="icon-inline">
+                                    <!-- Rounded switch -->
+                                        <label class="switch">
+                                            <input id="xid-toggle-switch" type="checkbox" onchange="toggleXid(this.checked);">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </span>
+                                </li>
 							</ul>
 						</div>
 					</div>
@@ -221,7 +205,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<div class="col-xl-2 col-lg-4 col-md-5 col-11">
 								<a href="./index.html" class="logo">
                                     <img src="img/DolphinTelcoLogoWhite.png" />
-				 					<!--span class="logo-text py-20"><strong>Maxi</strong>com</span-->
+				 					<!--span class="logo-text py-20"><strong>Dolphin</strong>com</span-->
 								</a>
 							</div>
 							<div class="col-xl-9 col-lg-8 col-md-7 col-1">
@@ -361,7 +345,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 												</a>
 											</li>
 											<li>
-												<a href="contact.html">
+												<a href="contact-form.html">
 													<i class="color-main7 fa fa-phone"></i>
 													call me back
 												</a>
@@ -600,8 +584,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<div class="item-content text-center text-md-left">
 								<h5 class="fw-200 text-uppercase">We Are</h5>
 								<h3 class="text-uppercase">#1 internet service provider company in Country</h3>
-								<h6 class="fw-500 font-italic">To get started with MaxiCom, please go over all of our plans to let our operators know which one works for you the best!</h6>
-								<p class="big">We guarantee high-quality customer support service with high-speed satellite connection all over the world. Enjoy fun family nights and loud friends parties at your place! MaxiCom provides excellent entertainment.
+								<h6 class="fw-500 font-italic">To get started with Dolphin, please go over all of our plans to let our operators know which one works for you the best!</h6>
+								<p class="big">We guarantee high-quality customer support service with high-speed satellite connection all over the world. Enjoy fun family nights and loud friends parties at your place! Dolphin provides excellent entertainment.
 								</p>
 								<div class="d-flex justify-content-between mt-50">
 									<a class="btn btn-white" href=""><span>Read More</span></a>
@@ -1025,19 +1009,87 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</div>
 				</div>
 			</section>
-			<footer class="page_footer ls ms s-pt-70 s-pb-20 s-pt-lg-130 s-pb-lg-50 footer-layout6">
+			<footer class="page_footer ls ms s-pt-80 s-pb-70 s-py-lg-120 s-pt-xl-135 s-pb-xl-105 c-gutter-60 text-center text-md-left">
 				<div class="container">
 					<div class="row">
+						<div class="divider-20 d-none d-xl-block"></div>
 
-						<div class="col-md-12 text-center animate" data-animation="fadeInUp">
-							<div class="">
-								<h4 class="color-main fw-100">+1 206-111-1112	</h4>
-								<h1>
-									<a href="mailto:info@dolphintelco.com">info@dolphintelco.com</a>
-								</h1>
+						<div class="col-md-6 col-xl-3 order-xl-1 order-md-1 animate" data-animation="fadeInUp">
+
+							<div class="widget widget_text">
+								<h4 class="widget-title">About</h4>
+								<p>
+									Dolphin Telco is NOT A REAL COMPANY<br/>
+                                    This website is used for Qualtrics demo purposes only.
+								</p>
+								<div class="widget widget_social_buttons">
+									<a href="#" class="fa fa-facebook color-bg-icon rounded-icon" title="facebook"></a>
+									<a href="#" class="fa fa-twitter color-bg-icon rounded-icon" title="twitter"></a>
+									<a href="#" class="fa fa-youtube-play color-bg-icon rounded-icon" title="youtube-play"></a>
+								</div>
 							</div>
 						</div>
-
+						<div class="col-md-6 col-xl-3 order-xl-2 order-md-4 animate" data-animation="fadeInUp">
+							<div class="widget links">
+								<h4 class="widget-title">Links</h4>
+								<ul>
+									<li class="cat-item">
+										<a href="blog-right.html">Packages</a>
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">Dolphin Telco Media</a>
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">Connection</a>
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">Support</a>
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">Video Tutorials</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6 col-xl-3 order-xl-3 order-md-3 animate" data-animation="fadeInUp">
+							<div class="widget services-links">
+								<h4 class="widget-title">Services</h4>
+								<ul>
+									<li class="cat-item">
+										<a href="blog-right.html">4K Cable TV</a>
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">Dedicated Server</a>
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">High Speed Internet</a>
+									</li>
+									<li class="cat-item">
+										<a href="blog-right.html">Smartphone Service</a>
+									</li>
+									<li class="cat-item">
+										<a href="./index.html?session=clear">Clear Session</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6 col-xl-3 order-xl-4 order-md-2 animate" data-animation="fadeInUp">
+							<div class="widget widget_icons_list">
+								<h4 class="widget-title">Call Us</h4>
+								<p>23-456-7890</p>
+								<a href="#" class="small-text">
+									<i class="fa fa-envelope-o color-main fs-14"></i>
+									email us
+								</a>
+								<h4 class="widget-title">Visit Us</h4>
+								<p>246 Benson St., Ashwaubenon</p>
+								<a href="#" class="small-text">
+									<i class="fa fa-map-marker color-main3 fs-14"></i>
+									Get Direction
+								</a>
+							</div>
+							<div class="divider-45 d-none d-md-block d-xlz-none"></div>
+						</div>
 					</div>
 				</div>
 			</footer>
@@ -1056,14 +1108,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 		</div><!-- eof #box_wrapper -->
 	</div><!-- eof #canvas -->
+    
+      <!-- // xiD Slider Tab -->
+<div id="slideOut">
+<!--   // Tab -->
+  <div class="slideOutTab">
+    <div>
+      <img src="img/xiD-large.svg" alt="XID" width="100px"/>
+    </div>
+  </div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">xiD Profile</h4> </div>
+    <div class="modal-body">
+      <img id="modal-body-image" src="img/profile-snapshots/profile1.png" alt="profile0" width="700px"/>
+    </div>
+    <div class="modal-footer"> </div>
+    <div style="position:absolute;top:160px;left:211px;border: 1px solid white;background-color:white;color:#999;width:400px;"><span id="profile_email">&nbsp;</span></div>
+  </div>
+</div>
+<!-- // END xiD Slider Tab -->
 
 
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
+    <script type="text/javascript" src="js/xidslider.js"></script>
+    <script type="text/javascript">
+        
+        if ( window.localStorage.getItem("showXid") !== null ) {
+            //hide or show Xid Widget
+            if (window.localStorage.getItem("showXid") === "true") {
+                document.getElementById('slideOut').style.display = "block";
+                document.getElementById('xid-toggle-switch').checked = true;
+            }
+            else {
+                document.getElementById('slideOut').style.display = "none";    
+                document.getElementById('xid-toggle-switch').checked = false;
+            }
+        }
+        else {
+            document.getElementById('slideOut').style.display = "none";    
+            document.getElementById('xid-toggle-switch').checked = false;
+        }
+    </script>
 
 
 	<!-- Google Map Script -->
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0pr5xCHpaTGv12l73IExOHDJisBP2FK4&callback=initGoogleMap"></script>
+    
 
 </body>
 

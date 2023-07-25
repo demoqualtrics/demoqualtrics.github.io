@@ -30,6 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<link rel="stylesheet" href="css/animations.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+    <link rel="stylesheet" type="text/css" href="css/xidslider.css" media="all" />
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
 	<!--[if lt IE 9]>
@@ -65,9 +66,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         "webchat": {
             "transport": {
             "type": "purecloud-v2-sockets",
-            "dataURL": "https://api.mypurecloud.com",
-            "deploymentKey": "c8ea4906-729e-40e6-81c2-7b147f258dd5",
-            "orgGuid": "1d9123ca-5eee-449c-8b4f-937148c4d011",
+            "dataURL": "https://api.usw2.pure.cloud",
+            "deploymentKey": "4e0717ec-953b-4e95-9cd6-a1fac49bd302",
+            "orgGuid": "bb5b87a8-84af-458f-865e-7a97f451fa2e",
             "interactionData": {
                 "routing": {
                     "targetType": "QUEUE",
@@ -97,6 +98,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </script>
     <!-- End Genesys Chat Widget Tag -->    
+    
+<script type="application/javascript">  
+    
+function writeToLocalStorage(key, value) {
+    if (typeof(Storage) !== "undefined") {
+        window.localStorage.setItem(key, value);
+    }
+}
+</script>
     
     <!--[if lt IE 9]>
 		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
@@ -453,7 +463,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 														WiFi connection problems can be frustrating, but we’re here to help keep you online. Simply test your broadband service, and if we find an issue we can help with a fix online. If needed you can book a technician, order a replacement WiFi Hub, or chat to one of our team.
 													</p>
                                                     <p class="Test my Connection">
-													<a href="https://demoqualtrics.github.io/telco/404.html" class="btn btn-maincolor"><span>Test my Connection</span></a>
+													<a href="./404.html" class="btn btn-maincolor" onclick="writeToLocalStorage('test', 'true');"><span>Test my Connection</span></a>
                                                     <div id="feedback"> </div>
 
 												</div>
@@ -464,14 +474,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 											<div role="tab" id="collapse03_header">
 												<p class="text-normal">
 													<a class="collapsed" data-toggle="collapse" href="#collapse03" aria-expanded="false" aria-controls="collapse03">
-														Molestiae suscipit ipsum non eos so autem dolores. Exercitation si or laudantium?
+														Is my broadband router set up correctly?
 													</a>
 												</p>
 											</div>
 											<div id="collapse03" class="collapse" role="tabpanel" aria-labelledby="collapse03_header" data-parent="#accordion01">
 												<div class="card-body">
 													<p>
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a semper ante, eu finibus diam. Sed mauris velit, sagittis eget tincidunt tincidunt, accumsan ac tellus. Sed vulputate, purus eget venenatis tincidunt, lorem lorem maximus risus, facilisis scelerisque est metus eget justo. Etiam vestibulum felis sit amet porta egestas.
+														Got a Smart Hub? Check your Smart Hub is set up correctly with our Smart Hub set-up guide or download our Virtual Support app to set up your Smart HubCheck that your cables aren't mixed up and that all the cables are securely in place..
 													</p>
                                                     <div id="feedback"> </div>
 												</div>
@@ -482,14 +492,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 											<div role="tab" id="collapse04_header">
 												<p class="text-normal">
 													<a class="collapsed" data-toggle="collapse" href="#collapse04" aria-expanded="false" aria-controls="collapse04">
-														Veniam magna for ut or adipisci veritatis. In ipsa and eu. Id omnis dicta?
+														Is there a problem with my wiring?
 													</a>
 												</p>
 											</div>
 											<div id="collapse04" class="collapse" role="tabpanel" aria-labelledby="collapse04_header" data-parent="#accordion01">
 												<div class="card-body">
 													<p>
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a semper ante, eu finibus diam. Sed mauris velit, sagittis eget tincidunt tincidunt, accumsan ac tellus. Sed vulputate, purus eget venenatis tincidunt, lorem lorem maximus risus, facilisis scelerisque est metus eget justo. Etiam vestibulum felis sit amet porta egestas.
+														Sometimes the wiring between phone and broadband sockets can cause problems.If your phone line connects to a single wall master socket when it enters your home, try connecting your router to the master socket using a microfilter.If this improves your connection but means your router is no longer near the centre of your home, you can buy a WiFi extender to boost your signal..
 													</p>
 												</div>
 											</div>
@@ -499,14 +509,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 											<div role="tab" id="collapse05_header">
 												<p class="text-normal">
 													<a class="collapsed" data-toggle="collapse" href="#collapse05" aria-expanded="false" aria-controls="collapse05">
-														What industries do you specialize in?
+														How do I restart my router?
 													</a>
 												</p>
 											</div>
 											<div id="collapse05" class="collapse" role="tabpanel" aria-labelledby="collapse05_header" data-parent="#accordion01">
 												<div class="card-body">
 													<p>
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a semper ante, eu finibus diam. Sed mauris velit, sagittis eget tincidunt tincidunt, accumsan ac tellus. Sed vulputate, purus eget venenatis tincidunt, lorem lorem maximus risus, facilisis scelerisque est metus eget justo. Etiam vestibulum felis sit amet porta egestas.
+														Disconnect your router from the main electricity supply for a few moments and switch it back on. Once back on, your router lights should start flashing again. If the connection works after you've restart your router there could be a problem with the way your house is wired rather than with the broadband line or master socket. We would recommend you talk to a qualified engineer to fix the problem.
 													</p>
 												</div>
 											</div>
@@ -516,86 +526,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 											<div role="tab" id="collapse06_header">
 												<p class="text-normal">
 													<a class="collapsed" data-toggle="collapse" href="#collapse06" aria-expanded="false" aria-controls="collapse06">
-														Can you guarantee that our plan will raise capital?
+														How do I know if my account has been cut off?
 													</a>
 												</p>
 											</div>
 											<div id="collapse06" class="collapse" role="tabpanel" aria-labelledby="collapse06_header" data-parent="#accordion01">
 												<div class="card-body">
 													<p>
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a semper ante, eu finibus diam. Sed mauris velit, sagittis eget tincidunt tincidunt, accumsan ac tellus. Sed vulputate, purus eget venenatis tincidunt, lorem lorem maximus risus, facilisis scelerisque est metus eget justo. Etiam vestibulum felis sit amet porta egestas.
-													</p>
-												</div>
-											</div>
-										</div>
+														If you haven’t paid your bill, we might’ve put a pause on your account. This means you won’t be able to go online. You should have an email from us to explain this.
 
-										<div class="tab-block">
-											<div role="tab" id="collapse07_header">
-												<p class="text-normal">
-													<a class="collapsed" data-toggle="collapse" href="#collapse07" aria-expanded="false" aria-controls="collapse07">
-														Why should we hire a consultant to write our business plan?
-													</a>
-												</p>
-											</div>
-											<div id="collapse07" class="collapse" role="tabpanel" aria-labelledby="collapse07_header" data-parent="#accordion01">
-												<div class="card-body">
-													<p>
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a semper ante, eu finibus diam. Sed mauris velit, sagittis eget tincidunt tincidunt, accumsan ac tellus. Sed vulputate, purus eget venenatis tincidunt, lorem lorem maximus risus, facilisis scelerisque est metus eget justo. Etiam vestibulum felis sit amet porta egestas.
 													</p>
 												</div>
 											</div>
 										</div>
+										
 
-										<div class="tab-block">
-											<div role="tab" id="collapse08_header">
-												<p class="text-normal">
-													<a class="collapsed" data-toggle="collapse" href="#collapse08" aria-expanded="false" aria-controls="collapse08">
-														What makes your business plans so special?
-													</a>
-												</p>
-											</div>
-											<div id="collapse08" class="collapse" role="tabpanel" aria-labelledby="collapse08_header" data-parent="#accordion01">
-												<div class="card-body">
-													<p>
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a semper ante, eu finibus diam. Sed mauris velit, sagittis eget tincidunt tincidunt, accumsan ac tellus. Sed vulputate, purus eget venenatis tincidunt, lorem lorem maximus risus, facilisis scelerisque est metus eget justo. Etiam vestibulum felis sit amet porta egestas.
-													</p>
-												</div>
-											</div>
-										</div>
 
-										<div class="tab-block">
-											<div role="tab" id="collapse09_header">
-												<p class="text-normal">
-													<a class="collapsed" data-toggle="collapse" href="#collapse09" aria-expanded="false" aria-controls="collapse09">
-														What makes your financial projections special?
-													</a>
-												</p>
-											</div>
-											<div id="collapse09" class="collapse" role="tabpanel" aria-labelledby="collapse09_header" data-parent="#accordion01">
-												<div class="card-body">
-													<p>
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a semper ante, eu finibus diam. Sed mauris velit, sagittis eget tincidunt tincidunt, accumsan ac tellus. Sed vulputate, purus eget venenatis tincidunt, lorem lorem maximus risus, facilisis scelerisque est metus eget justo. Etiam vestibulum felis sit amet porta egestas.
-													</p>
-												</div>
-											</div>
-										</div>
 
-										<div class="tab-block">
-											<div role="tab" id="collapse10_header">
-												<p class="text-normal">
-													<a class="collapsed" data-toggle="collapse" href="#collapse10" aria-expanded="false" aria-controls="collapse10">
-														How does the process work?
-													</a>
-												</p>
-											</div>
-											<div id="collapse10" class="collapse" role="tabpanel" aria-labelledby="collapse10_header" data-parent="#accordion01">
-												<div class="card-body">
-													<p>
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a semper ante, eu finibus diam. Sed mauris velit, sagittis eget tincidunt tincidunt, accumsan ac tellus. Sed vulputate, purus eget venenatis tincidunt, lorem lorem maximus risus, facilisis scelerisque est metus eget justo. Etiam vestibulum felis sit amet porta egestas.
-													</p>
-												</div>
-											</div>
-										</div>
+										
 									</div>
 									<!-- collapse -->
 								</div>
@@ -1203,7 +1151,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								</p>
 								<div class="widget widget_social_buttons">
 									<a href="#" class="fa fa-facebook color-bg-icon rounded-icon" title="facebook"></a>
-									<a href="#" class="fa fa-twitter color-bg-icon rounded-icon" title="twitter"></a>
+									<a href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Emention%7Ctwgr%5EDolphinTelco&screen_name=DolphinTelco&text=Absolutely%20pointless%20support%20team%20and%20process.Have%20no%20connection%20for%20a%20week%20.%20No%20useful%20info%20on%20the%20website,%20broken%20links,%20none%20working%20tools.%20Also%20your%20online%20chat%20support%20was%20equally%20useless!%20No%20clue%20at%20all%20on%20how%20to%20fix%20my%20issue." class="fa fa-twitter color-bg-icon rounded-icon" title="twitter" onclick="writeToLocalStorage('social', 'true');"></a>
 									<a href="#" class="fa fa-youtube-play color-bg-icon rounded-icon" title="youtube-play"></a>
 								</div>
 							</div>
@@ -1216,7 +1164,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 										<a href="blog-right.html">Packages</a>
 									</li>
 									<li class="cat-item">
-										<a href="blog-right.html">MaxiNet Media</a>
+										<a href="blog-right.html">Dolphin Telco Media</a>
 									</li>
 									<li class="cat-item">
 										<a href="blog-right.html">Connection</a>
@@ -1287,10 +1235,57 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 		</div><!-- eof #box_wrapper -->
 	</div><!-- eof #canvas -->
+    
+    <!-- // xiD Slider Tab -->
+<div id="slideOut">
+<!--   // Tab -->
+  <div class="slideOutTab">
+    <div>
+      <img src="img/xiD-large.svg" alt="XID" width="100px"/>
+    </div>
+  </div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">xiD Profile</h4> </div>
+    <div class="modal-body">
+      <img id="modal-body-image" src="img/profile-snapshots/profile2.png" alt="profile0" width="700px"/>
+    </div>
+    <div class="modal-footer"> </div>
+    <div style="position:absolute;top:160px;left:211px;border: 1px solid white;background-color:white;color:#999;width:400px;"><span id="profile_email">&nbsp;</span></div>
+  </div>
+</div>
+<!-- // END xiD Slider Tab -->
 
 
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
+    <script type="text/javascript" src="js/xidslider.js"></script>
+    
+    <script type="application/javascript">
+        
+        if ( window.localStorage.getItem("test") !== null ) {
+            //update xID profile widget
+            document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile4.png";
+        }
+        
+        if ( window.localStorage.getItem("social") !== null ) {
+            //update xID profile widget
+            document.getElementById('modal-body-image').src = "./img/profile-snapshots/profile5.png";
+        }
+        
+        if ( window.localStorage.getItem("showXid") !== null ) {
+            //hide or show Xid Widget
+            if (window.localStorage.getItem("showXid") === "true") {
+                document.getElementById('slideOut').style.display = "block";
+            }
+            else {
+                document.getElementById('slideOut').style.display = "none";        
+            }
+        }
+        else {
+            document.getElementById('slideOut').style.display = "none";        
+        }
+    </script>
 
 
 </body>
