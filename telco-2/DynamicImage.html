@@ -18,12 +18,12 @@
       const utmSource = urlParams.get('utm_source');
       
       if (utmSource === 'facebook') {
-        document.getElementById('dynamicImage').src = 'facebook.jpg';
+        document.getElementById('dynamicImage').src = 'teaser_icon01.png';
       } else if (utmSource === 'google') {
-        document.getElementById('dynamicImage').src = 'google.jpg';
+        document.getElementById('dynamicImage').src = 'teaser_icon02.png';
       } else {
         // If no specific UTM parameter value matches, keep the default image
-        document.getElementById('dynamicImage').src = 'default.jpg';
+        document.getElementById('dynamicImage').src = 'teaser_icon03.png';
       }
     }
     
