@@ -26,32 +26,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-P6TPCWL');</script>
 <!-- End Google Tag Manager -->
- 
-  <script>
-    // Function to get the value of a specific UTM parameter from the URL
-    function getUTMParameter(parameterName) {
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      return urlParams.get(parameterName);
-    }
-    
-    // Function to update the image source based on the UTM parameter value
-    function updateImageBasedOnUTM() {
-      const utmSource = getUTMParameter('utm_campaign');
-      
-      if (utmSource === 'facebook') {
-        document.getElementById('dynamicImage1').src = 'images/teaser_icon03.png';
-      } else if (utmSource === 'google') {
-        document.getElementById('dynamicImage1').src = 'images/teaser_icon02.png';
-      } else {
-        // If no specific UTM parameter value matches, keep the default image
-        document.getElementById('dynamicImage1').src = 'images/teaser_icon01.png';
-      }
-    }
-    
-    // Call the function on page load to update the image based on UTM parameter
-    updateImageBasedOnUTM();
-  </script>    
     
     
     
@@ -469,8 +443,7 @@ function clearCookiesAndRedirect() {
 				<div class="container">
                     <div class="col-4 col-lg-8 offset-lg-2 text-center animate data" data-animation="fadeInDown">
                     <br>
-                          <!-- The image element to be updated -->
-                    <img id="dynamicImage1" src="images/Banner.png" alt="Default Image">
+							<img src="images/Banner.png" alt="">
 						</div>
 <br>
 					<div class="row">
