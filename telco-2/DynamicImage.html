@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Image Change</title>
+</head>
+<body>
+  <h1>Welcome to our website!</h1>
+  <p>This is an example page to demonstrate changing images based on UTM parameters.</p>
+  
+  <!-- The image element to be updated -->
+  <img id="dynamicImage" src="default.jpg" alt="Default Image">
+  
+  <script>
+    // Function to update the image source based on the UTM parameter value
+    function updateImageBasedOnUTM() {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const utmSource = urlParams.get('utm_source');
+      
+      if (utmSource === 'facebook') {
+        document.getElementById('dynamicImage').src = 'facebook.jpg';
+      } else if (utmSource === 'google') {
+        document.getElementById('dynamicImage').src = 'google.jpg';
+      } else {
+        // If no specific UTM parameter value matches, keep the default image
+        document.getElementById('dynamicImage').src = 'default.jpg';
+      }
+    }
+    
+    // Call the function on page load to update the image based on UTM parameter
+    updateImageBasedOnUTM();
+  </script>
+</body>
+</html>
