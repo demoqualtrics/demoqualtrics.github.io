@@ -442,31 +442,30 @@ function clearCookiesAndRedirect() {
 				<div class="container">
                     <div class="col-4 col-lg-8 offset-lg-2 text-center animate data" data-animation="fadeInDown">
                     <br>
-  <!-- The image element to be updated -->
-  <img id="dynamicImage" src="images/Banner.png" alt="Default Image">
-  
-  <script>
-    // Function to update the image source based on the UTM parameter value
-    function updateImageBasedOnUTM() {
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      const utmSource = urlParams.get('utm_source');
-      
-      if (utmSource === 'awareness') {
-        document.getElementById('dynamicImage').src = 'images/Dbanner1.png';
-      } else if (utmSource === 'consideration') {
-        document.getElementById('dynamicImage').src = 'images/Dbanner2.png';
-      } else if (utmSource === 'onboarding') {
-        document.getElementById('dynamicImage').src = 'images/Dbanner3.png';
-      } else {
-        // If no specific UTM parameter value matches, keep the default image
-        document.getElementById('dynamicImage').src = 'images/banner.png';
-    }
-    }
+<img id="dynamicImage" src="images/Banner.png" alt="Default Image">
+
+<script>
+  // Function to update the image source based on the 'Stage' parameter value
+  function updateImageBasedOnStage() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const stage = urlParams.get('Stage');
     
-    // Call the function on page load to update the image based on UTM parameter
-    updateImageBasedOnUTM();
-  </script>
+    if (stage === '1') {
+      document.getElementById('dynamicImage').src = 'images/Dbanner1.png';
+    } else if (stage === '2') {
+      document.getElementById('dynamicImage').src = 'images/Dbanner2.png';
+    } else if (stage === '3') {
+      document.getElementById('dynamicImage').src = 'images/Dbanner3.png';
+    } else {
+      // If no specific 'Stage' parameter value matches, keep the default image
+      document.getElementById('dynamicImage').src = 'images/banner.png';
+    }
+  }
+  
+  // Call the function on page load to update the image based on 'Stage' parameter
+  updateImageBasedOnStage();
+</script>
 						</div>
 <br>
 					<div class="row">
