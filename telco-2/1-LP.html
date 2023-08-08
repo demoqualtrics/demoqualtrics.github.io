@@ -453,12 +453,12 @@ function clearCookiesAndRedirect() {
       const utmSource = urlParams.get('utm_source');
       
       if (utmSource === 'awareness') {
-        document.getElementById('dynamicImage').src = 'images/Banner1.png';
+        document.getElementById('dynamicImage').src = 'images/Dbanner1.png';
       } else if (utmSource === 'consideration') {
-        document.getElementById('dynamicImage').src = 'images/Banner2.png';
+        document.getElementById('dynamicImage').src = 'images/Dbanner2.png';
       } else if ((utmSource === 'onboarding') {
         // If no specific UTM parameter value matches, keep the default image
-        document.getElementById('dynamicImage').src = 'images/Banner3.png';
+        document.getElementById('dynamicImage').src = 'images/Dbanner3.png';
       }
     }
     
