@@ -388,7 +388,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
                 <div class="col-12 col-lg-8 offset-lg-2 text-center animate data" data-animation="fadeInDown" data-delay="300">
                     <br>
-							<img src="images/Banner.png" alt="">
+							<img id="dynamicImage" src="images/Banner.png" alt="Default Image">
+
+<script>
+  // Function to update the image source based on the 'Stage' parameter value
+  function updateImageBasedOnStage() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const stage = urlParams.get('Stage');
+    
+    if (stage === '1') {
+      document.getElementById('dynamicImage').src = 'images/Dbanner1.png';
+    } else if (stage === '2') {
+      document.getElementById('dynamicImage').src = 'images/Dbanner2a.png';
+    } else if (stage === '3') {
+      document.getElementById('dynamicImage').src = 'images/Dbanner3.png';
+    } else {
+      // If no specific 'Stage' parameter value matches, keep the default image
+      document.getElementById('dynamicImage').src = 'images/banner.png';
+    }
+  }
+  
+  // Call the function on page load to update the image based on 'Stage' parameter
+  updateImageBasedOnStage();
+</script>
 						</div>
 
 			<section class="ls s-py-80 s-py-lg-120 s-py-xl-160">
