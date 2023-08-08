@@ -63,28 +63,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     
-  <script>
-    // Function to update the image source based on the UTM parameter value
-    function updateImageBasedOnUTM() {
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      const utmSource = urlParams.get('utm_source');
-      
-      if (utmSource === 'facebook') {
-        document.getElementById('dynamicImage').src = 'images/teaser_icon01.png';
-      } else if (utmSource === 'google') {
-        document.getElementById('dynamicImage').src = 'images/teaser_icon02.png';
-      } else {
-        // If no specific UTM parameter value matches, keep the default image
-        document.getElementById('dynamicImage').src = 'images/teaser_icon03.png';
-      }
-    }
-    
-    // Call the function on page load to update the image based on UTM parameter
-    updateImageBasedOnUTM();
-  </script>
-
-    
     <!--[if lt IE 9]>
 		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
 	<![endif]-->
@@ -464,8 +442,29 @@ function clearCookiesAndRedirect() {
 				<div class="container">
                     <div class="col-4 col-lg-8 offset-lg-2 text-center animate data" data-animation="fadeInDown">
                     <br>
-							   <!-- The image element to be updated -->
-                    <img id="dynamicImage" src="default.jpg" alt="Default Image">
+  <!-- The image element to be updated -->
+  <img id="dynamicImage" src="default.jpg" alt="Default Image">
+  
+  <script>
+    // Function to update the image source based on the UTM parameter value
+    function updateImageBasedOnUTM() {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const utmSource = urlParams.get('utm_source');
+      
+      if (utmSource === 'awareness') {
+        document.getElementById('dynamicImage').src = 'images/teaser_icon01.png';
+      } else if (utmSource === 'consideration') {
+        document.getElementById('dynamicImage').src = 'images/teaser_icon02.png';
+      } else {
+        // If no specific UTM parameter value matches, keep the default image
+        document.getElementById('dynamicImage').src = 'images/teaser_icon03.png';
+      }
+    }
+    
+    // Call the function on page load to update the image based on UTM parameter
+    updateImageBasedOnUTM();
+  </script>
 						</div>
 <br>
 					<div class="row">
