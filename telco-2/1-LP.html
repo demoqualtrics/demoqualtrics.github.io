@@ -452,14 +452,16 @@ function clearCookiesAndRedirect() {
       const urlParams = new URLSearchParams(queryString);
       const utmSource = urlParams.get('utm_source');
       
-      if (utmSource === 'facebook') {
+      if (utmSource === 'awareness') {
         document.getElementById('dynamicImage').src = 'images/Dbanner1.png';
-      } else if (utmSource === 'google') {
+      } else if (utmSource === 'consideration') {
         document.getElementById('dynamicImage').src = 'images/Dbanner2.png';
+      } else if (utmSource === 'onboarding') {
+        document.getElementById('dynamicImage').src = 'images/Dbanner3.png';
       } else {
         // If no specific UTM parameter value matches, keep the default image
-        document.getElementById('dynamicImage').src = 'images/Dbanner3.png';
-      }
+        document.getElementById('dynamicImage').src = 'images/banner.png';
+    }
     }
     
     // Call the function on page load to update the image based on UTM parameter
