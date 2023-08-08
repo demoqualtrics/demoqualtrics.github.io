@@ -443,7 +443,7 @@ function clearCookiesAndRedirect() {
                     <div class="col-4 col-lg-8 offset-lg-2 text-center animate data" data-animation="fadeInDown">
                     <br>
   <!-- The image element to be updated -->
-  <img id="dynamicImage" src="default.jpg" alt="Default Image">
+  <img id="dynamicImage" src="images/Banner.png" alt="Default Image">
   
   <script>
     // Function to update the image source based on the UTM parameter value
@@ -452,11 +452,11 @@ function clearCookiesAndRedirect() {
       const urlParams = new URLSearchParams(queryString);
       const utmSource = urlParams.get('utm_source');
       
-      if (utmSource === 'awareness') {
+      if (utmSource === 'facebook') {
         document.getElementById('dynamicImage').src = 'images/Dbanner1.png';
-      } else if (utmSource === 'consideration') {
+      } else if (utmSource === 'google') {
         document.getElementById('dynamicImage').src = 'images/Dbanner2.png';
-      } else if ((utmSource === 'onboarding') {
+      } else {
         // If no specific UTM parameter value matches, keep the default image
         document.getElementById('dynamicImage').src = 'images/Dbanner3.png';
       }
