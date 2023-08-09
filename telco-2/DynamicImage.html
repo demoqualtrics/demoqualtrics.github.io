@@ -4,31 +4,93 @@
   <title>Dynamic Image Change</title>
 </head>
 <body>
+    <script>
+        // Function to get URL parameters
+        function getURLParameters(url) {
+            const params = {};
+            const searchParams = new URLSearchParams(new URL(url).search);
+            for (const [key, value] of searchParams) {
+                params[key] = value;
+            }
+            return params;
+        }
+
+        // Function to set 'Stage' parameter to local storage
+        function setStageParameterToLocalStorage() {
+            const currentURL = window.location.href;
+            const parameters = getURLParameters(currentURL);
+
+            if ('Stage' in parameters) {
+                const stageValue = parameters['Stage'];
+                localStorage.setItem('Stage', stageValue);
+                console.log(`'Stage' parameter (${stageValue}) has been saved to local storage.`);
+            } else {
+                console.log("'Stage' parameter not found in the URL.");
+            }
+        }
+
+        // Call the function to set 'Stage' parameter to local storage
+        setStageParameterToLocalStorage();
+    </script>
+    
+    
+        <script>
+        // Function to get URL parameters
+        function getURLParameters(url) {
+            const params = {};
+            const searchParams = new URLSearchParams(new URL(url).search);
+            for (const [key, value] of searchParams) {
+                params[key] = value;
+            }
+            return params;
+        }
+
+        // Function to set 'Stage' parameter to local storage
+        function setStageParameterToLocalStorage() {
+            const currentURL = window.location.href;
+            const parameters = getURLParameters(currentURL);
+
+            if ('Stage' in parameters) {
+                const stageValue = parameters['Stage'];
+                localStorage.setItem('Stage', stageValue);
+                console.log(`'Stage' parameter (${stageValue}) has been saved to local storage.`);
+            } else {
+                console.log("'Stage' parameter not found in the URL.");
+            }
+        }
+
+        // Call the function to set 'Stage' parameter to local storage
+        setStageParameterToLocalStorage();
+    </script>
+    
+    
+    <img id="dynamicImage" src="images/Banner.png" alt="Default Image">
+
+<script>
+  // Function to update the image source based on the stored 'Stage' value in local storage
+  function updateImageBasedOnStoredStage() {
+    const storedStage = localStorage.getItem('storedStage');
+    
+    if (storedStage === '1') {
+      document.getElementById('dynamicImage').src = 'images/Dbanner1.png';
+    } else if (storedStage === '2') {
+      document.getElementById('dynamicImage').src = 'images/Dbanner2.png';
+    } else if (storedStage === '3') {
+      document.getElementById('dynamicImage').src = 'images/Dbanner3.png';
+    } else {
+      // If no specific stored 'Stage' value matches, keep the default image
+      document.getElementById('dynamicImage').src = 'images/banner.png';
+    }
+  }
+  
+  // Call the function on page load to update the image based on stored 'Stage' value
+  updateImageBasedOnStoredStage();
+</script>
+
+    
   <h1>Welcome to our website!</h1>
   <p>This is an example page to demonstrate changing images based on UTM parameters.</p>
   
-  <!-- The image element to be updated -->
-  <img id="dynamicImage" src="default.jpg" alt="Default Image">
-  
-  <script>
-    // Function to update the image source based on the UTM parameter value
-    function updateImageBasedOnUTM() {
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      const utmSource = urlParams.get('utm_source');
-      
-      if (utmSource === 'facebook') {
-        document.getElementById('dynamicImage').src = 'images/teaser_icon01.png';
-      } else if (utmSource === 'google') {
-        document.getElementById('dynamicImage').src = 'images/teaser_icon02.png';
-      } else {
-        // If no specific UTM parameter value matches, keep the default image
-        document.getElementById('dynamicImage').src = 'images/teaser_icon03.png';
-      }
-    }
-    
-    // Call the function on page load to update the image based on UTM parameter
-    updateImageBasedOnUTM();
-  </script>
+
 </body>
 </html>
