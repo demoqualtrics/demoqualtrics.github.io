@@ -4,67 +4,7 @@
   <title>Dynamic Image Change</title>
 </head>
 <body>
-    <script>
-        // Function to get URL parameters
-        function getURLParameters(url) {
-            const params = {};
-            const searchParams = new URLSearchParams(new URL(url).search);
-            for (const [key, value] of searchParams) {
-                params[key] = value;
-            }
-            return params;
-        }
-
-        // Function to set 'Stage' parameter to local storage
-        function setStageParameterToLocalStorage() {
-            const currentURL = window.location.href;
-            const parameters = getURLParameters(currentURL);
-
-            if ('Stage' in parameters) {
-                const stageValue = parameters['Stage'];
-                localStorage.setItem('Stage', stageValue);
-                console.log(`'Stage' parameter (${stageValue}) has been saved to local storage.`);
-            } else {
-                console.log("'Stage' parameter not found in the URL.");
-            }
-        }
-
-        // Call the function to set 'Stage' parameter to local storage
-        setStageParameterToLocalStorage();
-    </script>
-    
-    
-        <script>
-        // Function to get URL parameters
-        function getURLParameters(url) {
-            const params = {};
-            const searchParams = new URLSearchParams(new URL(url).search);
-            for (const [key, value] of searchParams) {
-                params[key] = value;
-            }
-            return params;
-        }
-
-        // Function to set 'Stage' parameter to local storage
-        function setStageParameterToLocalStorage() {
-            const currentURL = window.location.href;
-            const parameters = getURLParameters(currentURL);
-
-            if ('Stage' in parameters) {
-                const stageValue = parameters['Stage'];
-                localStorage.setItem('Stage', stageValue);
-                console.log(`'Stage' parameter (${stageValue}) has been saved to local storage.`);
-            } else {
-                console.log("'Stage' parameter not found in the URL.");
-            }
-        }
-
-        // Call the function to set 'Stage' parameter to local storage
-        setStageParameterToLocalStorage();
-    </script>
-    
-    
-    <img id="dynamicImage" src="images/Banner.png" alt="Default Image">
+<img id="dynamicImage" src="images/Banner.png" alt="Default Image">
 
 <script>
   // Function to update the image source based on the stored 'Stage' value in local storage
@@ -82,6 +22,25 @@
       document.getElementById('dynamicImage').src = 'images/banner.png';
     }
   }
+  
+  // Function to read URL parameters and store 'Stage' and 'XID' values in local storage
+  function readURLParamsAndStore() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const stageValue = urlParams.get('stage');
+    const xidValue = urlParams.get('XID');
+    
+    if (stageValue) {
+      localStorage.setItem('storedStage', stageValue);
+    }
+    
+    if (xidValue) {
+      localStorage.setItem('storedXID', xidValue);
+    }
+  }
+  
+  // Call the function to read URL parameters and store 'Stage' and 'XID' values in local storage
+  readURLParamsAndStore();
   
   // Call the function on page load to update the image based on stored 'Stage' value
   updateImageBasedOnStoredStage();
