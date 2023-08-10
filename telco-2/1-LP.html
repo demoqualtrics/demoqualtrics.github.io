@@ -26,11 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-P6TPCWL');</script>
 <!-- End Google Tag Manager -->
-    
-    
-    
-
-    
+        
     <title>Flash Sale Landing Page</title>
     <meta name="robots" content="noindex">
 	<meta charset="utf-8">
@@ -443,28 +439,65 @@ function clearCookiesAndRedirect() {
                     <div class="col-4 col-lg-8 offset-lg-2 text-center animate data" data-animation="fadeInDown">
                     <br>
 <img id="dynamicImage" src="images/Banner.png" alt="Default Image">
+<img id="dynamicXIDImage" src="images/DefaultXIDImage.png" alt="Default XID Image">
 
 <script>
-  // Function to update the image source based on the 'Stage' parameter value
-  function updateImageBasedOnStage() {
+  // Function to read URL parameters and store 'Stage' and 'XID' values in local storage
+  function readURLParamsAndStore() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const stage = urlParams.get('Stage');
+    const stageValue = urlParams.get('stage');
+    const xidValue = urlParams.get('XID');
     
-    if (stage === '1') {
-      document.getElementById('dynamicImage').src = 'images/Dbanner1.png';
-    } else if (stage === '2') {
-      document.getElementById('dynamicImage').src = 'images/Dbanner2a.png';
-    } else if (stage === '3') {
-      document.getElementById('dynamicImage').src = 'images/Dbanner3.png';
-    } else {
-      // If no specific 'Stage' parameter value matches, keep the default image
-      document.getElementById('dynamicImage').src = 'images/Banner.png';
+    if (stageValue) {
+      localStorage.setItem('storedStage', stageValue);
+    }
+    
+    if (xidValue) {
+      localStorage.setItem('storedXID', xidValue);
     }
   }
   
-  // Call the function on page load to update the image based on 'Stage' parameter
-  updateImageBasedOnStage();
+  // Function to update the image source based on the stored 'Stage' value in local storage
+  function updateImageBasedOnStoredStage() {
+    const storedStage = localStorage.getItem('storedStage');
+    
+    if (storedStage === '1') {
+      document.getElementById('dynamicImage').src = 'images/Dbanner1.png';
+    } else if (storedStage === '2') {
+      document.getElementById('dynamicImage').src = 'images/Dbanner2.png';
+    } else if (storedStage === '3') {
+      document.getElementById('dynamicImage').src = 'images/Dbanner3.png';
+    } else {
+      // If no specific stored 'Stage' value matches, keep the default image
+      document.getElementById('dynamicImage').src = 'images/banner.png';
+    }
+  }
+
+  // Function to update the image source based on the stored 'XID' value in local storage
+  function updateImageBasedOnStoredXID() {
+    const storedXID = localStorage.getItem('storedXID');
+
+    if (storedXID === '1') {
+      document.getElementById('dynamicXIDImage').src = 'images/XIDbanner1.png';
+    } else if (storedXID === '2') {
+      document.getElementById('dynamicXIDImage').src = 'images/XIDbanner2.png';
+    } else if (storedXID === '3') {
+      document.getElementById('dynamicXIDImage').src = 'images/XIDbanner3.png';
+    } else if (storedXID === '4') {
+      document.getElementById('dynamicXIDImage').src = 'images/XIDbanner4.png';
+    } else {
+      // If no specific stored 'XID' value matches, keep the default image
+      document.getElementById('dynamicXIDImage').src = 'images/DefaultXIDImage.png';
+    }
+  }
+  
+  // Call the function to read URL parameters and store 'Stage' and 'XID' values in local storage
+  readURLParamsAndStore();
+  
+  // Call the functions on page load to update the images based on stored values
+  updateImageBasedOnStoredStage();
+  updateImageBasedOnStoredXID();
 </script>
 						</div>
 <br>
