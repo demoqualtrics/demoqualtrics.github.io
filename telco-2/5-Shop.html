@@ -388,29 +388,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
                 <div class="col-12 col-lg-8 offset-lg-2 text-center animate data" data-animation="fadeInDown" data-delay="300">
                     <br>
-							<img id="dynamicImage" src="images/Banner.png" alt="Default Image">
+<img id="dynamicImage" src="images/Banner.png" alt="Default Image Force Update">
+
 
 <script>
-  // Function to update the image source based on the 'Stage' parameter value
-  function updateImageBasedOnStage() {
+  // Function to read URL parameters and store 'Stage' and 'XID' values in local storage
+  function readURLParamsAndStore() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const stage = urlParams.get('Stage');
+    const stageValue = urlParams.get('stage');
+    const xidValue = urlParams.get('XID');
     
-    if (stage === '1') {
+    if (stageValue) {
+      localStorage.setItem('storedStage', stageValue);
+    }
+    
+    if (xidValue) {
+      localStorage.setItem('storedXID', xidValue);
+    }
+  }
+  
+  // Function to update the image source based on the stored 'Stage' value in local storage
+  function updateImageBasedOnStoredStage() {
+    const storedStage = localStorage.getItem('storedStage');
+    
+    if (storedStage === '1') {
       document.getElementById('dynamicImage').src = 'images/Dbanner1.png';
-    } else if (stage === '2') {
-      document.getElementById('dynamicImage').src = 'images/Dbanner2a.png';
-    } else if (stage === '3') {
+    } else if (storedStage === '2') {
+      document.getElementById('dynamicImage').src = 'images/Dbanner2.png';
+    } else if (storedStage === '3') {
       document.getElementById('dynamicImage').src = 'images/Dbanner3.png';
     } else {
-      // If no specific 'Stage' parameter value matches, keep the default image
+      // If no specific stored 'Stage' value matches, keep the default image
       document.getElementById('dynamicImage').src = 'images/banner.png';
     }
   }
   
-  // Call the function on page load to update the image based on 'Stage' parameter
-  updateImageBasedOnStage();
+  // Call the function to read URL parameters and store 'Stage' and 'XID' values in local storage
+  readURLParamsAndStore();
+  
+  // Call the functions on page load to update the images based on stored values
+  updateImageBasedOnStoredStage();
+  updateImageBasedOnStoredXID();
 </script>
 						</div>
 
@@ -818,7 +837,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								<h5 class="widget-title">Top Savings</h5>
 								<ul class="product_list_widget">
 									<li>
-										<a href="6-Phone.html">
+										<a href="https://demoqualtrics.github.io/telco-2/6-Phone.html">
 											<img src="images/Device_S22_Ultra.jpg" alt="">
 											<span class="product-title">SAMSUNG GALAXY S22+ 5Ge</span>
 										</a>
