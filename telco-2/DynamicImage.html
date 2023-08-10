@@ -5,28 +5,9 @@
 </head>
 <body>
 <img id="dynamicImage" src="images/Banner.png" alt="Default Image">
-
-<img id="dynamicImage" src="images/Banner.png" alt="Default Image">
-
-<img id="dynamicImage" src="images/Banner.png" alt="Default Image">
+<img id="dynamicXIDImage" src="images/DefaultXIDImage.png" alt="Default XID Image">
 
 <script>
-  // Function to update the image source based on the stored 'Stage' value in local storage
-  function updateImageBasedOnStoredStage() {
-    const storedStage = localStorage.getItem('storedStage');
-    
-    if (storedStage === '1') {
-      document.getElementById('dynamicImage').src = 'images/Dbanner1.png';
-    } else if (storedStage === '2') {
-      document.getElementById('dynamicImage').src = 'images/Dbanner2.png';
-    } else if (storedStage === '3') {
-      document.getElementById('dynamicImage').src = 'images/Dbanner3.png';
-    } else {
-      // If no specific stored 'Stage' value matches, keep the default image
-      document.getElementById('dynamicImage').src = 'images/Banner.png';
-    }
-  }
-  
   // Function to read URL parameters and store 'Stage' and 'XID' values in local storage
   function readURLParamsAndStore() {
     const queryString = window.location.search;
@@ -43,18 +24,66 @@
     }
   }
   
+  // Function to update the image source based on the stored 'Stage' value in local storage
+  function updateImageBasedOnStoredStage() {
+    const storedStage = localStorage.getItem('storedStage');
+    
+    if (storedStage === '1') {
+      document.getElementById('dynamicImage').src = 'images/Dbanner1.png';
+    } else if (storedStage === '2') {
+      document.getElementById('dynamicImage').src = 'images/Dbanner2.png';
+    } else if (storedStage === '3') {
+      document.getElementById('dynamicImage').src = 'images/Dbanner3.png';
+    } else {
+      // If no specific stored 'Stage' value matches, keep the default image
+      document.getElementById('dynamicImage').src = 'images/banner.png';
+    }
+  }
+
+  // Function to update the image source based on the stored 'XID' value in local storage
+  function updateImageBasedOnStoredXID() {
+    const storedXID = localStorage.getItem('storedXID');
+
+    if (storedXID === '1') {
+      document.getElementById('dynamicXIDImage').src = 'images/XIDbanner1.png';
+    } else if (storedXID === '2') {
+      document.getElementById('dynamicXIDImage').src = 'images/XIDbanner2.png';
+    } else if (storedXID === '3') {
+      document.getElementById('dynamicXIDImage').src = 'images/XIDbanner3.png';
+    } else if (storedXID === '4') {
+      document.getElementById('dynamicXIDImage').src = 'images/XIDbanner4.png';
+    } else {
+      // If no specific stored 'XID' value matches, keep the default image
+      document.getElementById('dynamicXIDImage').src = 'images/DefaultXIDImage.png';
+    }
+  }
+  
   // Call the function to read URL parameters and store 'Stage' and 'XID' values in local storage
   readURLParamsAndStore();
   
-  // Call the function on page load to update the image based on stored 'Stage' value
+  // Call the functions on page load to update the images based on stored values
   updateImageBasedOnStoredStage();
+  updateImageBasedOnStoredXID();
 </script>
+
 
 
 
     
   <h1>Welcome to our website!</h1>
   <p>This is an example page to demonstrate changing images based on UTM parameters.</p>
+    
+    <!-- Add a button to clear local storage -->
+<button id="clearLocalStorageButton">Clear Local Storage</button>
+
+<script>
+  // Add click event listener to the clear local storage button
+  document.getElementById('clearLocalStorageButton').addEventListener('click', function() {
+    // Clear both storedStage and storedXID values from local storage
+    localStorage.removeItem('storedStage');
+    localStorage.removeItem('storedXID');
+  });
+</script>
   
 
 </body>
