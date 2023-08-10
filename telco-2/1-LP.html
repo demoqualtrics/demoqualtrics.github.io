@@ -439,7 +439,7 @@ function clearCookiesAndRedirect() {
                     <div class="col-4 col-lg-8 offset-lg-2 text-center animate data" data-animation="fadeInDown">
                     <br>
 <img id="dynamicImage" src="images/Banner.png" alt="Default Image Force Update">
-<img id="dynamicXIDImage" src="images/DefaultXIDImage.png" alt="Default XID Image">
+
 
 <script>
   // Function to read URL parameters and store 'Stage' and 'XID' values in local storage
@@ -471,24 +471,6 @@ function clearCookiesAndRedirect() {
     } else {
       // If no specific stored 'Stage' value matches, keep the default image
       document.getElementById('dynamicImage').src = 'images/banner.png';
-    }
-  }
-
-  // Function to update the image source based on the stored 'XID' value in local storage
-  function updateImageBasedOnStoredXID() {
-    const storedXID = localStorage.getItem('storedXID');
-
-    if (storedXID === '1') {
-      document.getElementById('dynamicXIDImage').src = 'images/XIDbanner1.png';
-    } else if (storedXID === '2') {
-      document.getElementById('dynamicXIDImage').src = 'images/XIDbanner2.png';
-    } else if (storedXID === '3') {
-      document.getElementById('dynamicXIDImage').src = 'images/XIDbanner3.png';
-    } else if (storedXID === '4') {
-      document.getElementById('dynamicXIDImage').src = 'images/XIDbanner4.png';
-    } else {
-      // If no specific stored 'XID' value matches, keep the default image
-      document.getElementById('dynamicXIDImage').src = 'images/DefaultXIDImage.png';
     }
   }
   
@@ -1194,6 +1176,30 @@ function clearCookiesAndRedirect() {
     <div class="modal-header">
       <h4 class="modal-title">xiD Profile</h4> </div>
     <div class="modal-body">
+    <img id="dynamicXIDImage" src="images/DefaultXIDImage.png" alt="Default XID Image">
+<script>    
+  // Function to update the image source based on the stored 'XID' value in local storage
+  function updateImageBasedOnStoredXID() {
+    const storedXID = localStorage.getItem('storedXID');
+
+    if (storedXID === '1') {
+      document.getElementById('dynamicXIDImage').src = 'img/profile-snapshots/profile1.png';
+    } else if (storedXID === '2') {
+      document.getElementById('dynamicXIDImage').src = 'img/profile-snapshots/profile2.png';
+    } else if (storedXID === '3') {
+      document.getElementById('dynamicXIDImage').src = 'img/profile-snapshots/profile3.png';
+    } else if (storedXID === '4') {
+      document.getElementById('dynamicXIDImage').src = 'img/profile-snapshots/profile4.png';
+    } else {
+      // If no specific stored 'XID' value matches, keep the default image
+      document.getElementById('dynamicXIDImage').src = 'img/profile-snapshots/profile1.png';
+    }
+      
+    // Set the width of the image to 700 pixels
+    dynamicXIDImage.style.width = '700px';
+  }
+    
+</script>
       <img id="modal-body-image" src="img/profile-snapshots/profile1.png" alt="profile0" width="700px"/>
     </div>
     <div class="modal-footer"> </div>
