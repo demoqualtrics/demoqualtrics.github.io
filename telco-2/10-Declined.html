@@ -80,7 +80,7 @@ function retrieveEmailFromLocalStorage() {
 function sendAbandonEmail() {
   var email = encodeURIComponent(localStorage.getItem('email'));
   console.log('Sending abandon email for email:', email);
-  var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_f7D78upY0ckDxHv&contextId=SV_9MpxKVapoceWyI6&firstName=Sarah&lastName=Bailey&email=" + email + "&mobile=0";
+  var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_1zhzmkcepw1ai5N&contextId=SV_exLhadpZYdZfrUi&firstName=Sarah&lastName=Bailey&email=" + email + "&mobile=0";
   console.log('API URL:', url);
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url, true);
