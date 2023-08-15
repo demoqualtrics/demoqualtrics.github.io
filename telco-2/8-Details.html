@@ -921,53 +921,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 										</div>
                                         <fieldset>
 													<legend>Credit Check</legend>
-                                                    <div>
-                                                        <h7>When did you move to your current address?</h7>
-                                                        <form action="/action_page.php">
-                                                      
-                                                          <input type="date" id="birthday" name="birthday">
-                                                            <br>
-                                                            </form>
-                                                        </div>
+<div>
+    <h7>When did you move to your current address?</h7>
+    <form action="/action_page.php">
+        <input type="date" id="address" name="address" value="2020-08-15"> <!-- Change the value to the desired default date -->
+        <br>
+    </form>
+</div>
                                                             <br>
                                             
-                                            <div>
-                                                <h7>When did you join your current bank?</h7>
-                                                        <form action="/action_page.php">
-                                                      
-                                                          <input type="date" id="birthday" name="birthday">
-                                                            <br>
-                                                            </form>
-                                                        </div>
+<div>
+    <h7>When did you join your current bank?</h7>
+    <form action="/action_page.php">
+        <input type="date" id="bank" name="bank" value="2003-09-05"> <!-- Change the value to the desired default date -->
+        <br>
+    </form>
+</div>
                                                             <br>
                                             
                                                 <tr>
                                             
-											    <div>
-                                                <h7>When did you start your current employment?</h7>
-                                                        <form action="/action_page.php">
-                                                      
-                                                          <input type="date" id="birthday" name="birthday">
-                                                            <br>
-                                                            </form>
-                                                        </div>
+<div>
+    <h7>When did you start your current employment?</h7>
+    <form action="/action_page.php">
+        <input type="date" id="employmentStartDate" name="employmentStartDate" value="2021-08-15"> <!-- Change the value to the desired default date -->
+        <br>
+    </form>
+</div>
+
                                                             <br>
                                             
-                                                <tr>
-                                                <h7>What is your current employment status?</h7>
-													<td class="value">
-														<select id="pa_size" class="wc-default-select" name="attribute_pa_size" data-attribute_name="attribute_pa_size" style="color: black" >
-															<option value="">Select Employment Status</option>
-															<option value="x-small" class="attached enabled">Office-based</option>
-															<option value="small" class="attached enabled">Non Office-based</option>
-															<option value="medium" class="attached enabled">Retired</option>
-															<option value="large" class="attached enabled">Student</option>
-															<option value="x-large" class="attached enabled">Other</option>
-														</select>
-                                                        <br>
-													</td>
-                                                    <br>
-												</tr>
+<tr>
+    <h7>What is your current employment status?</h7>
+    <td class="value">
+        <select id="pa_size" class="wc-default-select" name="attribute_pa_size" data-attribute_name="attribute_pa_size" style="color: black">
+            <option value="">Select Employment Status</option>
+            <option value="x-small" class="attached enabled" selected>Office-based</option> <!-- Preselected option -->
+            <option value="small" class="attached enabled">Non Office-based</option>
+            <option value="medium" class="attached enabled">Retired</option>
+            <option value="large" class="attached enabled">Student</option>
+            <option value="x-large" class="attached enabled">Other</option>
+        </select>
+        <br>
+    </td>
+    <br>
+</tr>
                                             
 
                                                     
