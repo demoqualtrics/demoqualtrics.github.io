@@ -482,10 +482,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         </a>
 									</div>
 								</div>
+                                                    
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var storedStage = localStorage.getItem("storedStage");
+    
+    if (storedStage === "3") {
+        var notificationBadge = document.querySelector(".notification-badge");
+        var bellIcon = document.querySelector(".fa.fa-bell.bell-icon");
+        
+        if (notificationBadge && bellIcon) {
+            notificationBadge.style.display = "flex";
+            bellIcon.style.display = "block";
+        }
+    }
+});
+</script>
 
 
 <div class="col-lg-4">
-    <div class="icon-box text-center bordered hero-bg rounded box-shadow animate animate fadeInRight" data-animation="fadeInRight" data-delay="350">
+    <div class="icon-box text-center bordered hero-bg rounded box-shadow animate fadeInRight" data-animation="fadeInRight" data-delay="350">
         <div class="icon-styled bg-maincolor2 rounded fs-24">
             <i class="fa fa-gears"></i>
             <div class="notification-badge">
@@ -531,23 +547,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </style>
                                                     
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    var storedStage = localStorage.getItem("storedStage");
-    
-    if (storedStage === "3") {
-        var notificationBadge = document.querySelector(".notification-badge");
-        var bellIcon = document.querySelector(".fa.fa-bell.bell-icon");
-        
-        if (notificationBadge && bellIcon) {
-            notificationBadge.style.display = "flex";
-            bellIcon.style.display = "block";
-        }
-    }
-});
-</script>
-
-
 
 								</div>
 							</div>
