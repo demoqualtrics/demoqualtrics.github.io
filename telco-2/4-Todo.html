@@ -488,7 +488,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="icon-box text-center bordered hero-bg rounded box-shadow animate animate fadeInRight" data-animation="fadeInRight" data-delay="350">
         <div class="icon-styled bg-maincolor2 rounded fs-24">
             <i class="fa fa-gears"></i>
-            <div class="notification-badge" id="notificationBadge">
+            <div class="notification-badge">
                 <i class="fa fa-bell bell-icon"></i> <!-- Bell badge -->
             </div>
         </div>
@@ -502,32 +502,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </div>
 
-<style>
-/* Your existing CSS styles here */
 
-/* ... */
+<style>
+.notification-badge {
+    display: none; /* Initially hide the badge */
+    position: absolute;
+    top: -1px; /* Adjusted positioning */
+    right: -1px; /* Adjusted positioning */
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* To ensure the badge appears above the icon */
+}
+
+.bell-icon {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adding shadow */
+}
+
+.icon-styled {
+    position: relative;
+}
 
 </style>
-
+                                                    
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     var storedStage = localStorage.getItem("storedStage");
-
+    
     if (storedStage === "3") {
-        var notificationBadge = document.getElementById("notificationBadge");
-        notificationBadge.style.display = "flex";
+        var notificationBadge = document.querySelector(".notification-badge");
+        var bellIcon = document.querySelector(".fa.fa-bell.bell-icon");
+        
+        if (notificationBadge && bellIcon) {
+            notificationBadge.style.display = "flex";
+            bellIcon.style.display = "block";
+        }
     }
 });
 </script>
-In this code, a script is added at the end of the HTML content. It listens for the "DOMContentLoaded" event to ensure that the DOM is fully loaded before attempting to manipulate it. It retrieves the value of storedStage from local storage and checks if it's equal to "3". If the condition is met, it sets the display style of the notification badge to "flex", making it visible.
-
-Remember to replace "storedStage" with the actual key you're using to store the stage value in local storage.
-
-This script will show the notification badge and bell badge only when the storedStage value in local storage is equal to 3. If the value is different or not set, the badges will remain hidden.
-
-
-
-
 
 
 
