@@ -1115,9 +1115,29 @@ function clearCookiesAndRedirect() {
 									<li class="cat-item">
 										<a href="blog-right.html">4K Cable TV</a>
 									</li>
-									<li class="cat-item">
-										<a href="blog-right.html">Dedicated Server</a>
-									</li>
+<ul class="menu">
+    <li class="cat-item">
+        <a href="#" id="clear-session">Clear Session</a>
+    </li>
+</ul>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Add a click event listener to the "Clear Session" link
+    document.getElementById("clear-session").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+
+        // Clear the storedStage from local storage
+        localStorage.removeItem("storedStage");
+        
+        // Optionally, you can perform additional actions after clearing the storage
+        // For example, you can redirect the user to another page or display a message.
+        
+        // Reload the page to reflect the changes (optional)
+        // window.location.reload();
+    });
+});
+</script>
 									<li class="cat-item">
 										<a href="blog-right.html">High Speed Internet</a>
 									</li>
