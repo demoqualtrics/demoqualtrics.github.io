@@ -412,17 +412,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   function updateImageBasedOnStoredStage() {
     const storedStage = localStorage.getItem('storedStage');
     
-    if (storedStage === '1') {
-      document.getElementById('dynamicImage').src = 'images/Dbanner1.png';
-    } else if (storedStage === '2') {
-      document.getElementById('dynamicImage').src = 'images/Dbanner2.png';
-    } else if (storedStage === '3') {
-      document.getElementById('dynamicImage').src = 'images/Dbanner3.png';
-    } else {
-      // If no specific stored 'Stage' value matches, keep the default image
-      document.getElementById('dynamicImage').src = 'images/banner.png';
-    }
+  if (storedStage === '1') {
+    document.getElementById('dynamicImage').src = 'images/Dbanner1.png';
+  } else if (storedStage === '2') {
+    document.getElementById('dynamicImage').src = 'images/Dbanner2.png';
+  } else if (storedStage === '3') {
+    document.getElementById('dynamicImage').src = 'images/Dbanner3.png';
+  } else if (storedStage === '4') {
+    document.getElementById('dynamicImage').src = 'images/Dbanner4.png';
+  } else {
+    // If no specific stored 'Stage' value matches, keep the default image
+    document.getElementById('dynamicImage').src = 'images/Dbanner1.png';
   }
+}
   
   // Call the function to read URL parameters and store 'Stage' and 'XID' values in local storage
   readURLParamsAndStore();
