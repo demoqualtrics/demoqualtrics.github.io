@@ -52,6 +52,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body>
+    
+<script type="application/javascript">  
+    
+function writeToLocalStorage(key, value) {
+    if (typeof(Storage) !== "undefined") {
+        window.localStorage.setItem(key, value);
+    }
+}
+</script>
 
     <!-- Header -->
     <header class="header">
@@ -315,7 +324,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </p>
                                     </div>
                                     <div class="col-12 mt-35">
-                                        <button class="theme-btn theme-btn-lg w-100" onclick="location.href='onlinebanking-home.html';">Continue</button>
+                                        <button class="theme-btn theme-btn-lg w-100" onclick="login()">Continue</button>
                                     </div>
                                 </div>
                         </div>
@@ -662,6 +671,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript">
+    function login() {
+        window.location.href='onlinebanking-home.html';
+    }
+    </script>
 </body>
 
 </html>
