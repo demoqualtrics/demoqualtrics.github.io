@@ -60,6 +60,11 @@ function writeToLocalStorage(key, value) {
         window.localStorage.setItem(key, value);
     }
 }
+    
+function login() {
+    writeToLocalStorage('authenticated_id', document.getElementById('f-name').value);
+    window.location.href='onlinebanking-home.html';
+}
 </script>
 
     <!-- Header -->
@@ -303,7 +308,7 @@ function writeToLocalStorage(key, value) {
                         <div class="contact-form-widget">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label for="f-name">Account Number (8 digits)</label>
+                                        <label for="f-name">Account Number</label>
                                         <input type="text" id="f-name" name="name" class="form-control"
                                             placeholder="XXXXXXXX">
                                     </div>
@@ -671,11 +676,7 @@ function writeToLocalStorage(key, value) {
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
-    <script type="text/javascript">
-    function login() {
-        window.location.href='onlinebanking-home.html';
-    }
-    </script>
+    
 </body>
 
 </html>
