@@ -75,9 +75,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (urlParams.get('session') == "clear") {
         window.localStorage.clear();
         if( getCookie( 'authenticated_id' ) ) {
+            var cookieName = "authenticated_id";
             var path = "/";
             var domain = "demoqualtrics.github.io";
-            document.cookie = name + "=" + ((path) ? ";path="+path:"") + ((domain)?";domain="+domain:"") + ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
+            document.cookie = cookieName + "=" + ((path) ? ";path="+path:"") + ((domain)?";domain="+domain:"") + ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
         }
     }
 </script>
