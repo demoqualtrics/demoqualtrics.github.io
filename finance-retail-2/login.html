@@ -62,7 +62,7 @@ function writeToLocalStorage(key, value) {
 }
     
 function login() {
-    writeToLocalStorage('authenticated_id', document.getElementById('f-name').value);
+    setCookie('authenticated_id', document.getElementById('f-name').value);
     window.location.href='onlinebanking-home.html';
 }
 </script>
