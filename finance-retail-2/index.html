@@ -78,6 +78,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             var cookieName = "authenticated_id";
             document.cookie = cookieName + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
         }
+        if( getCookie( 'username' ) ) {
+            var cookieName = "username";
+            document.cookie = cookieName + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
+        if( getCookie( 'loan_amount' ) ) {
+            var cookieName = "loan_amount";
+            document.cookie = cookieName + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
+        if( getCookie( 'loan_tenure' ) ) {
+            var cookieName = "loan_tenure";
+            document.cookie = cookieName + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
     }
 </script>
     

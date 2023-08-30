@@ -71,6 +71,10 @@ function sendAbandonEmail() {
     var firstName = encodeURIComponent(document.getElementById("fName").value);
     var lastName = encodeURIComponent(document.getElementById("lName").value);
     var email = encodeURIComponent(document.getElementById("emailName").value);
+    
+    
+    //set cookie for session replay data
+    setCookie('username', firstName + " " + lastName);
 
     var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_lJVP4FnkJKJ2wNI&contextId=SV_2mWpjBvGP2m6UaW&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
     
