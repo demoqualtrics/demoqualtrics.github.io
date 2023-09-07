@@ -679,6 +679,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h4 class="modal-title">xiD Profile</h4> </div>
     <div class="modal-body">
       <img id="modal-body-image" src="img/profile-snapshots/profile1a.png" alt="profile0" width="700px"/>
+
+<script>
+  // Function to read URL parameters and store 'Stage' and 'XID' values in local storage
+  function readURLParamsAndStore() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const stageValue = urlParams.get('stage');
+    const xidValue = urlParams.get('XID');
+    
+    if (stageValue) {
+      localStorage.setItem('storedStage', stageValue);
+    }
+    
+    if (xidValue) {
+      localStorage.setItem('storedXID', xidValue);
+    }
+  }
+  
+  // Function to update the image source based on the stored 'Stage' value in local storage
+  function updateImageBasedOnStoredStage() {
+    const storedStage = localStorage.getItem('storedStage');
+    
+  if (storedStage === '1') {
+    document.getElementById('modal-body-image').src = 'img/profile-snapshots/profile1a.png';
+  } else if (storedStage === '2') {
+    document.getElementById('modal-body-image').src = 'img/profile-snapshots/profile1b.png';
+  } else if (storedStage === '3') {
+    document.getElementById('modal-body-image').src = 'img/profile-snapshots/profile2a.png';
+  } else if (storedStage === '4') {
+    document.getElementById('modal-body-image').src = 'img/profile-snapshots/profile3a.png';
+  } else {
+    // If no specific stored 'Stage' value matches, keep the default image
+    document.getElementById('modal-body-image').src = 'images/Dbanner1.png';
+  }
+}
+  
+  // Call the function to read URL parameters and store 'Stage' and 'XID' values in local storage
+  readURLParamsAndStore();
+  
+  // Call the functions on page load to update the images based on stored values
+  updateImageBasedOnStoredStage();
+  updateImageBasedOnStoredXID();
+</script>
+						</div>
     </div>
     <div class="modal-footer"> </div>
     <div style="position:absolute;top:160px;left:211px;border: 1px solid white;background-color:white;color:#999;width:400px;"><span id="localStorage.getItem(email)">&nbsp;</span></div>
