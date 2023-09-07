@@ -26,6 +26,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 <!-- End Amazon Connect Tag -->
     
+    <script type="text/javascript" src="./js/cookieFunction.js"></script>
+    
     <meta name="robots" content="noindex">
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -61,6 +63,9 @@ function triggerSurvey(form) {
     var mobile = $("#inputPhoneNumber").intlTelInput("getNumber");
 
     var url = "https://5f2m6d012l.execute-api.us-east-1.amazonaws.com/default/qbancaWebhookRelay?triggerId=OC_l7XGFkOL00v09Ti&contextId=SV_4UFSlTX88OHFHhQ&firstName=" + firstName + "&lastName=" + lastName + "&email=" + email + "&mobile=0";
+    
+    //set cookie for session replay data
+    setCookie('username', firstName + " " + lastName);
     
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);

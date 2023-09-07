@@ -52,6 +52,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body>
+    
+<script type="application/javascript">  
+    
+function writeToLocalStorage(key, value) {
+    if (typeof(Storage) !== "undefined") {
+        window.localStorage.setItem(key, value);
+    }
+}
+    
+function login() {
+    setCookie('authenticated_id', document.getElementById('f-name').value);
+    window.location.href='onlinebanking-home.html';
+}
+</script>
 
     <!-- Header -->
     <header class="header">
@@ -294,7 +308,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <div class="contact-form-widget">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label for="f-name">Account Number (8 digits)</label>
+                                        <label for="f-name">Account Number</label>
                                         <input type="text" id="f-name" name="name" class="form-control"
                                             placeholder="XXXXXXXX">
                                     </div>
@@ -315,7 +329,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </p>
                                     </div>
                                     <div class="col-12 mt-35">
-                                        <button class="theme-btn theme-btn-lg w-100" onclick="location.href='onlinebanking-home.html';">Continue</button>
+                                        <button class="theme-btn theme-btn-lg w-100" onclick="login()">Continue</button>
                                     </div>
                                 </div>
                         </div>
@@ -662,6 +676,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    
 </body>
 
 </html>
