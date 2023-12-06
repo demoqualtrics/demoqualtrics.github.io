@@ -20291,6 +20291,30 @@ body.boxed-wrapper {
   top: -93%;
 }
 
+.sign-in .select-box .nice-select {
+  position: relative;
+  height: 60px;
+  outline: none;
+  border-radius: var(--insur-bdr-radius);
+  border: 0;
+  background-color: var(--insur-extra);
+  margin: 0;
+  padding: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: var(--insur-gray);
+  font-size: 14px;
+  line-height: 60px;
+  font-weight: 500;
+  box-shadow: none;
+  letter-spacing: var(--insur-letter-spacing);
+  float: none;
+}
+
+.sign-in .select-box .nice-select:after {
+  position: absolute;
+  right: 30px;
+}
 /*--------------------------------------------------------------
 # Make a claim
 --------------------------------------------------------------*/
