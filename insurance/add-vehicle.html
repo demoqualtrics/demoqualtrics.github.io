@@ -30,6 +30,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
 
+
+
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendors/animate/animate.min.css">
     <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css">
@@ -58,15 +60,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="assets/css/insur-responsive.css">
 </head>
 
-<body class="custom-cursor">
+<body>
 
-        <!-- Google Tag Manager (noscript) -->
+    
+    <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPKP9L29"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
-
-
 
 
     <div class="preloader">
@@ -192,192 +192,278 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="container">
                 <div class="page-header__inner">
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Policy Portal</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><span>/</span></li>
-                        <li>Add Vehicle</li>
+                        <li>Policy Portal</li>
                     </ul>
-                    <h2>Add or Replace Vehicle</h2>
+                    <h2>Add Vehicle</h2>
                 </div>
             </div>
         </section>
         <!--Page Header End-->
 
-        <!--Policy Proposal Start-->
-        <section class="policy-proposal">
+        <!--Start Checkout Page-->
+        <section class="checkout-page">
             <div class="container">
-                <div class="policy-proposal__inner">
-                    <p class="policy-proposal__text-1">Let's start your vehicle quote:</p>
-                    <form action="assets/inc/sendemail.php" class="policy-proposal__form contact-form-validated">
-                        <div class="row">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="billing_details">
+                            <div class="billing_title">
+                                <p>Returning Customer? <span>Click here to Login</span></p>
+                                <h2>Billing details</h2>
                             </div>
-                            <div class="col-xl-6">
-                                <div class="policy-proposal__input-box">
-                                    <p class="policy-proposal__input-title">How many vehicles do you want to add today?:</p>
-                                    <div class="select-box">
-                                        <select class="wide nice-select">
-                                            <option data-display="Select options">Select options</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Multiple</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6"></div>
-                            <div class="col-xl-6">
-                                <div class="policy-proposal__input-box">
-                                    <p class="policy-proposal__input-title">Vehicle Type:</p>
-                                    <div class="select-box">
-                                        <select class="wide nice-select">
-                                            <option data-display="Select options">Select options</option>
-                                            <option value="1">Private Passenger (Car, SUV, Pickup, Van, etc.)</option>
-                                            <option value="2">Commercial Vehicle</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6"></div>
-                            <div class="col-xl-6">
-                                <div class="policy-proposal__input-box">
-                                    <p class="policy-proposal__input-title">Vehicle Identification Number (VIN):</p>
-                                    <input type="text" placeholder="" name="name">
-                                </div>
-                            </div>
-                            <div class="col-xl-6"></div>
-                            <div class="col-xl-6">
-                                <div class="policy-proposal__input-box">
-                                    <fieldset>
-                                    <p class="policy-proposal__input-title">Is this vehicle owned, financed or leased?:</p>
-                                    <div>
-                                    <input type="radio" placeholder="" name="ownership" id="owned">
-                                    <label for="owned">Owned</label>
-                                    </div>
-                                    <div>
-                                    <input type="radio" placeholder="" name="ownership" id="financed">
-                                    <label for="owned">Financed</label>
-                                    </div>
-                                    <div>
-                                    <input type="radio" placeholder="" name="ownership" id="leased">
-                                    <label for="owned">Leased</label>
-                                    </div>
-                                    </fieldset>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="policy-proposal__input-box">
-                                    <p class="policy-proposal__input-title">Date of Birth:</p>
-                                    <input type="text" placeholder="" name="name">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="policy-proposal__input-box">
-                                    <p class="policy-proposal__input-title">Residential Address:</p>
-                                    <input type="text" placeholder="" name="name">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="policy-proposal__input-box">
-                                    <p class="policy-proposal__input-title">Contact No:</p>
-                                    <input type="text" placeholder="" name="name">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
+                            <form class="billing_details_form">
                                 <div class="row">
-                                    <div class="col-xl-6">
-                                        <div class="policy-proposal__input-box">
-                                            <p class="policy-proposal__input-title">Fax:</p>
-                                            <input type="text" placeholder="" name="name">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <div class="policy-proposal__input-box">
-                                            <p class="policy-proposal__input-title">Email:</p>
-                                            <input type="text" placeholder="" name="name">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="policy-proposal__input-box">
-                                    <p class="policy-proposal__input-title">Your Occupation:</p>
-                                    <input type="text" placeholder="" name="name">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="policy-proposal__input-box">
-                                    <p class="policy-proposal__input-title">Monthly Income:</p>
-                                    <input type="text" placeholder="" name="name">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="row">
-                                    <div class="col-xl-6">
-                                        <div class="policy-proposal__input-box">
-                                            <p class="policy-proposal__input-title">Chose Plan:</p>
+                                    <div class="col-xl-12">
+                                        <div class="billing_input_box">
                                             <div class="select-box">
                                                 <select class="wide nice-select">
-                                                    <option data-display="Choose policy">Choose policy</option>
-                                                    <option value="1">Choose policy 01</option>
-                                                    <option value="2">Choose policy 02</option>
-                                                    <option value="3">Choose policy 03</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <div class="policy-proposal__input-box">
-                                            <p class="policy-proposal__input-title">Chose Terms:</p>
-                                            <div class="select-box">
-                                                <select class="wide nice-select">
-                                                    <option data-display="10">10</option>
-                                                    <option value="1">10</option>
-                                                    <option value="2">20</option>
-                                                    <option value="3">30</option>
+                                                    <option data-display="Select a country">Select a country</option>
+                                                    <option value="1">Canada</option>
+                                                    <option value="2">England</option>
+                                                    <option value="3">Australia</option>
+                                                    <option value="3">USA</option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="policy-proposal__messages-boxes">
-                                    <div class="policy-proposal__message-one">
-                                        <p class="policy-proposal__message-one-title">Do you have any physical
-                                            impairment?
-                                            If yes, please state its nature:</p>
-                                        <div class="policy-proposal__textarea-one">
-                                            <textarea name="message" placeholder=""></textarea>
+                                <div class="row bs-gutter-x-20">
+                                    <div class="col-xl-6">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="first_name" value="" placeholder="First name"
+                                                required="">
                                         </div>
                                     </div>
-                                    <div class="policy-proposal__message-two">
-                                        <p class="policy-proposal__message-two-title">Do you now or ever had heart
-                                            disease,
-                                            diabetes, high blood pressure, TB, jaundice or liver, stomach, renal
-                                            disease,
-                                            cancer, asthma, epilepsy, nervous or psychological disorders? If so specify
-                                            with
-                                            dates:</p>
-                                        <div class="policy-proposal__textarea-two">
-                                            <textarea name="message" placeholder=""></textarea>
+                                    <div class="col-xl-6">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="last_name" value="" placeholder="Last name"
+                                                required="">
                                         </div>
                                     </div>
-                                    <div class="policy-proposal__message-three">
-                                        <p class="policy-proposal__message-three-title">Are you in good health? If not,
-                                            describe the nature of ailment:</p>
-                                        <div class="policy-proposal__textarea-three">
-                                            <textarea name="message" placeholder=""></textarea>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="thm-btn policy-proposal__btn">Submit Proposal</button>
                                 </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="company_name" value="" placeholder="Company">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="Address" value="" placeholder="Address">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="company_name" value=""
+                                                placeholder="Appartment, Unit, etc. (optional)">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="Town/City" value="" placeholder="Town / City"
+                                                required="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row bs-gutter-x-20">
+                                    <div class="col-xl-6">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="State" value="" placeholder="State" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="billing_input_box">
+                                            <input name="form_zip" type="text" pattern="[0-9]*" placeholder="Zip code">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="billing_input_box">
+                                            <input name="email" type="email" placeholder="Email address">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="billing_input_box">
+                                            <input type="tel" name="form_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                                required="" placeholder="Phone">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="checked-box">
+                                            <input type="checkbox" name="skipper1" id="skipper" checked="">
+                                            <label for="skipper"><span></span>Create an account?</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="billing_details ship_different_address">
+                            <div class="billing_title ship_different_address_title">
+                                <h2>Ship to a different address <span class="fa fa-check-circle"></span></h2>
+                            </div>
+                            <form class="billing_details_form ship_different_address_form">
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="billing_input_box">
+                                            <div class="select-box">
+                                                <select class="wide nice-select">
+                                                    <option data-display="Select a country">Select a country</option>
+                                                    <option value="1">Canada</option>
+                                                    <option value="2">England</option>
+                                                    <option value="3">Australia</option>
+                                                    <option value="3">USA</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row bs-gutter-x-20">
+                                    <div class="col-xl-6">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="first_name" value="" placeholder="First name"
+                                                required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="last_name" value="" placeholder="Last name"
+                                                required="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="company_name" value="" placeholder="Company">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="Address" value="" placeholder="Address">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="company_name" value=""
+                                                placeholder="Appartment, Unit, etc. (optional)">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="Town/City" value="" placeholder="Town / City"
+                                                required="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row bs-gutter-x-20">
+                                    <div class="col-xl-6">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="State" value="" placeholder="State" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="billing_input_box">
+                                            <input name="form_zip" type="text" pattern="[0-9]*" placeholder="Zip code">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row bs-gutter-x-20">
+                                    <div class="col-xl-6">
+                                        <div class="billing_input_box">
+                                            <input name="email" type="email" placeholder="Email address">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="billing_input_box">
+                                            <input type="tel" name="form_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                                required="" placeholder="Phone">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="ship_different_input">
+                                            <textarea placeholder="Notes about order"
+                                                name="form_order_notes"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="your_order">
+                    <h2>Your order</h2>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="order_table_box">
+                                <table class="order_table_detail">
+                                    <thead class="order_table_head">
+                                        <tr>
+                                            <th>Product</th>
+                                            <th class="right">Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="pro__title">Product Name</td>
+                                            <td class="pro__price">$10.99 USD</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pro__title">Subtotal</td>
+                                            <td class="pro__price">$10.99 USD</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pro__title">Shipping</td>
+                                            <td class="pro__price">$0.00 USD</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pro__title">Total</td>
+                                            <td class="pro__price">$20.98 USD</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                    </form>
+
+                        <div class="col-lg-6">
+                            <div class="checkout__payment">
+                                <div class="checkout__payment__item checkout__payment__item--active">
+                                    <h3 class="checkout__payment__title">Direct Bank Transfer</h3>
+                                    <div class="checkout__payment__content">
+                                        Make your payment directly into our bank account. Please
+                                        use your Order ID as the payment reference. Your order
+                                        wont be shipped until the funds have cleared.
+                                    </div><!-- /.checkout__payment__content -->
+                                </div><!-- /.checkout__payment__item -->
+                                <div class="checkout__payment__item">
+                                    <h3 class="checkout__payment__title">Paypal Payment <img
+                                            src="assets/images/shop/paypal-1.jpg" alt=""></h3>
+                                    <div class="checkout__payment__content">
+                                        Make your payment directly into our bank account. Please
+                                        use your Order ID as the payment reference. Your order
+                                        wont be shipped until the funds have cleared.
+                                    </div><!-- /.checkout__payment__content -->
+                                </div><!-- /.checkout__payment__item -->
+                            </div><!-- /.checkout__payment -->
+                            <div class="text-right d-flex justify-content-end">
+                                <a href="checkout.html" class="thm-btn">Place Your Order</a>
+                            </div><!-- /.text-right -->
+
+                        </div><!-- /.col-lg-6 -->
+                    </div>
                 </div>
             </div>
         </section>
-        <!--Policy Proposal End-->
+        <!--End Checkout Page-->
 
         <!--Site Footer Start-->
         <footer class="site-footer">
