@@ -13582,6 +13582,15 @@ body.boxed-wrapper {
   margin-bottom: 20px;
 }
 
+.billing__input-title {
+  font-size: 16px;
+  color: var(--insur-black);
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: var(--insur-letter-spacing);
+  margin-bottom: 5px;
+}
+
 .billing_input_box input[type="text"],
 .billing_input_box input[type="email"],
 .billing_input_box input[type="tel"] {
