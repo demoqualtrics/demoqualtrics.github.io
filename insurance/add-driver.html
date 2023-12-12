@@ -57,6 +57,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/insur.css">
     <link rel="stylesheet" href="assets/css/insur-responsive.css">
+    
+<script>
+    document.getElementById('addNameForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        var relationship = document.getElementById('relationship').value;
+        var title = document.getElementById('title').value;
+        var firstName = document.getElementById('first_name').value;
+        var initials = document.getElementById('initials').value;
+        var lastName = document.getElementById('last_name').value;
+        
+        localStorage.setItem('relationship', relationship);
+        localStorage.setItem('title', title);
+        localStorage.setItem('first_name', firstName);
+        localStorage.setItem('initials', initials);
+        localStorage.setItem('last_name', lastName);
+        
+        window.location.href = 'add-vehicle-2.html';
+    });
+</script>
 </head>
 
 <body>
@@ -204,13 +224,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="container">
                 <div class="policy-proposal__inner">
                     <p class="policy-proposal__text-1">Please provide the name as it appears on the drivers license:</p>
-                    <form action="add-vehicle-2.html" method="get" class="policy-proposal__form contact-form-validated">
+                    <form id="addDriverForm" class="policy-proposal__form contact-form-validated">
                         <div class="row">
                             <div class="col-xl-3">
                                 <div class="policy-proposal__input-box">
                                     <p class="policy-proposal__input-title">Relationship to Policy Holder:</p>
                                     <div class="select-box">
-                                        <select class="wide nice-select">
+                                        <select name="relationship" class="wide nice-select">
                                             <option data-display="Please Select">Please Select</option>
                                             <option value="1">Spouse</option>
                                             <option value="2">Partner</option>
@@ -224,7 +244,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="policy-proposal__input-box">
                                     <p class="policy-proposal__input-title">Title:</p>
                                     <div class="select-box">
-                                        <select class="wide nice-select">
+                                        <select name="title" class="wide nice-select">
                                             <option data-display="Please Select">Please Select</option>
                                             <option value="1">Mr</option>
                                             <option value="2">Mrs</option>
