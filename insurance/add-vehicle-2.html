@@ -59,6 +59,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/insur.css">
     <link rel="stylesheet" href="assets/css/insur-responsive.css">
+    
+    <script>
+        // A function to get URL query parameters
+        function getUrlParams() {
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            return {
+                relationship: urlSearchParams.get('relationship'),
+                title: urlSearchParams.get('title'),
+                firstName: urlSearchParams.get('first_name'),
+                initials: urlSearchParams.get('initials'),
+                lastName: urlSearchParams.get('last_name')
+            };
+        }
+
+        // This function processes the parameters and adds them to the dropdown
+        function addOptionFromParams() {
+          const params = getUrlParams();
+
+          // Check if any of the parameters are present
+          if (params.relationship || params.title || params.firstName || params.initials || params.lastName) {
+            const dropdown = document.getElementById('main_driver');
+            const optionText = `${params.firstName ? params.firstName + ' ' : ''}${params.lastName ? params.lastName + ' ': ''} (${params.relationship})`.trim();
+
+            // Create option element only if there's text
+            if (optionText) {
+                const optionElement = document.createElement('option');
+                optionElement.value = 3; // Setting value to the same text, change if necessary
+                optionElement.textContent = optionText;
+
+                // Append the new option to the dropdown
+                dropdown.appendChild(optionElement);
+            }
+          }
+        }
+
+        // Call the function to process URL parameters and add the option.
+        addOptionFromParams();
+    </script>
 </head>
 
 <body>
@@ -239,7 +277,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="billing_input_box">
                                             <div class="select-box">
                                                 <p class="billing__input-title">Who will drive it the most?</p>
-                                                <select name="main_driver" class="wide nice-select" required>
+                                                <select id="main_driver" name="main_driver" class="wide nice-select" required>
                                                     <option data-display="Please Select" value="">Please Select</option>
                                                     <option value="1">Simon Bailey (Named Insured)</option>
                                                     <option value="2">Sarah Bailey (Spouse)</option>
