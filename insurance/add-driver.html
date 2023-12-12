@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- Google Tag Manager -->
+     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -13,7 +13,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="robots" content="noindex">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Qinsure | Vehicle Usage </title>
+    <title> Qinsure | Add Driver </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/qinsure-favicon-color.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/qinsure-favicon-color.png">
@@ -29,7 +29,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
-
 
 
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
@@ -53,7 +52,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css">
     <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css">
     <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css">
-    <link rel="stylesheet" href="assets/vendors/insur-three-icon/style.css">
     <link rel="stylesheet" href="assets/vendors/nice-select/nice-select.css">
 
     <!-- template styles -->
@@ -63,11 +61,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <body>
 
-    
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPKP9L29"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
+
+
 
 
     <div class="preloader">
@@ -88,7 +84,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <span class="icon-pin"></span>
                                     </i>
                                     <div class="text">
-                                        <p>30 Commercial Road Fratton, USA</p>
+                                        <p>30 Commercial Road Fratton, Australia</p>
                                     </div>
                                 </li>
                                 <li>
@@ -187,7 +183,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <!--Page Header Start-->
         <section class="page-header">
-            <div class="page-header-bg" style="background-image: url(assets/images/resources/cheap-car-insurance.png)">
+            <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
             </div>
             <div class="page-header-shape-1"><img src="assets/images/shapes/page-header-shape-1.png" alt=""></div>
             <div class="container">
@@ -197,166 +193,84 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li><span>/</span></li>
                         <li>Policy Portal</li>
                     </ul>
-                    <h2>Vehicle Usage</h2>
+                    <h2>Add a Driver</h2>
                 </div>
             </div>
         </section>
         <!--Page Header End-->
 
-        <!--Start Checkout Page-->
-        <section class="checkout-page">
+        <!--Policy Proposal Start-->
+        <section class="policy-proposal">
             <div class="container">
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="billing_details">
-                            <div class="billing_title">
-                                <h3><span class="insur-three-icon-car"></span>&nbsp;Vehicles</h3>
-                            </div>
-                            <form class="billing_details_form">
-                                <div class="row">
-                                    <div class="col-xl-12">
-                                            <h5>2022 Chevrolet Suburban LT 5.3L V8 RWD</h5>
+                <div class="policy-proposal__inner">
+                    <p class="policy-proposal__text-1">Please provide the name as it appears on the drivers license:</p>
+                    <form action="./add-vehicle-2.html" class="policy-proposal__form contact-form-validated">
+                        <div class="row">
+                            <div class="col-xl-3">
+                                <div class="policy-proposal__input-box">
+                                    <p class="policy-proposal__input-title">Relationship to Policy Holder:</p>
+                                    <div class="select-box">
+                                        <select class="wide nice-select">
+                                            <option data-display="Please Select">Please Select</option>
+                                            <option value="1">Spouse</option>
+                                            <option value="2">Partner</option>
+                                            <option value="3">Child</option>
+                                        </select>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-xl-9"></div>
+                            <div class="col-xl-3">
+                                <div class="policy-proposal__input-box">
+                                    <p class="policy-proposal__input-title">Title:</p>
+                                    <div class="select-box">
+                                        <select class="wide nice-select">
+                                            <option data-display="Please Select">Please Select</option>
+                                            <option value="1">Mr</option>
+                                            <option value="2">Mrs</option>
+                                            <option value="3">Miss</option>
+                                            <option value="3">Ms</option>
+                                            <option value="3">Dr</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6"></div>
+                            <div class="col-xl-6">
+                                <div class="policy-proposal__input-box">
+                                    <p class="policy-proposal__input-title">First Name:</p>
+                                    <input type="text" placeholder="" name="first_name">
+                                </div>
+                            </div>
+                            <div class="col-xl-6"></div>
+                            <div class="col-xl-1">
+                                <div class="policy-proposal__input-box">
+                                    <p class="policy-proposal__input-title">Initials:</p>
+                                    <input type="text" placeholder="" name="initials">
+                                </div>
+                            </div>
+                            <div class="col-xl-6"></div>
+                            <div class="col-xl-6">
+                                <div class="policy-proposal__input-box">
+                                    <p class="policy-proposal__input-title">Last Name:</p>
+                                    <input type="text" placeholder="" name="last_name">
+                                </div>
+                            </div>
+                            <div class="col-xl-6"></div>
                             
-                                <div id="quote_form">    
-                            <div class="row" style="padding-top:20px;">
-                                    <div class="col-xl-12">
-                                <div class="billing_input_box">
-                                            <div class="select-box">
-                                                <p class="billing__input-title">Primary Use of Vehicle:</p>
-                                                <select name="primary_use" class="wide nice-select" required>
-                                                    <option data-display="Please Select" value="">Please Select</option>
-                                                    <option value="1">Social, domestic and pleasure (SD&amp;P)</option>
-                                                    <option value="2">Commuting</option>
-                                                    <option value="3">Business Use</option>
-                                                    <option value="4">Carriage of goods for hire and reward</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                </div>
-                                <div class="row bs-gutter-x-20">
-                                    <div class="col-xl-6">
-                                <div class="billing_input_box">
-                                            <div class="select-box">
-                                                <p class="billing__input-title">Who will drive it the most?</p>
-                                                <select name="main_driver" class="wide nice-select" required>
-                                                    <option data-display="Please Select" value="">Please Select</option>
-                                                    <option value="1">Simon Bailey (Named Insured)</option>
-                                                    <option value="2">Sarah Bailey (Spouse)</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                </div>
-                                </div>
-                                <div class="row bs-gutter-x-20">
-                                    <div class="col-xl-6">
-                                        <div class="billing_input_box">
-                                            <p class="billing__input-title">Annual Mileage:</p>
-                                            <input type="text" name="annual_mileage" value="" placeholder="Annual Mileage"
-                                               required >
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                 <div class="text-right d-flex justify-content-end">
-                                      <button type="submit" class="thm-btn comment-form__btn">Save</button>
-                            </div><!-- /.text-right -->
-                                
-                                </div>
                         </div>
-                            </form>
-                    </div>
-
-
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="policy-proposal__messages-boxes">
+                                    <button type="submit" class="thm-btn policy-proposal__btn">Add Driver</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="row" style="padding-top: 50px">
-                                
-                                                <h3>2020 Dodge Caravan SE 5dr 02847</h3>
-                                    <div class="order_table_box">
-                                <table class="order_table_detail">
-                                    <tbody>
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                                                <div class="make-a-claim__img-and-points-box">
-                                <div class="row">
-                            <div class="order_table_box">
-                                <table class="order_table_detail">
-                                    <tbody>
-                                        <tr>
-                                            <td class="pro__title">Primary Use of Vehicle</td>
-                                            <td class="pro__price">Social, domestic and pleasure (SD&amp;P)</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pro__title">Primary Driver</td>
-                                            <td class="pro__price">Sarah Bailey (Spouse)</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pro__title">Annual Mileage</td>
-                                            <td class="pro__price">10000</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-               <div class="cart-page__buttons" style="padding-top:20px">
-                            <div class="cart-page__buttons-1">
-                                <a href="#" class="thm-btn">Edit</a>
-                            </div>
-                        </div>
-                <div class="row" style="padding-top: 100px">
-                                
-                            <div class="row">
-                                <h5><span class="insur-three-icon-car"></span>&nbsp;Vehicle Assignment</h5>
-                    </div>
-                    <div class="row" style="padding-top:20px;">
-                                <h5>Match Driver To Vehicle</h5>
-                    </div>
-                    <div class="row" style="padding-top:10px;">
-                                <p>Please select which vehicle each driver is most likely to use.</p>
-                    </div>
-                
-                            </div>
-                <div class="row" style="padding: 0px 50px 0px 50px">
-                                    <div class="order_table_box">
-                                <table class="order_table_detail">
-                                    <tbody>
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                                                <div class="make-a-claim__img-and-points-box">
-                                <div class="row">
-                            <div class="order_table_box">
-                                <table class="order_table_detail">
-                                    <tbody>
-                                        <tr>
-                                            <td class="pro__title">SIMON (Named Insured)</td>
-                                            <td class="pro__price">2020 Dodge Caravan SE 5dr 02847</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pro__title">SARAH (Spouse)</td>
-                                            <td class="pro__price">2020 Dodge Caravan SE 5dr 02847</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                                        
-                                    </div>
-                                </div>
-                </div>
-                 <div class="cart-page__buttons" style="padding-top:20px">
-                            <div class="cart-page__buttons-1">
-                                <a href="add-driver.html" class="thm-btn">Edit</a>
-                            </div>
-                        </div>
             </div>
         </section>
-        <!--End Checkout Page-->
+        <!--Policy Proposal End-->
 
         <!--Site Footer Start-->
         <footer class="site-footer">
