@@ -684,9 +684,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script>
         // Check if any of the parameters are present
+        // Get URL parameters
+        const params = new URLSearchParams(window.location.search);
+        
         if (params.get('first_name') || params.get('last_name')) {
-            // Get URL parameters
-            const params = new URLSearchParams(window.location.search);
+            
             const firstName = params.get('first_name');
             const lastName = params.get('last_name');
 
