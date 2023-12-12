@@ -57,22 +57,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/insur.css">
     <link rel="stylesheet" href="assets/css/insur-responsive.css">
-    
-<script>
-    document.getElementById('addDriverForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        var relationship = document.getElementById('relationship').value;
-        var title = document.getElementById('title').value;
-        var firstName = document.getElementById('first_name').value;
-        var initials = document.getElementById('initials').value;
-        var lastName = document.getElementById('last_name').value;
-        
-        var queryString = `relationship=${encodeURIComponent(relationship)}&title=${encodeURIComponent(title)}&first_name=${encodeURIComponent(firstName)}&initials=${encodeURIComponent(title)}&last_name=${encodeURIComponent(lastName)}`;
-        
-        window.location.href = `add-vehicle-2.html?${queryString}`;
-    });
-</script>
 </head>
 
 <body>
@@ -510,7 +494,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
     <script src="assets/vendors/nice-select/jquery.nice-select.min.js"></script>
 
-
+    <script>
+    document.getElementById('addDriverForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        var relationship = document.getElementById('relationship').value;
+        var title = document.getElementById('title').value;
+        var firstName = document.getElementById('first_name').value;
+        var initials = document.getElementById('initials').value;
+        var lastName = document.getElementById('last_name').value;
+        
+        var queryString = `relationship=${encodeURIComponent(relationship)}&title=${encodeURIComponent(title)}&first_name=${encodeURIComponent(firstName)}&initials=${encodeURIComponent(title)}&last_name=${encodeURIComponent(lastName)}`;
+        
+        window.location.href = `add-vehicle-2.html?${queryString}`;
+    });
+</script>
 
 
     <!-- template js -->

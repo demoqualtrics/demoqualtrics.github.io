@@ -59,44 +59,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/insur.css">
     <link rel="stylesheet" href="assets/css/insur-responsive.css">
-    
-    <script>
-        // A function to get URL query parameters
-        function getUrlParams() {
-            const urlSearchParams = new URLSearchParams(window.location.search);
-            return {
-                relationship: urlSearchParams.get('relationship'),
-                title: urlSearchParams.get('title'),
-                firstName: urlSearchParams.get('first_name'),
-                initials: urlSearchParams.get('initials'),
-                lastName: urlSearchParams.get('last_name')
-            };
-        }
-
-        // This function processes the parameters and adds them to the dropdown
-        function addOptionFromParams() {
-          const params = getUrlParams();
-
-          // Check if any of the parameters are present
-          if (params.relationship || params.title || params.firstName || params.initials || params.lastName) {
-            const dropdown = document.getElementById('main_driver');
-            const optionText = `${params.firstName ? params.firstName + ' ' : ''}${params.lastName ? params.lastName + ' ': ''} (${params.relationship})`.trim();
-
-            // Create option element only if there's text
-            if (optionText) {
-                const optionElement = document.createElement('option');
-                optionElement.value = 3; // Setting value to the same text, change if necessary
-                optionElement.textContent = optionText;
-
-                // Append the new option to the dropdown
-                dropdown.appendChild(optionElement);
-            }
-          }
-        }
-
-        // Call the function to process URL parameters and add the option.
-        addOptionFromParams();
-    </script>
 </head>
 
 <body>
@@ -618,7 +580,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
     <script src="assets/vendors/nice-select/jquery.nice-select.min.js"></script>
 
+    <script>
+        // A function to get URL query parameters
+        function getUrlParams() {
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            return {
+                relationship: urlSearchParams.get('relationship'),
+                title: urlSearchParams.get('title'),
+                firstName: urlSearchParams.get('first_name'),
+                initials: urlSearchParams.get('initials'),
+                lastName: urlSearchParams.get('last_name')
+            };
+        }
 
+        // This function processes the parameters and adds them to the dropdown
+        function addOptionFromParams() {
+          const params = getUrlParams();
+
+          // Check if any of the parameters are present
+          if (params.relationship || params.title || params.firstName || params.initials || params.lastName) {
+            const dropdown = document.getElementById('main_driver');
+            const optionText = `${params.firstName ? params.firstName + ' ' : ''}${params.lastName ? params.lastName + ' ': ''} (${params.relationship})`.trim();
+
+            // Create option element only if there's text
+            if (optionText) {
+                const optionElement = document.createElement('option');
+                optionElement.value = 3; // Setting value to the same text, change if necessary
+                optionElement.textContent = optionText;
+
+                // Append the new option to the dropdown
+                dropdown.appendChild(optionElement);
+            }
+          }
+        }
+
+        // Call the function to process URL parameters and add the option.
+        addOptionFromParams();
+    </script>
 
 
     <!-- template js -->
