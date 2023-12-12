@@ -214,10 +214,81 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             
                             <div class="make-a-claim__procedure-faq">
                                 <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
+                                    <div id="new_car_policy" class="accrodion active" style="display: none">
+                                        <div class="accrodion-title">
+                                            <h4><span class="insur-three-icon-car"></span>Auto</h4>
+                                            <p>Policy Number: #582384495</p>
+                                        </div>
+                                        <div class="accrodion-content">
+                                            <div class="inner">
+                                            <div class="select-box" style="display: inline;">
+                                                <select class="wide nice-select" style="display: none;  padding-bottom: 10px;">
+                                                    <option data-display="Select a country">I Would Like To...</option>
+                                                    <option value="1">Start a New Quote</option>
+                                                    <option value="2">Change Coverage</option>
+                                                    <option value="3">Change Address</option>
+                                                    <option value="3">Add Vehicle</option>
+                                                    <option value="4">Claims</option>
+                                                </select><div class="nice-select wide" tabindex="0"><span class="current">I Would Like To...</span><ul class="list"><li data-value="I Would Like To..." data-display="I Would Like To..." class="option selected">I Would Like To...</li><li data-value="1" class="option">Start a New Quote</li><li data-value="2" class="option">Change Coverage</li><li data-value="3" class="option">Change Address</li><a href="./add-vehicle.html" style="color: white"><li data-value="3" class="option">Add Vehicle</li></a><li data-value="4" class="option">Claims</li></ul></div>
+                                            </div>
+                                <div class="row" style="padding: 10px">
+                                
+                                                <h3>Your Policy</h3>
+                                    <div class="order_table_box">
+                                <table class="order_table_detail">
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                                                <div class="make-a-claim__img-and-points-box">
+                                <div class="row">
+                            <div class="order_table_box">
+                                <table class="order_table_detail">
+                                    <tbody>
+                                        <tr>
+                                            <td class="pro__title">Policy Period</td>
+                                            <td class="pro__price"><span id="date">12/12/2023 - 12/11/2024</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pro__title">Drivers</td>
+                                            <td class="pro__price"><span id="name">Alex Bailey</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pro__title">Premium</td>
+                                            <td class="pro__price">$1,988</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pro__title">Vehicle</td>
+                                            <td class="pro__price">2022 Chevrolet Suburban LT 5.3L V8 RWD 28188</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                                                </div>
+                                <div style="padding: 10px">
+                                 <h3>Your Billing</h3>
+                                                <p>This policy is paid in full. Thank you.</p>
+                                </div>
+                                <div style="padding: 10px">
+                                <h5>Upcoming Payments</h5>
+                                    <p>You do not have any payments currectly scheduled</p>
+                                </div>
+                                            
+                                            <div class="insurance-details__download-btn-box" style="padding-top:20px">
+                                                <a href="#" class="insurance-details__download-btn thm-btn">Download Policy</a>
+                                            </div>
+                                            </div><!-- /.inner -->
+                                        </div>
+                                    
                                     <div class="accrodion active">
                                         <div class="accrodion-title">
                                             <h4><span class="insur-three-icon-car"></span>Auto</h4>
-                                            <p>Policy Number: #992384495</p>
+                                            <p>Policy Number: #2983749292</p>
                                         </div>
                                         <div class="accrodion-content">
                                             <div class="inner">
@@ -284,6 +355,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             </div>
                                             </div><!-- /.inner -->
                                         </div>
+                                    
+                                    
                                     <div class="accrodion last-chiled active">
                                         <div class="accrodion-title">
                                             <h4><span class="insur-three-icon-home"></span>Homeowners</h4>
@@ -609,7 +682,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
     <script src="assets/vendors/nice-select/jquery.nice-select.min.js"></script>
 
+    <script>
+        // Check if any of the parameters are present
+        if (params.get('first_name') || params.get('last_name')) {
+            // Get URL parameters
+            const params = new URLSearchParams(window.location.search);
+            const firstName = params.get('first_name');
+            const lastName = params.get('last_name');
 
+            // Append the first name and last name with a space
+            const fullName = `${firstName} ${lastName}`;
+            // Set the combined name into the span with the id "name"
+            document.getElementById('name').textContent = fullName;
+
+            // Current date
+            const currentDate = new Date();
+            // Add 364 days to the current date
+            currentDate.setDate(currentDate.getDate() + 364);
+        
+            // Function to format date as MM/DD/YYYY
+            const formatDate = (date) => {
+                const day = ('0' + date.getDate()).slice(-2);
+                const month = ('0' + (date.getMonth() + 1)).slice(-2);
+                const year = date.getFullYear();
+                return `${month}/${day}/${year}`;
+            };
+
+            // Format both dates and set into the span with the id "date"
+            const today = new Date(); // This needs to be a new Date instance to represent today's date
+            const formattedToday = formatDate(today);
+            const formattedFutureDate = formatDate(currentDate);
+            document.getElementById('date').textContent = `${formattedToday} - ${formattedFutureDate}`;
+            document.getElementById('new_car_policy').style.display = 'block';
+        }
+    </script>
 
 
     <!-- template js -->
