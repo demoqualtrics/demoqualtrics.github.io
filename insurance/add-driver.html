@@ -68,13 +68,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         var initials = document.getElementById('initials').value;
         var lastName = document.getElementById('last_name').value;
         
-        localStorage.setItem('relationship', relationship);
-        localStorage.setItem('title', title);
-        localStorage.setItem('first_name', firstName);
-        localStorage.setItem('initials', initials);
-        localStorage.setItem('last_name', lastName);
+        var queryString = `relationship=${encodeURIComponent(relationship)}&title=${encodeURIComponent(title)}&first_name=${encodeURIComponent(firstName)}&initials=${encodeURIComponent(title)}&last_name=${encodeURIComponent(lastName)}`;
         
-        window.location.href = 'add-vehicle-2.html';
+        window.location.href = `add-vehicle-2.html?${queryString}`;
     });
 </script>
 </head>
