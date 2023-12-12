@@ -211,7 +211,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="billing_title">
                                 <h3><span class="insur-three-icon-car"></span>&nbsp;Vehicles</h3>
                             </div>
-                            <form class="billing_details_form">
+                            <form id="addVehicleForm" class="billing_details_form">
                                 <div class="row">
                                     <div class="col-xl-12">
                                             <h5>2022 Chevrolet Suburban LT 5.3L V8 RWD</h5>
@@ -611,11 +611,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 // Append the new option to the dropdown
                 dropdown.appendChild(optionElement);
             }
+              
           }
+        }
+        
+        function setSubmitActionFromParams() {
+             document.getElementById('addVehicleForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const params = getUrlParams();
+                 
+                // Check if any of the parameters are present
+                if (params.relationship || params.title || params.firstName || params.initials || params.lastName) {
+                    const dropdown = document.getElementById('main_driver');
+                    
+                    var queryString = `relationship=${encodeURIComponent(params.relationship)}&title=${encodeURIComponent(params.title)}&first_name=${encodeURIComponent(params.firstName)}&initials=${encodeURIComponent(params.title)}&last_name=${encodeURIComponent(params.lastName)}`;
+        
+                    window.location.href = `policy-portal.html?${queryString}`;
+                });
         }
 
         // Call the function to process URL parameters and add the option.
         addOptionFromParams();
+        setSubmitActionFromParams();
     </script>
 
 
