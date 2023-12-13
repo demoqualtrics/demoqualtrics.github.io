@@ -64,9 +64,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<script type="application/javascript">  
+//Trigger post application survey to user for demo
+function triggerSurvey(form) {
+    
+    var email = encodeURIComponent(document.getElementById("emailName").value);
 
+    var url = "https://yul1.qualtrics.com/inbound-event/v1/events/json/triggers?urlTokenId=3ba37a4b-ca17-49cb-af02-5e53e3b7b40a&email=" + email;
+    
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.send('');
+    //alert("Trigger sent with payload " + JSON.stringify(payload));
 
-
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            //submit form
+            form.submit();
+        }
+    }
+}
+</script>
 
     <div class="preloader">
         <div class="preloader__image"></div>
@@ -208,7 +227,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-xl-6 col-lg-6">
                         <div class="sign-in__single">
                             <h3 class="sign-in__title">My Qinsure Sign In</h3>
-                            <form class="sign-in__form" action="./policy-portal.html">
+                            <form class="sign-in__form" action="policy-portal.html" onsubmit="event.preventDefault();triggerSurvey(this);">
                             <p style="padding: 10px">Already registered with My Qinsure? Go ahead and log in.</p>
                                 <div class="sign-in__form-input-box">
                                     <input type="email" placeholder="Username or Email address*">
