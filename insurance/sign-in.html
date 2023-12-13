@@ -68,7 +68,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 //Trigger post application survey to user for demo
 function triggerSurvey(form) {
     
-    var email = encodeURIComponent(document.getElementById("emailName").value);
+    var email = encodeURIComponent(document.getElementById("email").value);
 
     var url = "https://yul1.qualtrics.com/inbound-event/v1/events/json/triggers?urlTokenId=3ba37a4b-ca17-49cb-af02-5e53e3b7b40a&email=" + email;
     
@@ -230,7 +230,7 @@ function triggerSurvey(form) {
                             <form class="sign-in__form" action="policy-portal.html" onsubmit="event.preventDefault();triggerSurvey(this);">
                             <p style="padding: 10px">Already registered with My Qinsure? Go ahead and log in.</p>
                                 <div class="sign-in__form-input-box">
-                                    <input type="email" placeholder="Username or Email address*">
+                                    <input id="email" type="email" placeholder="Username or Email address*">
                                 </div>
                                 <div class="sign-in__form-input-box">
                                     <input type="password" placeholder="Password*">
