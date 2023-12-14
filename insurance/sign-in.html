@@ -30,7 +30,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
 
-
+    <script type="text/javascript" src="assets/js/cookieFunction.js"></script>
+    
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendors/animate/animate.min.css">
     <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css">
@@ -67,6 +68,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script type="application/javascript">  
 //Trigger post application survey to user for demo
 function triggerSurvey(form) {
+    
+    if(!document.getElementById('skipper2').checked) {
+        //Write authenticated_id cookie if 'remember me' tick box is selected
+        setCookie('authenticated_id', document.getElementById('SBAILEY').value);
+    }
     
     var email = encodeURIComponent(document.getElementById("email").value);
     
