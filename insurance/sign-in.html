@@ -71,7 +71,7 @@ function triggerSurvey(form) {
     
     if(!document.getElementById('skipper2').checked) {
         //Write authenticated_id cookie if 'remember me' tick box is selected
-        setCookie('authenticated_id', document.getElementById('SBAILEY').value);
+        setCookie('authenticated_id', 'SBAILEY');
     }
     
     var email = encodeURIComponent(document.getElementById("email").value);
