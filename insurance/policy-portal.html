@@ -719,7 +719,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             document.getElementById('new_car_policy').style.display = 'block';
             
             //Custom Event for DXA
-            new Event('completedAddVehicleToPolicy');
+            const evt = new Event('completedAddVehicleToPolicy', { bubbles: true, cancelable: false });
+            document.dispatchEvent(evt);
         }
     </script>
 

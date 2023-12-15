@@ -69,12 +69,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 //Trigger post application survey to user for demo
 function triggerSurvey(form) {
     
+    //Custom Event for DXA
+    const evt = new Event('myQinsurePortalLogin', { bubbles: true, cancelable: false });
+    document.dispatchEvent(evt);
+    
     if(!document.getElementById('skipper2').checked) {
         //Write authenticated_id cookie if 'remember me' tick box is selected
         setCookie('authenticated_id', 'SBAILEY');
-        
-        //Custom Event for DXA
-        new Event('myQinsurePortalLogin');
     }
     
     var email = encodeURIComponent(document.getElementById("email").value);
