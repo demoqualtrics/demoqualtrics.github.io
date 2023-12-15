@@ -717,6 +717,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             const formattedFutureDate = formatDate(currentDate);
             document.getElementById('date').textContent = `${formattedToday} - ${formattedFutureDate}`;
             document.getElementById('new_car_policy').style.display = 'block';
+            
+            //Custom Event for DXA
+            new Event('completedAddVehicleToPolicy');
         }
     </script>
 
