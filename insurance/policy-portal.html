@@ -693,6 +693,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         if (params.get('first_name') || params.get('last_name')) {
             
+            //Custom Event for DXA
+            const evt = new Event('completedAddVehicleToPolicy', { bubbles: true, cancelable: false });
+            document.dispatchEvent(evt);
+            
             const firstName = params.get('first_name');
             const lastName = params.get('last_name');
 
@@ -720,10 +724,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             const formattedFutureDate = formatDate(currentDate);
             document.getElementById('date').textContent = `${formattedToday} - ${formattedFutureDate}`;
             document.getElementById('new_car_policy').style.display = 'block';
-            
-            //Custom Event for DXA
-            const evt = new Event('completedAddVehicleToPolicy', { bubbles: true, cancelable: false });
-            document.dispatchEvent(evt);
         }
     </script>
 
