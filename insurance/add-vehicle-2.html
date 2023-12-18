@@ -626,6 +626,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                  
                 // Check if any of the parameters are present
                 if (params.relationship || params.title || params.firstName || params.initials || params.lastName) {
+                    
+                    //Custom Event for DXA
+                    const evt = new Event('completedAddVehicleToPolicy', { bubbles: true, cancelable: false });
+                    document.dispatchEvent(evt);
+                    
                     const dropdown = document.getElementById('main_driver');
                     
                     var queryString = `relationship=${encodeURIComponent(params.relationship)}&title=${encodeURIComponent(params.title)}&first_name=${encodeURIComponent(params.firstName)}&initials=${encodeURIComponent(params.title)}&last_name=${encodeURIComponent(params.lastName)}`;
