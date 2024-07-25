@@ -399,7 +399,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         document.dispatchEvent(evt);
         
         //Stop Qualtrics session recording
-        window.QSI.API.SessionRecording.stop();
+        function stopSessionRecording() {
+            if (QSI.API) {
+                window.QSI.API.SessionRecording.stop();
+            }
+        }
+        
+        window.addEventListener("qsi_js_loaded", stopSessionRecording, false);
     </script>
     
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>

@@ -850,8 +850,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- JS here -->
     <script type="text/javascript">
+        
         //Start Qualtrics session recording
-        window.QSI.API.SessionRecording.start();
+        function startSessionRecording() {
+            if (QSI.API) {
+                window.QSI.API.SessionRecording.start();
+            }
+        }
+        
+        window.addEventListener("qsi_js_loaded", startSessionRecording, false);
     </script>
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="js/preloader.js"></script>
