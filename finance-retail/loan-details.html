@@ -71,7 +71,6 @@ function getExperienceTransparencyReviews () {
                 }
                 catch (error) {
                     console.error("Failed to parse or inject reviews:", error);
-                    document.body.innerHTML = "<h1>Error loading reviews. Check console.</h1>";
                 }   
             }
         }
@@ -991,6 +990,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         if (urlParams.get('interest') == "homeloan") {
             document.getElementById('banner_animation').innerHTML = homeLoanBanner;
         }
+        
+        //Initiate fetching experience transparency reviews
+        getExperienceTransparencyReviews();
         
     </script>
 </body>
