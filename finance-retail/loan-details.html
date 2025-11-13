@@ -27,10 +27,11 @@ function formatReviewDate(dateString) {
     function reviewsToDiv(reviews) {
 
         reviews.forEach(review => {
+                alert(`review_${index}_comment`);
                 // 4. Find the target div using its ID from the review object
-                var commentDiv = document.getElementById("review_${index}_comment");
-                var authorDiv = document.getElementById("review_${index}_author");
-                var dateDiv = document.getElementById("review_${index}_date");
+                var commentDiv = document.getElementById(`review_${index}_comment`);
+                var authorDiv = document.getElementById(`review_${index}_author`);
+                var dateDiv = document.getElementById(`review_${index}_date`);
 
                 // 5. Check if the div actually exists on the page
                 if (commentDiv) {
@@ -41,10 +42,10 @@ function formatReviewDate(dateString) {
                     // For this trusted data, it's safe.
                     commentDiv.innerHTML = review.verbatim.replace(/\\n/g, '<br>').replace(/\\\\/g, '\\');
                     authorDiv.innerHTML = review.title;
-                    dateDiv.innerHTML = 'Posted on: ${formatReviewDate(review.date)}';
+                    dateDiv.innerHTML = `Posted on: ${formatReviewDate(review.date)}`;
                 
                 } else {
-                    console.warn(`Could not find a div with ID: ${commentDiv}`);
+                    console.warn(`Could not find a div with ID: review_${index}_comment`);
                 }
         });
     }
