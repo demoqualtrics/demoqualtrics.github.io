@@ -24,9 +24,9 @@ function formatReviewDate(dateString) {
 }
     
 // --- Inject reviews to DIVs ---
-        function reviewsToDiv(reviews) {
+    function reviewsToDiv(reviews) {
 
-            reviews.forEach(review => {
+        reviews.forEach(review => {
                 // 4. Find the target div using its ID from the review object
                 var commentDiv = document.getElementById("review_${index}_comment");
                 var authorDiv = document.getElementById("review_${index}_author");
@@ -46,8 +46,8 @@ function formatReviewDate(dateString) {
                 } else {
                     console.warn(`Could not find a div with ID: ${commentDiv}`);
                 }
-            });
-        }
+        });
+    }
 
     
 //Get experience transparency reviews from Qdemo QBanca project
@@ -68,6 +68,7 @@ function getExperienceTransparencyReviews () {
                     
                     reviewsToDiv(reviews);
                     console.log('responseText: ', xhr.responseText);
+                }
                 catch (error) {
                     console.error("Failed to parse or inject reviews:", error);
                     document.body.innerHTML = "<h1>Error loading reviews. Check console.</h1>";
