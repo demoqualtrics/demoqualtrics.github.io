@@ -27,7 +27,6 @@ function formatReviewDate(dateString) {
     function reviewsToDiv(reviews) {
 
         reviews.forEach((review, index) => {
-                alert(`review_${index}_comment`);
                 // 4. Find the target div using its ID from the review object
                 var commentDiv = document.getElementById(`review_${index}_comment`);
                 var authorDiv = document.getElementById(`review_${index}_author`);
