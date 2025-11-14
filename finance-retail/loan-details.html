@@ -28,6 +28,7 @@ function formatReviewDate(dateString) {
 
         reviews.forEach((review, index) => {
                 // 4. Find the target div using its ID from the review object
+                var titleDiv = document.getElementById(`review_${index}_title`);
                 var commentDiv = document.getElementById(`review_${index}_comment`);
                 var authorDiv = document.getElementById(`review_${index}_author`);
                 var dateDiv = document.getElementById(`review_${index}_date`);
@@ -39,8 +40,9 @@ function formatReviewDate(dateString) {
                     // NOTE: In a real app, you must "sanitize" data from an API
                     // before using innerHTML to prevent security (XSS) attacks.
                     // For this trusted data, it's safe.
+                    titleDiv.innerHTML = review.title;
                     commentDiv.innerHTML = review.verbatim.replace(/\\n/g, '<br>').replace(/\\\\/g, '\\');
-                    authorDiv.innerHTML = review.title;
+                    authorDiv.innerHTML = review.author;
                     dateDiv.innerHTML = `Posted on: ${formatReviewDate(review.date)}`;
                 
                 } else {
@@ -432,6 +434,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="row mt-30 gy-4">
                     <div class="col-xl-4 col-md-6">
                         <blockquote class="wow fadeInUp" data-wow-delay="0.1s">
+                               <h4><span id ="review_0_title">Title</span></h4>
 
                                 <p><span id="review_0_comment">Review 1 comment</span></p>
                                 <div class="author">
@@ -444,6 +447,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="col-xl-4 col-md-6">
                         <blockquote class="wow fadeInUp" data-wow-delay="0.3s">
+                               <h4><span id ="review_1_title">Title</span></h4>
 
                                <p><span id="review_1_comment">Review 2 comment</span></p>
                                 <div class="author">
@@ -456,7 +460,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="col-xl-4 col-md-6">
                         <blockquote class="wow fadeInUp" data-wow-delay="0.5s">
-
+                               <h4><span id ="review_2_title">Title</span></h4>
                                <p><span id="review_2_comment">Review 3 comment</span></p>
                                 <div class="author">
                                     <div>
